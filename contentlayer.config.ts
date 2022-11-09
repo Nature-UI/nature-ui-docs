@@ -6,9 +6,9 @@ import {
 import remarkEmoji from 'remark-emoji';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
-import { getTableOfContents } from 'utils/get-table-of-contents';
-import { rehypeMdxCodeMeta } from 'utils/rehype-code-meta';
-// import siteConfig from './config'
+import siteConfig from './configs/site-config';
+import { getTableOfContents } from './src/utils/get-table-of-contents';
+import { rehypeMdxCodeMeta } from './src/utils/rehype-code-meta';
 
 const computedFields: ComputedFields = {
 	slug: {
@@ -49,25 +49,28 @@ const Doc = defineDocumentType(() => ({
 	},
 	computedFields: {
 		...computedFields,
-		frontMatter: {
+		frontmatter: {
 			type: 'json',
 			resolve: (doc) => ({
 				type: doc.title,
 				package: doc.package,
 				description: doc.description,
 				version: doc.version,
-				slug: `${doc.raw.flattenedPath}`,
+				slug: `/${doc._raw.flattenedPath}`,
+				editUrl: `${siteConfig.repo.editUrl}/${doc._id}`,
 				headings: getTableOfContents(doc.body.raw),
 			}),
 		},
 	},
 }));
 
-export default makeSource({
+const contentLayerConfig = makeSource({
 	contentDirPath: 'content',
 	documentTypes: [Doc],
 	mdx: {
 		rehypePlugins: [rehypeMdxCodeMeta],
-		remarkPlugins: [remarkEmoji, remarkGfm, remarkSlug],
+		remarkPlugins: [remarkSlug, remarkEmoji, remarkGfm],
 	},
 });
+
+export default contentLayerConfig;

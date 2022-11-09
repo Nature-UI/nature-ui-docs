@@ -40,9 +40,9 @@ function getMDXMeta(file: string) {
 	const filePath = posixPath(file);
 	const fileContent = fs.readFileSync(filePath, 'utf-8');
 
-	const { content, frontMatter } = parseFrontMatter(fileContent) as {
+	const { content, frontmatter } = parseFrontMatter(fileContent) as {
 		content: string;
-		frontMatter: Record<string, any>;
+		frontmatter: Record<string, any>;
 	};
 	const tableOfContent = toc(content);
 	const json = tableOfContent.json as TOCResultItem[];
@@ -53,12 +53,12 @@ function getMDXMeta(file: string) {
 	const result: ResultType[] = [];
 
 	result.push({
-		content: frontMatter.title as string,
+		content: frontmatter.title as string,
 		id: nanoid(),
 		type: 'lvl1',
 		url: removePrefix(slug, '/'),
 		hierarchy: {
-			lvl1: frontMatter.title as string,
+			lvl1: frontmatter.title as string,
 		},
 	});
 
@@ -69,7 +69,7 @@ function getMDXMeta(file: string) {
 			type: `lvl${item.lvl}` as any,
 			url: removePrefix(slug, '/') + `#${item.slug}`,
 			hierarchy: {
-				lvl1: frontMatter.title,
+				lvl1: frontmatter.title,
 				lvl2: item.lvl === 2 ? item.content : json[index - 1]?.content ?? null,
 				lvl3: item.lvl === 3 ? item.content : null,
 			},
