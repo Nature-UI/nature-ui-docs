@@ -10,7 +10,7 @@ import {
 	useUpdateEffect,
 } from '@nature-ui/core';
 import { Icon } from '@nature-ui/icons';
-import { AnimatePresence, motion, useElementScroll } from 'framer-motion';
+import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -44,7 +44,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
 				css={{
 					flex: '1 1 0%',
 				}}
-				color={isActive ? 'primary-700' : 'gray-50'}
+				color={isActive ? 'primary-700' : 'gray-500'}
 				variant={isActive ? 'solid' : 'outline'}
 			>
 				{children}
@@ -57,7 +57,7 @@ const ScrollView = (props: BoxProps & { onScroll?: any }) => {
 	const { onScroll, ...rest } = props;
 	const [y, setY] = React.useState(0);
 	const elRef = React.useRef<any>();
-	const { scrollY } = useElementScroll(elRef);
+	const { scrollY } = useScroll({ container: elRef });
 	React.useEffect(() => {
 		return scrollY.onChange(() => setY(scrollY.get()));
 	}, [scrollY]);
@@ -156,7 +156,7 @@ export const MobileNavButton = React.forwardRef(
 					target='_blank'
 				>
 					<Icon
-						className='md:hidden text-gray-50 hover:text-gray-75 transition-colors duration-150'
+						className='md:hidden text-gray-500 hover:text-gray-75 transition-colors duration-150'
 						size='lg'
 						as={GithubIcon}
 					/>

@@ -33,8 +33,6 @@ export const getDocDoc = (slug: MixedArray): Doc | undefined => {
 
 	if (!doc) return;
 
-	console.log({ fm: doc.frontmatter });
-
 	// the presence of scope, means its a component documentation
 	if (doc.scope && doc.scope !== 'usage') {
 		doc.frontmatter = {
@@ -66,7 +64,7 @@ export function getComponentTabsData(slug: MixedArray) {
 			match: _slug.endsWith('/usage') || params.length === 2,
 			href: { query: { slug: usageSlug.slice(1) } },
 			label: 'Usage',
-			doc: getDocDoc(getSlug('usage')),
+			doc: getDocDoc(usageSlug),
 		},
 	];
 	return data.filter((item) => item.doc);

@@ -3,8 +3,8 @@ import Link from 'next/link';
 export const SvgLogo = () => {
 	return (
 		<svg
-			width='53'
-			height='53'
+			width='40'
+			height='40'
 			viewBox='0 0 252 252'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
@@ -66,8 +66,8 @@ export const Logo = () => {
 		<Link href='/'>
 			<div className='flex items-center mr-8'>
 				<SvgLogo />
-				<h2 className='text-xl font-bold text-gray-1000 w-full ml-3'>
-					Nature UI
+				<h2 className='text-xl font-bold text-gray-700 w-full ml-3'>
+					nature ui
 				</h2>
 			</div>
 		</Link>

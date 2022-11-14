@@ -52,7 +52,7 @@ const Doc = defineDocumentType(() => ({
 		frontmatter: {
 			type: 'json',
 			resolve: (doc) => ({
-				type: doc.title,
+				title: doc.title,
 				package: doc.package,
 				description: doc.description,
 				version: doc.version,

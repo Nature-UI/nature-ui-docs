@@ -18,22 +18,22 @@ export const links = [
 	{
 		icon: IoLogoGithub,
 		label: 'Github',
-		href: '//github.com/dnature',
+		href: 'https://github.com/dnature',
 	},
 	{
 		icon: IoLogoTwitter,
 		label: 'Twitter',
-		href: '//twitter.com/DivineHycenth',
+		href: 'https://twitter.com/DivineHycenth',
 	},
 	{
 		icon: IoGlobeOutline,
 		label: 'Website',
-		href: '//divinehycenth.com',
+		href: 'https://divinehycenth.com',
 	},
 	{
 		icon: IoLogoLinkedin,
 		label: 'Linkedin',
-		href: '//linkedin.com/in/dnature',
+		href: 'https://linkedin.com/in/dnature',
 	},
 	{
 		icon: MdEmail,
@@ -61,7 +61,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({
 }) => (
 	<Box as='span' {...rest}>
 		<Link href={href} aria-label={label} target='_blank'>
-			<Icon as={icon} size='lg' className='text-gray-50' />
+			<Icon as={icon} size='lg' className='text-gray-100' />
 		</Link>
 	</Box>
 );

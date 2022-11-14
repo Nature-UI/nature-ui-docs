@@ -13,7 +13,7 @@ interface MDXLayoutProps {
 }
 
 const MDXLayout: React.FC<MDXLayoutProps> = (props) => {
-	const { frontmatter, children } = props;
+	const { frontmatter, children, hideToc } = props;
 	const routes = getRoutes(frontmatter.slug);
 
 	const route = findRouteByPath(routes, removeFromLast('#', frontmatter.slug));
@@ -21,6 +21,7 @@ const MDXLayout: React.FC<MDXLayoutProps> = (props) => {
 
 	return (
 		<PageContainer
+			hideToc={hideToc}
 			leftSidebar={<Sidebar routes={routes} />}
 			frontmatter={frontmatter}
 			pagination={

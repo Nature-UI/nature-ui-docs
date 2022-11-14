@@ -1,6 +1,6 @@
 import { DocSearchModal, useDocSearchKeyboardEvents } from '@docsearch/react';
 import {
-	Button,
+	Box,
 	HTMLNatureProps,
 	Portal,
 	Stack,
@@ -38,26 +38,25 @@ export const SearchButton = React.forwardRef(
 		}, []);
 
 		return (
-			<Button
+			<Box
+				as='button'
 				ref={ref}
 				{...props}
 				variant='none'
-				className='w-full px-4 py-3 mx-5 focus:ring focus:outline-none rounded-md transition-shadow duration-200 shadow-md'
+				className='hidden w-full lg:flex items-center text-sm leading-6 text-slate-400 rounded-md ring-1 ring-slate-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-slate-300'
 			>
-				<Stack row className='items-center'>
-					<SearchIcon className='text-gray-50' />
-					<p className='text-gray-50 ml-4'>Search the docs</p>
+				<SearchIcon className='mr-3 ml-1' size='md' />
+				<p className='text-gray-500'>Quick search...</p>
 
-					<Stack row spacing='4px' className='items-center ml-auto'>
-						<VisuallyHidden>Press </VisuallyHidden>
-						<kbd className='no-underline px-2 rounded bg-gray-200'>
-							<abbr title={actionKey[1]}>{ACTION_KEY_APPLE[0]}</abbr>
-						</kbd>
-						<VisuallyHidden> and </VisuallyHidden>
-						<kbd className='no-underline px-2 rounded bg-gray-200'>K</kbd>
-					</Stack>
+				<Stack row spacing='4px' className='items-center ml-auto'>
+					<VisuallyHidden>Press </VisuallyHidden>
+					<kbd className='no-underline px-2 rounded bg-gray-200'>
+						<abbr title={actionKey[1]}>{ACTION_KEY_APPLE[0]}</abbr>
+					</kbd>
+					<VisuallyHidden> and </VisuallyHidden>
+					<kbd className='no-underline px-2 rounded bg-gray-200'>K</kbd>
 				</Stack>
-			</Button>
+			</Box>
 		);
 	}
 );
