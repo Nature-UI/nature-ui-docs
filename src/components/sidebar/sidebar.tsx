@@ -1,15 +1,23 @@
 /** ** */
 import { Box, BoxProps, clsx, nature, Stack } from '@nature-ui/core';
 import { Search } from 'components/algolia-search';
-import _ from 'lodash';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
-import { Routes } from 'utils/get-route-context';
+import { FaTools } from 'react-icons/fa';
+import { RouteItem, Routes } from 'utils/get-route-context';
 
 import SidebarCategory from './sidebar-category';
-import { DocsIcon } from './sidebar-icons';
+import { DocsIcon, DocumentationIcon } from './sidebar-icons';
 import SidebarLink from './sidebar-link';
+
+const sortRoutes = (routes: RouteItem[]) => {
+	return routes.sort(({ title: titleA }, { title: titleB }) => {
+		if (titleA < titleB) return -1;
+		if (titleA > titleB) return 1;
+		return 0;
+	});
+};
 
 export type SidebarContentProps = Routes & {
 	pathname?: string;
@@ -46,7 +54,7 @@ export function SidebarContent(props: SidebarContentProps) {
 							const opened = selected || lvl2.open;
 
 							const sortedRoutes = lvl2.sort
-								? _.sortBy(lvl2.routes, (i) => i.title)
+								? sortRoutes(lvl2.routes)
 								: lvl2.routes;
 
 							return (
@@ -79,22 +87,21 @@ export function SidebarContent(props: SidebarContentProps) {
 	);
 }
 
-const MainNavLink = ({ href, icon, children }) => {
-	const { pathname } = useRouter();
-	const [, group] = href.split('/');
-	const active = pathname.includes(group);
+const MainNavLink = ({ href, icon, children, isActive }) => {
+	const router = useRouter();
+	const active = router.asPath.startsWith(href) || !!isActive;
 
 	return (
 		<NextLink href={href} passHref>
 			<nature.a
 				className={clsx(
-					'flex items-center text-sm font-bold transition-colors duration-200 text-gray-500 hover:text-gray-75',
+					'flex items-center transition-colors duration-200 text-gray-500 hover:text-gray-75',
 					{
-						'text-gray-1000': active,
+						'text-gray-700 font-semibold': active,
 					}
 				)}
 			>
-				<nature.div className='flex items-center justify-center w-6 h-6 bg-primary-700 rounded-md mr-3'>
+				<nature.div className='flex items-center justify-center w-6 h-6 border-primary-300 border rounded-md mr-3 text-primary-400'>
 					{icon}
 				</nature.div>
 				{children}
@@ -106,15 +113,22 @@ const MainNavLink = ({ href, icon, children }) => {
 const mainNavLinks = [
 	{
 		icon: <DocsIcon />,
-		href: '/docs/getting-started',
-		label: 'Docs',
+		href: '/getting-started',
+		label: 'Getting started',
+	},
+	{
+		icon: <DocumentationIcon />,
+		href: '/docs/components',
+		label: 'Components',
+	},
+	{
+		icon: <FaTools />,
+		href: '/docs/hooks/use-boolean',
+		label: 'Hooks',
+		match: (asPath: string, href: string) =>
+			href.startsWith('/docs/hooks') && asPath.startsWith('/docs/hooks'),
 	},
 	// TODO: Coming soon
-	// {
-	//   icon: <GuidesIcon />,
-	//   href: '/guides/integrations/with-cra',
-	//   label: 'Guides',
-	// },
 	// {
 	//   icon: <Showcase />,
 	//   href: '/showcase',
@@ -133,6 +147,7 @@ const mainNavLinks = [
 ];
 
 const MainNavLinkGroup = (props: BoxProps) => {
+	const router = useRouter();
 	return (
 		<>
 			<div className='sticky top-0 -ml-0.5 pointer-events-none'>
@@ -145,7 +160,11 @@ const MainNavLinkGroup = (props: BoxProps) => {
 			<Stack col className='items-stretch' spacing='1rem' {...props}>
 				{mainNavLinks.map((item) => (
 					<nature.li className='list-none' key={item.label}>
-						<MainNavLink icon={item.icon} href={item.href}>
+						<MainNavLink
+							icon={item.icon}
+							href={item.href}
+							isActive={item.match?.(router.asPath, item.href)}
+						>
 							{item.label}
 						</MainNavLink>
 					</nature.li>

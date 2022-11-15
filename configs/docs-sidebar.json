@@ -1,25 +1,9 @@
 {
 	"routes": [
 		{
-			"title": "Getting Started",
-			"heading": true,
+			"title": "Components",
+			"heading": false,
 			"routes": [
-				{
-					"title": "Installation",
-					"path": "/docs/getting-started"
-				},
-
-				{
-					"title": "Configuration",
-					"path": "/docs/theming",
-					"open": true,
-					"routes": [
-						{
-							"title": "Configuration",
-							"path": "/docs/theming/configuration"
-						}
-					]
-				},
 				{
 					"title": "Layout",
 					"path": "/docs/layout",
@@ -36,124 +20,128 @@
 						},
 						{
 							"title": "Stack",
-							"path": "/docs/layout/stack"
+							"path": "/docs/components/stack"
 						}
 					]
 				},
 				{
 					"title": "Forms",
-					"path": "/docs/form",
+					"path": "/docs/components/form",
 					"sort": true,
 					"open": true,
 					"routes": [
 						{
 							"title": "Button",
-							"path": "/docs/form/button"
+							"path": "/docs/components/button"
 						},
 						{
 							"title": "Checkbox",
-							"path": "/docs/form/checkbox"
+							"path": "/docs/components/checkbox"
 						},
 						{
 							"title": "Form Control",
-							"path": "/docs/form/form-control"
+							"path": "/docs/components/form-control"
 						},
 						{
 							"title": "Icon Button",
-							"path": "/docs/form/icon-button"
-						},
-						{
-							"title": "Input",
-							"path": "/docs/form/input"
-						},
-						{
-							"title": "Radio",
-							"path": "/docs/form/radio"
-						}
-					]
-				},
-				{
-					"title": "Data Display",
-					"path": "/docs/data-display",
-					"open": true,
-					"sort": true,
-					"routes": [
-						{
-							"title": "Badge",
-							"path": "/docs/data-display/badge"
+							"path": "/docs/components/icon-button"
 						},
 						{
 							"title": "Close Button",
 							"path": "/docs/components/close-button"
 						},
 						{
-							"title": "Divider",
-							"path": "/docs/data-display/divider"
+							"title": "Input",
+							"path": "/docs/components/input"
+						},
+						{
+							"title": "Number Input",
+							"path": "/docs/components/number-input"
+						},
+						{
+							"title": "Radio",
+							"path": "/docs/components/radio"
+						},
+						{
+							"title": "Textarea",
+							"path": "/docs/components/textarea"
 						}
 					]
 				},
 				{
 					"title": "Feedback",
-					"path": "/docs/feedback",
+					"path": "/docs/components/feedback",
 					"open": true,
 					"sort": true,
 					"routes": [
 						{
 							"title": "Alert",
-							"path": "/docs/feedback/alert"
+							"path": "/docs/components/alert"
 						},
 						{
 							"title": "Circular Progress",
-							"path": "/docs/feedback/circular-progress"
+							"path": "/docs/components/circular-progress"
 						},
 						{
 							"title": "Progress",
-							"path": "/docs/feedback/progress"
+							"path": "/docs/components/progress"
 						},
 						{
 							"title": "Spinner",
-							"path": "/docs/feedback/spinner"
+							"path": "/docs/components/spinner"
 						},
 						{
 							"title": "Toast",
-							"path": "/docs/feedback/toast"
+							"path": "/docs/components/toast"
+						}
+					]
+				},
+				{
+					"title": "Data Display",
+					"path": "/docs/components/data-display",
+					"open": true,
+					"sort": true,
+					"routes": [
+						{
+							"title": "Badge",
+							"path": "/docs/components/badge"
+						},
+						{
+							"title": "Divider",
+							"path": "/docs/components/divider"
 						}
 					]
 				},
 				{
 					"title": "Overlay",
-					"path": "/docs/overlay",
+					"path": "/docs/components/overlay",
 					"open": true,
 					"sort": true,
 					"routes": [
 						{
 							"title": "Alert Dialog",
-							"path": "/docs/overlay/alert-dialog"
+							"path": "/docs/components/alert-dialog"
 						},
 						{
 							"title": "Drawer",
-							"path": "/docs/overlay/drawer"
+							"path": "/docs/components/drawer"
 						},
 						{
 							"title": "Modal",
-							"path": "/docs/overlay/modal"
+							"path": "/docs/components/modal"
 						},
 						{
 							"title": "Popover",
-							"path": "/docs/overlay/popover"
+							"path": "/docs/components/popover"
 						}
 					]
 				},
 				{
 					"title": "Disclosure",
-					"path": "/docs/components",
+					"path": "/docs/components/disclosure",
 					"open": true,
 					"sort": true,
 					"routes": [
-						{
-							"title": "Breadcrumb",
-							"path": "/docs/components/breadcrumb"
-						},
 						{
 							"title": "Visually Hidden",
 							"path": "/docs/components/visually-hidden"
@@ -161,14 +149,26 @@
 					]
 				},
 				{
+					"title": "Navigation",
+					"path": "/docs/components/navigation",
+					"open": true,
+					"sort": true,
+					"routes": [
+						{
+							"title": "Breadcrumb",
+							"path": "/docs/components/breadcrumb"
+						}
+					]
+				},
+				{
 					"title": "Media & Icons",
-					"path": "/docs/components",
+					"path": "/docs/components/media-and-icons",
 					"sort": true,
 					"open": true,
 					"routes": [
 						{
 							"title": "Avatar",
-							"path": "/docs/data-display/avatar"
+							"path": "/docs/components/avatar"
 						},
 						{
 							"title": "Icon",
@@ -176,11 +176,11 @@
 						},
 						{
 							"title": "Image",
-							"path": "/docs/data-display/image"
+							"path": "/docs/components/image"
 						},
 						{
 							"title": "Lazy Image",
-							"path": "/docs/data-display/lazy-image"
+							"path": "/docs/components/lazy-image"
 						}
 					]
 				},

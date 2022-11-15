@@ -9,7 +9,6 @@ import {
 	Stack,
 	useUpdateEffect,
 } from '@nature-ui/core';
-import { Icon } from '@nature-ui/icons';
 import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -155,10 +154,10 @@ export const MobileNavButton = React.forwardRef(
 					href={siteConfig.repo.url}
 					target='_blank'
 				>
-					<Icon
+					<IconButton
 						className='md:hidden text-gray-500 hover:text-gray-75 transition-colors duration-150'
 						size='lg'
-						as={GithubIcon}
+						icon={<GithubIcon />}
 					/>
 				</Link>
 				<IconButton
