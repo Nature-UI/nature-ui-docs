@@ -3,7 +3,7 @@ import ComponentDocsLayout from 'layouts/component';
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import {
-	getComponentTabsData,
+	getComponentMDXData,
 	getDocByType,
 	getDocDoc,
 } from 'utils/contentlayer-utils';
@@ -15,7 +15,7 @@ export default function Page({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	const Component = useMDXComponent(doc?.body?.code);
 	return (
-		<ComponentDocsLayout frontmatter={doc?.frontmatter} tabsData={tabsData}>
+		<ComponentDocsLayout frontmatter={doc?.frontmatter} mdxData={tabsData}>
 			<Component components={MDXComponents} />
 		</ComponentDocsLayout>
 	);
@@ -32,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-	const tabsData = getComponentTabsData(['components', ctx.params.slug]);
+	const tabsData = getComponentMDXData(['components', ctx.params.slug]);
 	return {
 		props: {
 			doc: getDocDoc(['components', ctx.params.slug]),

@@ -87,7 +87,7 @@ export function SidebarContent(props: SidebarContentProps) {
 	);
 }
 
-const MainNavLink = ({ href, icon, children, isActive }) => {
+const MainNavLink = ({ href, icon: NavIcon, children, isActive }) => {
 	const router = useRouter();
 	const active = router.asPath.startsWith(href) || !!isActive;
 
@@ -97,12 +97,16 @@ const MainNavLink = ({ href, icon, children, isActive }) => {
 				className={clsx(
 					'flex items-center transition-colors duration-200 text-gray-500 hover:text-gray-75',
 					{
-						'text-gray-700 font-semibold': active,
+						'text-primary-700 font-semibold': active,
 					}
 				)}
 			>
-				<nature.div className='flex items-center justify-center w-6 h-6 border-primary-300 border rounded-md mr-3 text-primary-400'>
-					{icon}
+				<nature.div className='flex items-center justify-center w-6 h-6 border-primary-300 border rounded-md mr-3 text-primary-400 overflow-hidden'>
+					<NavIcon
+						className={clsx({
+							'bg-primary-500': active,
+						})}
+					/>
 				</nature.div>
 				{children}
 			</nature.a>
@@ -112,17 +116,17 @@ const MainNavLink = ({ href, icon, children, isActive }) => {
 
 const mainNavLinks = [
 	{
-		icon: <DocsIcon />,
+		icon: DocsIcon,
 		href: '/getting-started',
 		label: 'Getting started',
 	},
 	{
-		icon: <DocumentationIcon />,
+		icon: DocumentationIcon,
 		href: '/docs/components',
 		label: 'Components',
 	},
 	{
-		icon: <FaTools />,
+		icon: FaTools,
 		href: '/docs/hooks/use-boolean',
 		label: 'Hooks',
 		match: (asPath: string, href: string) =>

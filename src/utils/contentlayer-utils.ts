@@ -44,9 +44,9 @@ export const getDocDoc = (slug: MixedArray): Doc | undefined => {
 	return doc;
 };
 
-export type TabsData = ReturnType<typeof getComponentTabsData>;
+export type MDXData = ReturnType<typeof getComponentMDXData>;
 
-export function getComponentTabsData(slug: MixedArray) {
+export function getComponentMDXData(slug: MixedArray) {
 	const params = toArray(slug);
 	const _slug = params.join('/');
 
@@ -58,14 +58,11 @@ export function getComponentTabsData(slug: MixedArray) {
 
 	const usageSlug = getSlug('usage');
 
-	const data = [
-		{
-			id: 'usage',
-			match: _slug.endsWith('/usage') || params.length === 2,
-			href: { query: { slug: usageSlug.slice(1) } },
-			label: 'Usage',
-			doc: getDocDoc(usageSlug),
-		},
-	];
-	return data.filter((item) => item.doc);
+	return {
+		id: 'usage',
+		match: _slug.endsWith('/usage') || params.length === 2,
+		href: { query: { slug: usageSlug.slice(1) } },
+		label: 'Usage',
+		doc: getDocDoc(usageSlug),
+	};
 }
