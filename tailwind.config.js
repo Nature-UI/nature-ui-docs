@@ -26,6 +26,9 @@ module.exports = {
           900: 'var(--primary-900)',
         },
       },
+      maxWidth: {
+        '8xl': '90rem',
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         mono: ['Fira Code VF', ...defaultTheme.fontFamily.mono],
@@ -34,5 +37,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 }

@@ -5,8 +5,22 @@
 @import url('./fonts.css');
 @import url('./root.css');
 
+html {
+	font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+	@apply text-slate-700;
+}
+
 pre,
 code {
 	/* @apply font-mono; */
 	@apply font-mono !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply text-slate-900;
 }

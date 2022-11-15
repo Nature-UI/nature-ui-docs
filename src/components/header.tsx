@@ -17,11 +17,11 @@ const HeaderContent = () => {
 		mobileNavBtnRef.current?.focus();
 	}, [mobileNav.isOpen]);
 	return (
-		<header className='sticky top-0 left-0 w-full bg-white z-10 border-b backdrop-blur flex-none'>
+		<header className='sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 border-b border-slate-900/10'>
 			<div className='w-full bg-primary-500 h-1 absolute top-0 left-0' />
 
-			<nav className='w-full max-w-screen-lg px-4 md:px-0 md:mx-auto py-3'>
-				<div className='flex items-center justify-between'>
+			<nav className='max-w-8xl mx-auto'>
+				<div className='py-4 lg:px-8 mx-4 lg:mx-0 flex items-center justify-between px-4'>
 					<Logo />
 					<div className='hidden md:w-4/6 md:flex items-center justify-end'>
 						<VersionSwitcher />
