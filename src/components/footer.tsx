@@ -1,4 +1,4 @@
-import { Box, Container, Icon, Stack } from '@nature-ui/core';
+import { Box, Container, IconButton, Stack } from '@nature-ui/core';
 import siteConfig from 'configs/site-config';
 import Link from 'next/link';
 import React from 'react';
@@ -6,7 +6,6 @@ import {
 	IoGlobeOutline,
 	IoLogoDiscord,
 	IoLogoGithub,
-	IoLogoLinkedin,
 	IoLogoTwitter,
 } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
@@ -31,11 +30,6 @@ export const links = [
 		href: 'https://divinehycenth.com',
 	},
 	{
-		icon: IoLogoLinkedin,
-		label: 'Linkedin',
-		href: 'https://linkedin.com/in/dnature',
-	},
-	{
 		icon: MdEmail,
 		label: 'Email',
 		href: 'mailto:contact@divinehycenth.com',
@@ -54,14 +48,14 @@ type FooterLinkProps = {
 };
 
 const FooterLink: React.FC<FooterLinkProps> = ({
-	icon,
+	icon: Icon,
 	href,
 	label,
 	...rest
 }) => (
 	<Box as='span' {...rest}>
 		<Link href={href} aria-label={label} target='_blank'>
-			<Icon as={icon} size='lg' className='text-gray-100' />
+			<IconButton icon={<Icon />} size='lg' className='text-gray-100' />
 		</Link>
 	</Box>
 );

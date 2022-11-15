@@ -8,7 +8,6 @@ const StyledLink = React.forwardRef(function StyledLink(
 	ref: React.Ref<any>
 ) {
 	const { isActive, ...rest } = props;
-	console.log({ isActive });
 
 	return (
 		<nature.a
