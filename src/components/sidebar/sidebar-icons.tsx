@@ -6,7 +6,7 @@ type HTML_SVG = PropsOf<typeof SVG>;
 
 export const DocsIcon = (props: IconProps) => {
 	return (
-		<Icon size='lg' viewBox='0 0 24 24' fill='none' color='white' {...props}>
+		<Icon size='lg' viewBox='0 0 24 24' fill='none' {...props}>
 			<path
 				d='M11.333 6.71257L4.84196 5.0224C4.74306 4.99667 4.63928 4.99305 4.53868 5.01183C4.43807 5.03062 4.34336 5.07129 4.26191 5.1307C4.18045 5.19011 4.11445 5.26665 4.06902 5.35437C4.0236 5.44209 3.99998 5.53863 4 5.63649V13.9091C3.99997 14.0488 4.04805 14.1845 4.13684 14.2955C4.22563 14.4065 4.35018 14.4865 4.49131 14.5232L11.333 16.3044V6.71257Z'
 				className='fill-primary-300'

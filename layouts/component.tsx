@@ -1,8 +1,9 @@
 import { Box, Stack } from '@nature-ui/core';
+import { isEmpty } from '@nature-ui/utils';
 import { MDXComponents } from 'components/mdx-components';
 import { Doc } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import { TabsData } from 'utils/contentlayer-utils';
+import { MDXData } from 'utils/contentlayer-utils';
 import MDXLayout from './mdx';
 
 function MDXContent({ doc }: { doc: Doc | undefined }) {
@@ -13,11 +14,11 @@ function MDXContent({ doc }: { doc: Doc | undefined }) {
 export default function ComponentDocsLayout({
 	children,
 	frontmatter,
-	tabsData,
+	mdxData: tabsData,
 }: {
 	children: React.ReactNode;
 	frontmatter: any;
-	tabsData?: TabsData;
+	mdxData?: MDXData;
 }) {
 	const id = frontmatter.package?.split('/').pop();
 
@@ -35,16 +36,11 @@ export default function ComponentDocsLayout({
 				</Stack>
 			)}
 
-			{tabsData.map((item, index) => (
-				<Box
-					key={index}
-					id={item.id}
-					hidden={!tabsData[index].match}
-					pt={index === 2 ? 12 : 0}
-				>
-					{index === 0 ? children : <MDXContent doc={item.doc} />}
+			{
+				<Box id={tabsData.id} hidden={!tabsData.match}>
+					{isEmpty(tabsData) ? children : <MDXContent doc={tabsData.doc} />}
 				</Box>
-			))}
+			}
 		</MDXLayout>
 	);
 }
