@@ -4,12 +4,10 @@ title: Checkbox
 package: '@nature-ui/checkbox'
 image: 'components/checkbox.svg'
 description:
-  Checkbox component is used in forms when a user needs to select multiple
+  The `Checkbox` component is used in forms when a user needs to select multiple
   values from several options.
 ---
 
-The `Checkbox` component is used in forms when a user needs to select multiple
-values from several options.
 
 Native HTML checkboxes are 100% accessible by default, so we used a
 [very common CSS technique](https://dev.to/lkopacz/create-custom-keyboard-accessible-checkboxes-2036)
@@ -47,10 +45,10 @@ You can override the color of the `Checkbox` to any color key specified in
 
 ```jsx
 <Stack spacing={10} row>
-  <Checkbox color='purple-500' defaultIsChecked>
+  <Checkbox color='bg-purple-500' defaultIsChecked>
     Checkbox
   </Checkbox>
-  <Checkbox color='green-500' defaultIsChecked>
+  <Checkbox color='bg-green-500' defaultIsChecked>
     Checkbox
   </Checkbox>
 </Stack>
@@ -63,13 +61,13 @@ Pass the `size` prop to change the size of the `Checkbox`. Values can be either
 
 ```jsx
 <Stack spacing={10} row>
-  <Checkbox size='sm' color='purple-500'>
+  <Checkbox size='sm' color='bg-purple-500'>
     Checkbox
   </Checkbox>
-  <Checkbox size='md' color='green-500' defaultIsChecked>
+  <Checkbox size='md' color='bg-green-500' defaultIsChecked>
     Checkbox
   </Checkbox>
-  <Checkbox size='lg' color='orange-500' defaultIsChecked>
+  <Checkbox size='lg' color='bg-orange-500' defaultIsChecked>
     Checkbox
   </Checkbox>
 </Stack>
@@ -146,7 +144,7 @@ props to each. See the props table at the bottom of this page for a list of the
 shared styling props.
 
 ```jsx
-<CheckboxGroup color='green-600' defaultValue={['naruto', 'kakashi']}>
+<CheckboxGroup color='bg-green-600' defaultValue={['naruto', 'kakashi']}>
   <Stack row>
     <Checkbox value='naruto'>Naruto</Checkbox>
     <Checkbox value='sasuke'>Sasuke</Checkbox>
