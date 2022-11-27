@@ -45,12 +45,14 @@ Use the `size` prop to change the size of the button. You can set the value to
 Use the `variant` prop to change the visual style of the Button. You can set the
 value to either `solid`, `ghost`, `outline`, or `link`.
 
+> Use `text-[color]` for `outline` and `ghost` variants
+
 ```jsx
 <Stack row spacing='1rem' className='items-center'>
 	<Button className='bg-purple-500' variant='solid'>
 		Button
 	</Button>
-	<Button className='bg-purple-500' variant='outline'>
+	<Button className='text-purple-500' variant='outline'>
 		Button
 	</Button>
 	<Button className='text-purple-500' variant='ghost'>
@@ -77,7 +79,7 @@ and `RightIcon` props respectively.
 	</Button>
 	<Button
 		rightIcon={<ArrowForwardIcon />}
-		className='bg-teal-500'
+		className='text-teal-500'
 		variant='outline'
 	>
 		Call us
