@@ -6,7 +6,7 @@
 			"routes": [
 				{
 					"title": "Layout",
-					"path": "/docs/layout",
+					"path": "/docs/components/layout",
 					"sort": true,
 					"open": true,
 					"routes": [
