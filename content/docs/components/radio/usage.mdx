@@ -1,0 +1,218 @@
+---
+id: Radio
+category: form
+title: Radio
+package: '@nature-ui/Radio'
+description: Radios are used when only one choice may be selected in a series of options.
+---
+
+Radios are used when only one choice may be selected in a series of options.
+
+native html Radios are 100% accessible by default, so we used a
+[very common css technique](https://dev.to/lkopacz/create-custom-keyboard-accessible-Radio-buttons-22eh)
+to style the Radio.
+
+## import
+
+```js
+import { Radio, RadioGroup } from '@nature-ui/core';
+```
+
+### usage
+
+```jsx
+function RadioExample() {
+	const [value, setValue] = React.useState('1');
+	return (
+		<RadioGroup onchange={setValue} value={value}>
+			<Stack row>
+				<Radio value='1'>first</Radio>
+				<Radio value='2'>second</Radio>
+				<Radio value='3'>third</Radio>
+			</Stack>
+		</RadioGroup>
+	);
+}
+```
+
+### Radio with custom color
+
+you can override the `bg`, `borderBg`,`darkBg`,`darkBorderBg`, of the Radio to any specified in tailwindcss
+`theme.colors`.
+see more about these `props` in the props section.
+
+```jsx
+<RadioGroup defaultValue='2'>
+	<Stack row>
+		<Radio
+			borderBg='border-red-600'
+			darkBg='bg-red-800'
+			darkBorderBg='border-red-800'
+			bg='bg-red-600'
+			value='1'
+		>
+			Radio
+		</Radio>
+		<Radio
+			borderBg='border-green-600'
+			darkBg='bg-green-800'
+			darkBorderBg='border-green-800'
+			bg='bg-green-600'
+			value='2'
+		>
+			Radio
+		</Radio>
+	</Stack>
+</RadioGroup>
+```
+
+### Radio sizes
+
+the checkbox comes with 3 sizes.
+
+```jsx
+<Stack col>
+	<Radio size='sm' name='1'>
+		Radio
+	</Radio>
+	<Radio size='md' name='1'>
+		Radio
+	</Radio>
+	<Radio size='lg' name='1' defaultChecked>
+		Radio
+	</Radio>
+</Stack>
+```
+
+### Radio group
+
+```jsx
+<RadioGroup defaultValue='Option 1' onChange={console.log}>
+	<Stack spacing='1rem'>
+		<Radio value='Option 1'>Option 1</Radio>
+		<Radio value='Option 2'>Option 2</Radio>
+		<Radio value='Option 3'>Option 3</Radio>
+	</Stack>
+</RadioGroup>
+```
+
+### Disabled Radios
+
+```jsx
+<RadioGroup defaultValue='1'>
+	<Stack row>
+		<Radio value='1' isDisabled>
+			checked
+		</Radio>
+		<Radio value='2'>unchecked</Radio>
+		<Radio value='3'>unchecked</Radio>
+	</Stack>
+</RadioGroup>
+```
+
+### horizontal alignment
+
+```jsx
+<RadioGroup defaultValue='1'>
+	<Stack row row>
+		<Radio value='1' isDisabled>
+			Radio 1
+		</Radio>
+		<Radio value='2'>Radio 2</Radio>
+		<Radio value='3'>Radio 3</Radio>
+	</Stack>
+</RadioGroup>
+```
+
+### invalid Radio
+
+```jsx
+<Radio isInvalid>Radio</Radio>
+```
+
+### custom Radio buttons
+
+in some cases, you might need to create components that work like Radios but
+don't look like Radios. nature ui exports `useRadio`, and `useRadioGroup` hooks
+to help with this scenario. here's what you need to do:
+
+- create a component that consumes the `useRadio` hook.
+- use the `useRadioGroup` hook to control a group of custom Radios.
+
+```jsx manual=true
+// 1. create a component that consumes the `useRadio` hook
+function RadioCard({ className, ...props }) {
+	const { getInputProps, getCheckboxProps, ...rest } = useRadio(props);
+
+	const input = getInputProps();
+	const checkbox = getCheckboxProps();
+
+	const checked = typeof checkbox['data-checked'] === 'string';
+	return (
+		<box as='label' className={className}>
+			<input {...input} />
+			<box
+				{...checkbox}
+				className={`${className} cursor-pointer border rounded-md shadow-md focus:shadow-outline px-5 py-3 ${
+					checked && 'bg-teal-600 text-white border-teal-600'
+				}`}
+			>
+				{props.children}
+			</box>
+		</box>
+	);
+}
+
+// step 2: use the `useRadioGroup` hook to control a group of custom Radios.
+function example() {
+	const options = ['react', 'vue', 'svelte'];
+
+	const { getRootProps, getRadioProps } = useRadioGroup({
+		name: 'framework',
+		defaultValue: 'react',
+		onchange: console.log,
+	});
+
+	const group = getRootProps();
+
+	return (
+		<Stack row {...group}>
+			{options.map((value) => {
+				const radio = getRadioProps({ value });
+				return (
+					<RadioCard key={value} {...radio}>
+						{value}
+					</RadioCard>
+				);
+			})}
+		</Stack>
+	);
+}
+
+render(<example />);
+```
+
+## props
+
+| name             | type                 | default | description                                                                                                                                     |
+| ---------------- | -------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| id               | `string`             |         | the id assigned to input field                                                                                                                  |
+| name             | `string`             |         | the name of the input field in a Radio (useful for form submission)                                                                             |
+| value            | `string` or `number` |         | the value to be used in the Radio input. this is the value that will be returned on form submission                                             |
+| bg               | `string`             |         | the background color of the Radio when it's checked. this should be one of the color keys in the theme (e.g."bg-blue-500")                      |
+| bgBorder         | `string`             |         | the border color of the Radio when it's checked.(e.g."border-blue-500")                                                                         |
+| darkBg           | `string`             |         | the background color of the Radio when it's checked and on a hover state. this should be one of the color keys in the theme (e.g."bg-blue-700") |
+| bgBorder         | `string`             |         | the border color of the Radio when it's checked.(e.g."border-blue-500")                                                                         |
+| darkBorderBg     | `string`             |         | the border color of the Radio when it's checked and on a hover state.(e.g."border-blue-700")                                                    |
+| defaultIsChecked | `boolean`            |         | if `true`, the Radio will be initially checked                                                                                                  |
+| isChecked        | `boolean`            |         | if `true`, the Radio will be checked. you'll need to pass `onchange` to update it's value (since it's now controlled)                           |
+| isFullWidth      | `boolean`            |         | if `true`, the Radio should take up the full width of the parent                                                                                |
+| size             | `sm`, `md`, `lg`     | `md`    | the size (width and height) of the Radio                                                                                                        |
+| isDisabled       | `boolean`            |         | if `true`, the Radio will be disabled                                                                                                           |
+| isInvalid        | `boolean`            |         | if `true`, the Radio is marked as invalid. changes style of unchecked state                                                                     |
+| children         | `react.reactnode`    |         | the children of the Radio                                                                                                                       |
+| onchange         | `function`           |         | function called when the state of the Radio changes                                                                                             |
+| onblur           | `function`           |         | function called when you blur out of the Radio                                                                                                  |
+| onfocus          | `function`           |         | function called when the Radio receive focus                                                                                                    |
+| aria-label       | `string`             |         | an accessible label for the Radio in event there's no visible label or `children` was passed                                                    |
+| aria-labelledby  | `string`             |         | id that points to the label for the Radio in event no `children` was passed                                                                     |
