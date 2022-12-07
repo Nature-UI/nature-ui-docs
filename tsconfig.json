@@ -22,6 +22,7 @@
 			"utils/*": ["src/utils/*"],
 			"hooks/*": ["src/hooks/*"],
 			"types/*": ["src/types/*"],
+			"@custom/*": ["src/components/custom/*"],
 			"components/*": ["src/components/*"],
 			"contentlayer/generated": ["./.contentlayer/generated"]
 		}

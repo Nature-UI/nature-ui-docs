@@ -1,3 +1,4 @@
+import Button from '@custom/button';
 import * as Nature from '@nature-ui/core';
 import * as Icons from '@nature-ui/icons';
 import * as Formik from 'formik';
@@ -40,4 +41,5 @@ export const reactLiveScope = {
 	...Icons,
 	...reactIcons,
 	Lorem,
+	Button,
 };
