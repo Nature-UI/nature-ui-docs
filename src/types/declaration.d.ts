@@ -1,1 +1,1 @@
-declare module 'markdown-toc';
+declare module "markdown-toc";

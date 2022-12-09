@@ -2,8 +2,8 @@
 id: progress
 title: Progress
 category: feedback
-package: '@nature-ui/progress'
-image: 'components/progress.svg'
+package: "@nature-ui/progress"
+image: "components/progress.svg"
 description:
   Progress is used to display the progress status for a task that takes a long
   time or consists of several steps.
@@ -12,7 +12,7 @@ description:
 ## Import
 
 ```js
-import { Progress } from '@nature-ui/core';
+import { Progress } from "@nature-ui/core";
 ```
 
 ## Usage
@@ -39,10 +39,10 @@ There are two ways you can increase the height of the progress bar:
 
 ```jsx
 <Stack col>
-	<Progress size='sm' value={20} />
-	<Progress size='md' value={20} />
-	<Progress size='lg' value={20} />
-	<Progress size='32px' value={20} />
+  <Progress size="sm" value={20} />
+  <Progress size="md" value={20} />
+  <Progress size="lg" value={20} />
+  <Progress size="32px" value={20} />
 </Stack>
 ```
 
@@ -52,7 +52,7 @@ You can add `indicatorClassName` prop to any progress bar to apply any color tha
 exists in the `theme` config file.
 
 ```jsx
-<Progress value={20} size={5} indicatorClassName='bg-primary-500' />
+<Progress value={20} size={5} indicatorClassName="bg-primary-500" />
 ```
 
 ### Animated Progress

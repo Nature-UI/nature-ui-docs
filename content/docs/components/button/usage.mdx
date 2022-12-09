@@ -2,20 +2,20 @@
 id: button
 category: form
 title: Button
-package: '@nature-ui/button'
-description: 'The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.'
+package: "@nature-ui/button"
+description: "The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation."
 ---
 
 ## Import
 
 ```js
-import { Button } from '@nature-ui/core';
+import { Button } from "@nature-ui/core";
 ```
 
 ## Usage
 
 ```jsx
-<Button className='bg-blue-500'>Button</Button>
+<Button className="bg-blue-500">Button</Button>
 ```
 
 ### Button Sizes
@@ -24,19 +24,19 @@ Use the `size` prop to change the size of the button. You can set the value to
 `xs`, `sm`, `md`, or `lg`.
 
 ```jsx
-<Stack spacing='1rem' row className='items-center'>
-	<Button className='bg-teal-500' size='xs'>
-		Button
-	</Button>
-	<Button className='bg-teal-500' size='sm'>
-		Button
-	</Button>
-	<Button className='bg-teal-500' size='md'>
-		Button
-	</Button>
-	<Button className='bg-teal-500' size='lg'>
-		Button
-	</Button>
+<Stack spacing="1rem" row className="items-center">
+  <Button className="bg-teal-500" size="xs">
+    Button
+  </Button>
+  <Button className="bg-teal-500" size="sm">
+    Button
+  </Button>
+  <Button className="bg-teal-500" size="md">
+    Button
+  </Button>
+  <Button className="bg-teal-500" size="lg">
+    Button
+  </Button>
 </Stack>
 ```
 
@@ -48,19 +48,19 @@ value to either `solid`, `ghost`, `outline`, or `link`.
 > Use `text-[color]` for `outline` and `ghost` variants
 
 ```jsx
-<Stack row spacing='1rem' className='items-center'>
-	<Button className='bg-purple-500' variant='solid'>
-		Button
-	</Button>
-	<Button className='text-purple-500' variant='outline'>
-		Button
-	</Button>
-	<Button className='text-purple-500' variant='ghost'>
-		Button
-	</Button>
-	<Button className='bg-purple-500' variant='link'>
-		Button
-	</Button>
+<Stack row spacing="1rem" className="items-center">
+  <Button className="bg-purple-500" variant="solid">
+    Button
+  </Button>
+  <Button className="text-purple-500" variant="outline">
+    Button
+  </Button>
+  <Button className="text-purple-500" variant="ghost">
+    Button
+  </Button>
+  <Button className="bg-purple-500" variant="link">
+    Button
+  </Button>
 </Stack>
 ```
 
@@ -73,17 +73,17 @@ and `RightIcon` props respectively.
 > strings.
 
 ```jsx
-<Stack row spacing='1rem'>
-	<Button leftIcon={<EmailIcon />} className='bg-teal-500' variant='solid'>
-		Email
-	</Button>
-	<Button
-		rightIcon={<ArrowForwardIcon />}
-		className='text-teal-500'
-		variant='outline'
-	>
-		Call us
-	</Button>
+<Stack row spacing="1rem">
+  <Button leftIcon={<EmailIcon />} className="bg-teal-500" variant="solid">
+    Email
+  </Button>
+  <Button
+    rightIcon={<ArrowForwardIcon />}
+    className="text-teal-500"
+    variant="outline"
+  >
+    Call us
+  </Button>
 </Stack>
 ```
 
@@ -96,13 +96,13 @@ You can also use icons from popular libraries like
 ```jsx
 // import { MdBuild , MdCall } from "react-icons/md"
 
-<Stack row spacing='1rem'>
-	<Button leftIcon={<MdBuild />} className='bg-pink-500' variant='solid'>
-		Settings
-	</Button>
-	<Button rightIcon={<MdCall />} className='bg-blue-500' variant='outline'>
-		Call us
-	</Button>
+<Stack row spacing="1rem">
+  <Button leftIcon={<MdBuild />} className="bg-pink-500" variant="solid">
+    Settings
+  </Button>
+  <Button rightIcon={<MdCall />} className="bg-blue-500" variant="outline">
+    Call us
+  </Button>
 </Stack>
 ```
 
@@ -114,18 +114,18 @@ show a spinner and leave the button's width unchanged.
 You can also pass the `loadingText` prop to show a spinner and the loading text.
 
 ```jsx
-<Stack row spacing='1rem'>
-	<Button isLoading className='bg-purple-500' variant='solid'>
-		Email
-	</Button>
-	<Button
-		isLoading
-		loadingText='Submitting'
-		className='bg-purple-500'
-		variant='outline'
-	>
-		Submit
-	</Button>
+<Stack row spacing="1rem">
+  <Button isLoading className="bg-purple-500" variant="solid">
+    Email
+  </Button>
+  <Button
+    isLoading
+    loadingText="Submitting"
+    className="bg-purple-500"
+    variant="outline"
+  >
+    Submit
+  </Button>
 </Stack>
 ```
 
@@ -144,14 +144,14 @@ or the emotion `css` prop.
 // The size prop affects the height of the button
 // but I can still override it by passing a custom height
 <Button
-	size='md'
-	css={{
-		height: '48px',
-		width: '200px',
-	}}
-	className='bg-gray-300 border-2 border-green-500'
+  size="md"
+  css={{
+    height: "48px",
+    width: "200px",
+  }}
+  className="bg-gray-300 border-2 border-green-500"
 >
-	Button
+  Button
 </Button>
 ```
 

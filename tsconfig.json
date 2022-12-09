@@ -1,41 +1,41 @@
 {
-	"compilerOptions": {
-		"target": "esnext",
-		"importHelpers": true,
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": false,
-		"forceConsistentCasingInFileNames": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"incremental": true,
-		"baseUrl": ".",
-		"downlevelIteration": false,
-		"noImplicitAny": false,
-		"paths": {
-			"utils/*": ["src/utils/*"],
-			"hooks/*": ["src/hooks/*"],
-			"types/*": ["src/types/*"],
-			"components/*": ["src/components/*"],
-			"contentlayer/generated": ["./.contentlayer/generated"]
-		}
-	},
-	"ts-node": {
-		"compilerOptions": {
-			"module": "CommonJS"
-		}
-	},
-	"include": [
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		".contentlayer/generated"
-	],
-	"exclude": ["node_modules"]
+  "compilerOptions": {
+    "target": "esnext",
+    "importHelpers": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "downlevelIteration": false,
+    "noImplicitAny": false,
+    "paths": {
+      "utils/*": ["src/utils/*"],
+      "hooks/*": ["src/hooks/*"],
+      "types/*": ["src/types/*"],
+      "components/*": ["src/components/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".contentlayer/generated"
+  ],
+  "exclude": ["node_modules"]
 }
