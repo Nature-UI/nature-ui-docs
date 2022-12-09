@@ -1,6 +1,4 @@
 ---
-id: alert-dialog
-category: feedback
 title: Alert Dialog
 package: '@nature-ui/alert-dialog'
 description:
@@ -52,28 +50,40 @@ function AlertDialogExample() {
 
   return (
     <>
-      <Button onClick={onOpen}>Delete something</Button>
+      <Button color="red-600" onClick={onOpen}>
+        Delete something
+      </Button>
       <AlertDialog
-        variant="blur"
         isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
         onClose={onClose}
-        title="Please confirm"
-        isCentered
-        footer={
-          <>
-            <Button
-              onClick={onClose}
-              className="mr-3 bg-gray-200 text-gray-700 hover:bg-gray-300"
-            >
-              Nevermind
-            </Button>
-            <Button className="hover:bg-red-600 bg-red-500">Yes, delete</Button>
-          </>
-        }
       >
-        Are you sure you want to delete something? This action is permanent, and
-        we're totally not just flipping a field called "deleted" to "true" in
-        our database, we're actually deleting something.
+        <AlertDialogOverlay>
+          <AlertDialogContent>
+            <AlertDialogHeader>Please Confirm!</AlertDialogHeader>
+            <AlertDialogBody>
+              Are you sure you want to delete something? This action is
+              permanent, and we're totally not just flipping a field called
+              "deleted" to "true" in our database, we're actually deleting
+              something.
+            </AlertDialogBody>
+            <AlertDialogFooter>
+              <Button
+                ref={cancelRef}
+                onClick={onClose}
+                className="bg-gray-200 hover:bg-gray-300"
+              >
+                Nevermind
+              </Button>
+              <Button
+                color="red-500"
+                className="ml-3 text-white hover:bg-red-600"
+              >
+                Yes, delete
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
       </AlertDialog>
     </>
   );
@@ -84,6 +94,13 @@ function AlertDialogExample() {
 
 Set the `variant` prop to `normal` to remove the background blur.
 
+```jsx live="false"
+<AlertDialog variant="normal">
+  No background blur effect
+  <>...</>
+</AlertDialog>
+```
+
 ### Changing the transition
 
 The `Modal` comes with a scale transition by default but you can change it by
@@ -93,32 +110,44 @@ passing a `motionPreset` prop, and set its value to either `slideInBottom`,
 ```jsx
 function TransitionExample() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
 
   return (
     <>
       <Button onClick={onOpen}>Discard</Button>
-
-      <AlertDialog
-        variant="blur"
-        isOpen={isOpen}
-        onClose={onClose}
-        title="Discard Changes"
-        isCentered
-        footer={
-          <>
-            <Button
-              onClick={onClose}
-              className="mr-3 bg-gray-200 text-gray-700 hover:bg-gray-300"
-            >
-              Cancel
-            </Button>
-            <Button className="hover:bg-red-600 bg-red-500">Save</Button>
-          </>
-        }
-      >
-        Are you sure you want to discard all of your notes? 44 words will be
-        deleted.
-      </AlertDialog>
+      <Fade timeout={300} in={isOpen}>
+        {(styles) => (
+          <AlertDialog
+            leastDestructiveRef={cancelRef}
+            onClose={onClose}
+            isOpen={true}
+            isCentered
+          >
+            <AlertDialogOverlay style={styles}>
+              <SlideFade timeout={200} in={isOpen} unmountOnExit={false}>
+                {(styles) => (
+                  <AlertDialogContent style={styles}>
+                    <AlertDialogHeader>Discard Changes?</AlertDialogHeader>
+                    <AlertDialogCloseButton />
+                    <AlertDialogBody>
+                      Are you sure you want to discard all of your notes? 44
+                      words will be deleted.
+                    </AlertDialogBody>
+                    <AlertDialogFooter>
+                      <Button ref={cancelRef} onClick={onClose}>
+                        No
+                      </Button>
+                      <Button color="red-500" className={'ml-3'}>
+                        Yes
+                      </Button>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                )}
+              </SlideFade>
+            </AlertDialogOverlay>
+          </AlertDialog>
+        )}
+      </Fade>
     </>
   );
 }
@@ -137,6 +166,10 @@ function TransitionExample() {
 
 ## Props
 
-| Name    | Type             | Default | Description                                                   |
-| ------- | ---------------- | ------- | ------------------------------------------------------------- |
-| variant | `normal`, `blur` | `blur`  | The least destructive action to get focus when dialog is open |
+AlertDialog and its components compose the `Modal` component. The only exception
+is that it requires a `leastDestructiveRef` which is similar to the
+`initialFocusRef` of `Modal`
+
+| Name                           | Type        | Default | Description                                                   |
+| ------------------------------ | ----------- | ------- | ------------------------------------------------------------- |
+| leastDestructiveRef (required) | `React.Ref` |         | The least destructive action to get focus when dialog is open |
