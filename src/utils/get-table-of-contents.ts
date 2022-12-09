@@ -1,23 +1,23 @@
-import slugger from 'github-slugger';
+import slugger from "github-slugger";
 
 export function getTableOfContents(mdxContent: string) {
-	const regexp = new RegExp(/^(### |## )(.*)\n/, 'gm');
-	const headings = [...mdxContent.matchAll(regexp)];
-	let tableOfContents: any[] = [];
+  const regexp = new RegExp(/^(### |## )(.*)\n/, "gm");
+  const headings = [...mdxContent.matchAll(regexp)];
+  let tableOfContents: any[] = [];
 
-	if (headings.length) {
-		tableOfContents = headings.map((heading) => {
-			const headingText = heading[2].trim();
-			const headingType = heading[1].trim() === '##' ? 'h2' : 'h3';
-			const headingLink = new slugger().slug(headingText, false);
+  if (headings.length) {
+    tableOfContents = headings.map((heading) => {
+      const headingText = heading[2].trim();
+      const headingType = heading[1].trim() === "##" ? "h2" : "h3";
+      const headingLink = new slugger().slug(headingText, false);
 
-			return {
-				text: headingText,
-				id: headingLink,
-				level: headingType,
-			};
-		});
-	}
+      return {
+        text: headingText,
+        id: headingLink,
+        level: headingType,
+      };
+    });
+  }
 
-	return tableOfContents;
+  return tableOfContents;
 }

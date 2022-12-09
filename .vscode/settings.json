@@ -1,3 +1,8 @@
 {
-	"cSpell.words": ["Frontmatter"]
+  "cSpell.words": ["Frontmatter"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  "editor.formatOnSave": true
 }

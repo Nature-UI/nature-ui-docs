@@ -2,7 +2,7 @@
 id: Radio
 category: form
 title: Radio
-package: '@nature-ui/Radio'
+package: "@nature-ui/Radio"
 description: Radios are used when only one choice may be selected in a series of options.
 ---
 
@@ -15,23 +15,23 @@ to style the Radio.
 ## import
 
 ```js
-import { Radio, RadioGroup } from '@nature-ui/core';
+import { Radio, RadioGroup } from "@nature-ui/core";
 ```
 
 ### usage
 
 ```jsx
 function RadioExample() {
-	const [value, setValue] = React.useState('1');
-	return (
-		<RadioGroup onchange={setValue} value={value}>
-			<Stack row>
-				<Radio value='1'>first</Radio>
-				<Radio value='2'>second</Radio>
-				<Radio value='3'>third</Radio>
-			</Stack>
-		</RadioGroup>
-	);
+  const [value, setValue] = React.useState("1");
+  return (
+    <RadioGroup onchange={setValue} value={value}>
+      <Stack row>
+        <Radio value="1">first</Radio>
+        <Radio value="2">second</Radio>
+        <Radio value="3">third</Radio>
+      </Stack>
+    </RadioGroup>
+  );
 }
 ```
 
@@ -42,27 +42,27 @@ you can override the `bg`, `borderBg`,`darkBg`,`darkBorderBg`, of the Radio to a
 see more about these `props` in the props section.
 
 ```jsx
-<RadioGroup defaultValue='2'>
-	<Stack row>
-		<Radio
-			borderBg='border-red-600'
-			darkBg='bg-red-800'
-			darkBorderBg='border-red-800'
-			bg='bg-red-600'
-			value='1'
-		>
-			Radio
-		</Radio>
-		<Radio
-			borderBg='border-green-600'
-			darkBg='bg-green-800'
-			darkBorderBg='border-green-800'
-			bg='bg-green-600'
-			value='2'
-		>
-			Radio
-		</Radio>
-	</Stack>
+<RadioGroup defaultValue="2">
+  <Stack row>
+    <Radio
+      borderBg="border-red-600"
+      darkBg="bg-red-800"
+      darkBorderBg="border-red-800"
+      bg="bg-red-600"
+      value="1"
+    >
+      Radio
+    </Radio>
+    <Radio
+      borderBg="border-green-600"
+      darkBg="bg-green-800"
+      darkBorderBg="border-green-800"
+      bg="bg-green-600"
+      value="2"
+    >
+      Radio
+    </Radio>
+  </Stack>
 </RadioGroup>
 ```
 
@@ -72,55 +72,55 @@ the checkbox comes with 3 sizes.
 
 ```jsx
 <Stack col>
-	<Radio size='sm' name='1'>
-		Radio
-	</Radio>
-	<Radio size='md' name='1'>
-		Radio
-	</Radio>
-	<Radio size='lg' name='1' defaultChecked>
-		Radio
-	</Radio>
+  <Radio size="sm" name="1">
+    Radio
+  </Radio>
+  <Radio size="md" name="1">
+    Radio
+  </Radio>
+  <Radio size="lg" name="1" defaultChecked>
+    Radio
+  </Radio>
 </Stack>
 ```
 
 ### Radio group
 
 ```jsx
-<RadioGroup defaultValue='Option 1' onChange={console.log}>
-	<Stack spacing='1rem'>
-		<Radio value='Option 1'>Option 1</Radio>
-		<Radio value='Option 2'>Option 2</Radio>
-		<Radio value='Option 3'>Option 3</Radio>
-	</Stack>
+<RadioGroup defaultValue="Option 1" onChange={console.log}>
+  <Stack spacing="1rem">
+    <Radio value="Option 1">Option 1</Radio>
+    <Radio value="Option 2">Option 2</Radio>
+    <Radio value="Option 3">Option 3</Radio>
+  </Stack>
 </RadioGroup>
 ```
 
 ### Disabled Radios
 
 ```jsx
-<RadioGroup defaultValue='1'>
-	<Stack row>
-		<Radio value='1' isDisabled>
-			checked
-		</Radio>
-		<Radio value='2'>unchecked</Radio>
-		<Radio value='3'>unchecked</Radio>
-	</Stack>
+<RadioGroup defaultValue="1">
+  <Stack row>
+    <Radio value="1" isDisabled>
+      checked
+    </Radio>
+    <Radio value="2">unchecked</Radio>
+    <Radio value="3">unchecked</Radio>
+  </Stack>
 </RadioGroup>
 ```
 
 ### horizontal alignment
 
 ```jsx
-<RadioGroup defaultValue='1'>
-	<Stack row row>
-		<Radio value='1' isDisabled>
-			Radio 1
-		</Radio>
-		<Radio value='2'>Radio 2</Radio>
-		<Radio value='3'>Radio 3</Radio>
-	</Stack>
+<RadioGroup defaultValue="1">
+  <Stack row row>
+    <Radio value="1" isDisabled>
+      Radio 1
+    </Radio>
+    <Radio value="2">Radio 2</Radio>
+    <Radio value="3">Radio 3</Radio>
+  </Stack>
 </RadioGroup>
 ```
 
@@ -142,51 +142,51 @@ to help with this scenario. here's what you need to do:
 ```jsx manual=true
 // 1. create a component that consumes the `useRadio` hook
 function RadioCard({ className, ...props }) {
-	const { getInputProps, getCheckboxProps, ...rest } = useRadio(props);
+  const { getInputProps, getCheckboxProps, ...rest } = useRadio(props);
 
-	const input = getInputProps();
-	const checkbox = getCheckboxProps();
+  const input = getInputProps();
+  const checkbox = getCheckboxProps();
 
-	const checked = typeof checkbox['data-checked'] === 'string';
-	return (
-		<box as='label' className={className}>
-			<input {...input} />
-			<box
-				{...checkbox}
-				className={`${className} cursor-pointer border rounded-md shadow-md focus:shadow-outline px-5 py-3 ${
-					checked && 'bg-teal-600 text-white border-teal-600'
-				}`}
-			>
-				{props.children}
-			</box>
-		</box>
-	);
+  const checked = typeof checkbox["data-checked"] === "string";
+  return (
+    <box as="label" className={className}>
+      <input {...input} />
+      <box
+        {...checkbox}
+        className={`${className} cursor-pointer border rounded-md shadow-md focus:shadow-outline px-5 py-3 ${
+          checked && "bg-teal-600 text-white border-teal-600"
+        }`}
+      >
+        {props.children}
+      </box>
+    </box>
+  );
 }
 
 // step 2: use the `useRadioGroup` hook to control a group of custom Radios.
 function example() {
-	const options = ['react', 'vue', 'svelte'];
+  const options = ["react", "vue", "svelte"];
 
-	const { getRootProps, getRadioProps } = useRadioGroup({
-		name: 'framework',
-		defaultValue: 'react',
-		onchange: console.log,
-	});
+  const { getRootProps, getRadioProps } = useRadioGroup({
+    name: "framework",
+    defaultValue: "react",
+    onchange: console.log,
+  });
 
-	const group = getRootProps();
+  const group = getRootProps();
 
-	return (
-		<Stack row {...group}>
-			{options.map((value) => {
-				const radio = getRadioProps({ value });
-				return (
-					<RadioCard key={value} {...radio}>
-						{value}
-					</RadioCard>
-				);
-			})}
-		</Stack>
-	);
+  return (
+    <Stack row {...group}>
+      {options.map((value) => {
+        const radio = getRadioProps({ value });
+        return (
+          <RadioCard key={value} {...radio}>
+            {value}
+          </RadioCard>
+        );
+      })}
+    </Stack>
+  );
 }
 
 render(<example />);

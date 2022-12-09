@@ -2,14 +2,14 @@
 id: divider
 category: data-display
 title: Divider
-package: '@nature-ui/layout'
+package: "@nature-ui/layout"
 description: Dividers are used to visually separate content in a list or group.
 ---
 
 ## Import
 
 ```js
-import { Divider } from '@nature-ui/core';
+import { Divider } from "@nature-ui/core";
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ tag.
 Pass the `orientation` prop and set it to either `horizontal` or `vertical`.
 
 ```jsx
-<Divider orientation='horizontal' />
+<Divider orientation="horizontal" />
 ```
 
 If the vertical orientation is used, make sure that the parent element is
@@ -34,20 +34,20 @@ assigned a height.
 
 ```jsx
 <Box
-	css={{
-		height: '50px',
-	}}
+  css={{
+    height: "50px",
+  }}
 >
-	<Divider orientation='vertical' />
+  <Divider orientation="vertical" />
 </Box>
 ```
 
 ## Composition
 
 ```jsx
-<Stack row className='h-32 p-4'>
-	<Divider orientation='vertical' />
-	<p>Nature UI</p>
+<Stack row className="h-32 p-4">
+  <Divider orientation="vertical" />
+  <p>Nature UI</p>
 </Stack>
 ```
 

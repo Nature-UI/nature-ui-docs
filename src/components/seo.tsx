@@ -1,10 +1,10 @@
-import siteConfig from 'configs/site-config';
-import { NextSeo } from 'next-seo';
+import siteConfig from "configs/site-config";
+import { NextSeo } from "next-seo";
 
 export const SEO = ({ title, description }) => (
-	<NextSeo
-		title={title}
-		description={description}
-		titleTemplate={siteConfig.seo.titleTemplate}
-	/>
+  <NextSeo
+    title={title}
+    description={description}
+    titleTemplate={siteConfig.seo.titleTemplate}
+  />
 );

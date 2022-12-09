@@ -2,7 +2,7 @@
 id: avatar
 category: media-and-icons
 title: Avatar
-package: '@nature-ui/avatar'
+package: "@nature-ui/avatar"
 description:
   The Avatar component is used to represent user, and displays the profile
   picture, initials or fallback icon.
@@ -18,20 +18,20 @@ Nature UI exports 3 avatar-related components:
 - `AvatarGroup`: A wrapper to stack multiple Avatars together.
 
 ```js
-import { Avatar, AvatarBadge } from '@nature-ui/core';
+import { Avatar, AvatarBadge } from "@nature-ui/core";
 ```
 
 ## Usage
 
 ```jsx
 <Stack row>
-	<Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
-	<Avatar name='Divine Nature' src='http://bit.ly/divine_n' />
-	<Avatar name='Adam Wathan' src='https://bit.ly/adam-wathan' />
-	<Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
-	<Avatar />
-	<Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
-	<Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' />
+  <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
+  <Avatar name="Divine Nature" src="http://bit.ly/divine_n" />
+  <Avatar name="Adam Wathan" src="https://bit.ly/adam-wathan" />
+  <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
+  <Avatar />
+  <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
+  <Avatar name="Ryan Florence" src="https://bit.ly/ryan-florence" />
 </Stack>
 ```
 
@@ -41,12 +41,12 @@ The `Avatar` component comes in 7 sizes.
 
 ```jsx
 <Stack row>
-	<Avatar size='xs' name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
-	<Avatar size='sm' name='Ryan Florence' src='https://bit.ly/ryan-florence' />
-	<Avatar size='md' name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
-	<Avatar size='lg' name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
-	<Avatar size='xl' name='Adam Wathan' src='https://bit.ly/adam-wathan' />
-	<Avatar size='2xl' name='Divine Nature' src='http://bit.ly/divine_n' />
+  <Avatar size="xs" name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
+  <Avatar size="sm" name="Ryan Florence" src="https://bit.ly/ryan-florence" />
+  <Avatar size="md" name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
+  <Avatar size="lg" name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
+  <Avatar size="xl" name="Adam Wathan" src="https://bit.ly/adam-wathan" />
+  <Avatar size="2xl" name="Divine Nature" src="http://bit.ly/divine_n" />
 </Stack>
 ```
 
@@ -60,9 +60,9 @@ If there is an error loading the `src` of the avatar, there are 2 fallbacks:
 
 ```jsx
 <Stack row>
-	<Avatar name='Kent Dodds' src='http://bit.ly/broken-link' />
-	<Avatar name='Oshigaki Kisame' src='https://bit.ly/broken-link' />
-	<Avatar src='https://bit.ly/broken-link' />
+  <Avatar name="Kent Dodds" src="http://bit.ly/broken-link" />
+  <Avatar name="Oshigaki Kisame" src="https://bit.ly/broken-link" />
+  <Avatar src="https://bit.ly/broken-link" />
 </Stack>
 ```
 
@@ -76,11 +76,11 @@ match your design requirements.
 
 ```jsx
 <Stack row spacing={14}>
-	<Avatar
-		className='bg-primary-500'
-		icon={<AiOutlineUser color='white' size='2rem' />}
-	/>
-	<Avatar className='bg-teal-500' />
+  <Avatar
+    className="bg-primary-500"
+    icon={<AiOutlineUser color="white" size="2rem" />}
+  />
+  <Avatar className="bg-teal-500" />
 </Stack>
 ```
 
@@ -92,14 +92,14 @@ online:
 
 ```jsx
 <Stack row spacing={8}>
-	<Avatar>
-		<AvatarBadge size='1.6em' className='bg-green-500' />
-	</Avatar>
+  <Avatar>
+    <AvatarBadge size="1.6em" className="bg-green-500" />
+  </Avatar>
 
-	{/* You can also change the borderColor and bg of the badge */}
-	<Avatar>
-		<AvatarBadge className='bg-orange-500 border-blue-500' size='1.25em' />
-	</Avatar>
+  {/* You can also change the borderColor and bg of the badge */}
+  <Avatar>
+    <AvatarBadge className="bg-orange-500 border-blue-500" size="1.25em" />
+  </Avatar>
 </Stack>
 ```
 
@@ -114,13 +114,13 @@ component.
 - To adjust the spacing between the avatars, pass the `spacing` prop.
 
 ```jsx
-<AvatarGroup size='md' max={2}>
-	<Avatar name='Divine Nature' src='http://bit.ly/divine_n' />
-	<Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
-	<Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' />
-	<Avatar name='Christian Nwamba' src='https://bit.ly/code-beast' />
-	<Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
-	<Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
+<AvatarGroup size="md" max={2}>
+  <Avatar name="Divine Nature" src="http://bit.ly/divine_n" />
+  <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
+  <Avatar name="Ryan Florence" src="https://bit.ly/ryan-florence" />
+  <Avatar name="Christian Nwamba" src="https://bit.ly/code-beast" />
+  <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
+  <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
 </AvatarGroup>
 ```
 

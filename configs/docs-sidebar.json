@@ -1,222 +1,222 @@
 {
-	"routes": [
-		{
-			"title": "Components",
-			"heading": false,
-			"routes": [
-				{
-					"title": "Layout",
-					"path": "/docs/components/layout",
-					"sort": true,
-					"open": true,
-					"routes": [
-						{
-							"title": "Box",
-							"path": "/docs/components/box"
-						},
-						{
-							"title": "Container",
-							"path": "/docs/components/container"
-						},
-						{
-							"title": "Stack",
-							"path": "/docs/components/stack"
-						}
-					]
-				},
-				{
-					"title": "Forms",
-					"path": "/docs/components/form",
-					"sort": true,
-					"open": true,
-					"routes": [
-						{
-							"title": "Button",
-							"path": "/docs/components/button"
-						},
-						{
-							"title": "Checkbox",
-							"path": "/docs/components/checkbox"
-						},
-						{
-							"title": "Form Control",
-							"path": "/docs/components/form-control"
-						},
-						{
-							"title": "Icon Button",
-							"path": "/docs/components/icon-button"
-						},
-						{
-							"title": "Close Button",
-							"path": "/docs/components/close-button"
-						},
-						{
-							"title": "Input",
-							"path": "/docs/components/input"
-						},
-						{
-							"title": "Number Input",
-							"path": "/docs/components/number-input"
-						},
-						{
-							"title": "Radio",
-							"path": "/docs/components/radio"
-						},
-						{
-							"title": "Textarea",
-							"path": "/docs/components/textarea"
-						}
-					]
-				},
-				{
-					"title": "Feedback",
-					"path": "/docs/components/feedback",
-					"open": true,
-					"sort": true,
-					"routes": [
-						{
-							"title": "Alert",
-							"path": "/docs/components/alert"
-						},
-						{
-							"title": "Circular Progress",
-							"path": "/docs/components/circular-progress"
-						},
-						{
-							"title": "Progress",
-							"path": "/docs/components/progress"
-						},
-						{
-							"title": "Spinner",
-							"path": "/docs/components/spinner"
-						},
-						{
-							"title": "Toast",
-							"path": "/docs/components/toast"
-						}
-					]
-				},
-				{
-					"title": "Data Display",
-					"path": "/docs/components/data-display",
-					"open": true,
-					"sort": true,
-					"routes": [
-						{
-							"title": "Badge",
-							"path": "/docs/components/badge"
-						},
-						{
-							"title": "Divider",
-							"path": "/docs/components/divider"
-						}
-					]
-				},
-				{
-					"title": "Overlay",
-					"path": "/docs/components/overlay",
-					"open": true,
-					"sort": true,
-					"routes": [
-						{
-							"title": "Alert Dialog",
-							"path": "/docs/components/alert-dialog"
-						},
-						{
-							"title": "Drawer",
-							"path": "/docs/components/drawer"
-						},
-						{
-							"title": "Modal",
-							"path": "/docs/components/modal"
-						},
-						{
-							"title": "Popover",
-							"path": "/docs/components/popover"
-						}
-					]
-				},
-				{
-					"title": "Disclosure",
-					"path": "/docs/components/disclosure",
-					"open": true,
-					"sort": true,
-					"routes": [
-						{
-							"title": "Visually Hidden",
-							"path": "/docs/components/visually-hidden"
-						}
-					]
-				},
-				{
-					"title": "Navigation",
-					"path": "/docs/components/navigation",
-					"open": true,
-					"sort": true,
-					"routes": [
-						{
-							"title": "Breadcrumb",
-							"path": "/docs/components/breadcrumb"
-						}
-					]
-				},
-				{
-					"title": "Media & Icons",
-					"path": "/docs/components/media-and-icons",
-					"sort": true,
-					"open": true,
-					"routes": [
-						{
-							"title": "Avatar",
-							"path": "/docs/components/avatar"
-						},
-						{
-							"title": "Icon",
-							"path": "/docs/components/icon"
-						},
-						{
-							"title": "Image",
-							"path": "/docs/components/image"
-						},
-						{
-							"title": "Lazy Image",
-							"path": "/docs/components/lazy-image"
-						}
-					]
-				},
-				{
-					"title": "Others",
-					"path": "/docs/components",
-					"open": true,
-					"sort": true,
-					"routes": [
-						{
-							"title": "Transitions",
-							"path": "/docs/components/transitions"
-						}
-					]
-				},
-				{
-					"title": "Hooks",
-					"path": "/docs/hooks",
-					"open": true,
-					"sort": true,
-					"routes": [
-						{
-							"title": "useClipboard",
-							"path": "/docs/hooks/use-clipboard"
-						},
-						{
-							"title": "useControllable",
-							"path": "/docs/hooks/use-controllable"
-						},
-						{
-							"title": "useDisclosure",
-							"path": "/docs/hooks/use-disclosure"
-						}
-					]
-				}
-			]
-		}
-	]
+  "routes": [
+    {
+      "title": "Components",
+      "heading": false,
+      "routes": [
+        {
+          "title": "Layout",
+          "path": "/docs/components/layout",
+          "sort": true,
+          "open": true,
+          "routes": [
+            {
+              "title": "Box",
+              "path": "/docs/components/box"
+            },
+            {
+              "title": "Container",
+              "path": "/docs/components/container"
+            },
+            {
+              "title": "Stack",
+              "path": "/docs/components/stack"
+            }
+          ]
+        },
+        {
+          "title": "Forms",
+          "path": "/docs/components/form",
+          "sort": true,
+          "open": true,
+          "routes": [
+            {
+              "title": "Button",
+              "path": "/docs/components/button"
+            },
+            {
+              "title": "Checkbox",
+              "path": "/docs/components/checkbox"
+            },
+            {
+              "title": "Form Control",
+              "path": "/docs/components/form-control"
+            },
+            {
+              "title": "Icon Button",
+              "path": "/docs/components/icon-button"
+            },
+            {
+              "title": "Close Button",
+              "path": "/docs/components/close-button"
+            },
+            {
+              "title": "Input",
+              "path": "/docs/components/input"
+            },
+            {
+              "title": "Number Input",
+              "path": "/docs/components/number-input"
+            },
+            {
+              "title": "Radio",
+              "path": "/docs/components/radio"
+            },
+            {
+              "title": "Textarea",
+              "path": "/docs/components/textarea"
+            }
+          ]
+        },
+        {
+          "title": "Feedback",
+          "path": "/docs/components/feedback",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Alert",
+              "path": "/docs/components/alert"
+            },
+            {
+              "title": "Circular Progress",
+              "path": "/docs/components/circular-progress"
+            },
+            {
+              "title": "Progress",
+              "path": "/docs/components/progress"
+            },
+            {
+              "title": "Spinner",
+              "path": "/docs/components/spinner"
+            },
+            {
+              "title": "Toast",
+              "path": "/docs/components/toast"
+            }
+          ]
+        },
+        {
+          "title": "Data Display",
+          "path": "/docs/components/data-display",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Badge",
+              "path": "/docs/components/badge"
+            },
+            {
+              "title": "Divider",
+              "path": "/docs/components/divider"
+            }
+          ]
+        },
+        {
+          "title": "Overlay",
+          "path": "/docs/components/overlay",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Alert Dialog",
+              "path": "/docs/components/alert-dialog"
+            },
+            {
+              "title": "Drawer",
+              "path": "/docs/components/drawer"
+            },
+            {
+              "title": "Modal",
+              "path": "/docs/components/modal"
+            },
+            {
+              "title": "Popover",
+              "path": "/docs/components/popover"
+            }
+          ]
+        },
+        {
+          "title": "Disclosure",
+          "path": "/docs/components/disclosure",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Visually Hidden",
+              "path": "/docs/components/visually-hidden"
+            }
+          ]
+        },
+        {
+          "title": "Navigation",
+          "path": "/docs/components/navigation",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Breadcrumb",
+              "path": "/docs/components/breadcrumb"
+            }
+          ]
+        },
+        {
+          "title": "Media & Icons",
+          "path": "/docs/components/media-and-icons",
+          "sort": true,
+          "open": true,
+          "routes": [
+            {
+              "title": "Avatar",
+              "path": "/docs/components/avatar"
+            },
+            {
+              "title": "Icon",
+              "path": "/docs/components/icon"
+            },
+            {
+              "title": "Image",
+              "path": "/docs/components/image"
+            },
+            {
+              "title": "Lazy Image",
+              "path": "/docs/components/lazy-image"
+            }
+          ]
+        },
+        {
+          "title": "Others",
+          "path": "/docs/components",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Transitions",
+              "path": "/docs/components/transitions"
+            }
+          ]
+        },
+        {
+          "title": "Hooks",
+          "path": "/docs/hooks",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "useClipboard",
+              "path": "/docs/hooks/use-clipboard"
+            },
+            {
+              "title": "useControllable",
+              "path": "/docs/hooks/use-controllable"
+            },
+            {
+              "title": "useDisclosure",
+              "path": "/docs/hooks/use-disclosure"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -9,8 +9,8 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Hey dev, thanks for reporting this issue. Please make sure it is not a duplicate, and check if a PR is active that is related to this issue."
-        pr-message: "Hey Ninja, thank you for your contribution. Please ensure that your PR is properly linked to an issue assigned to you on the project board."
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: "Hey dev, thanks for reporting this issue. Please make sure it is not a duplicate, and check if a PR is active that is related to this issue."
+          pr-message: "Hey Ninja, thank you for your contribution. Please ensure that your PR is properly linked to an issue assigned to you on the project board."
