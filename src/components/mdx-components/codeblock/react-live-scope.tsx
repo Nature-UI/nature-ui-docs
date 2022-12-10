@@ -1,5 +1,6 @@
 import * as Nature from "@nature-ui/core";
 import * as Icons from "@nature-ui/icons";
+import { Link } from "@reach/router";
 import * as Formik from "formik";
 import * as React from "react";
 import { AiOutlineUser } from "react-icons/ai";
@@ -40,4 +41,5 @@ export const reactLiveScope = {
   ...Icons,
   ...reactIcons,
   Lorem,
+  Link,
 };
