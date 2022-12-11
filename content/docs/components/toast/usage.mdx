@@ -2,7 +2,7 @@
 id: toast
 category: feedback
 title: Toast
-package: '@nature-ui/toast'
+package: "@nature-ui/toast"
 description: The toast is used to show alerts on top of an overlay
 ---
 
@@ -13,29 +13,29 @@ time.
 ## Import
 
 ```js
-import { useToast } from '@nature-ui/core';
+import { useToast } from "@nature-ui/core";
 ```
 
 ## Usage
 
 ```jsx
 function ToastExample() {
-	const toast = useToast();
-	return (
-		<Button
-			onClick={() =>
-				toast({
-					title: 'Account created.',
-					description: "We've created your account for you.",
-					status: 'success',
-					duration: 9000,
-					isClosable: true,
-				})
-			}
-		>
-			Show Toast
-		</Button>
-	);
+  const toast = useToast();
+  return (
+    <Button
+      onClick={() =>
+        toast({
+          title: "Account created.",
+          description: "We've created your account for you.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        })
+      }
+    >
+      Show Toast
+    </Button>
+  );
 }
 ```
 
@@ -45,21 +45,21 @@ Display a custom component instead of the default Toast UI.
 
 ```jsx
 function Example() {
-	const toast = useToast();
-	return (
-		<Button
-			onClick={() =>
-				toast({
-					position: 'bottom-left',
-					render: () => (
-						<Box className='bg-blue-500 m-2 text-white p-3'>Hello World</Box>
-					),
-				})
-			}
-		>
-			Show Toast
-		</Button>
-	);
+  const toast = useToast();
+  return (
+    <Button
+      onClick={() =>
+        toast({
+          position: "bottom-left",
+          render: () => (
+            <Box className="bg-blue-500 m-2 text-white p-3">Hello World</Box>
+          ),
+        })
+      }
+    >
+      Show Toast
+    </Button>
+  );
 }
 ```
 
@@ -67,22 +67,22 @@ function Example() {
 
 ```jsx
 function Example() {
-	const toast = useToast();
-	return (
-		<Button
-			onClick={() =>
-				toast({
-					title: 'Warning.',
-					description: 'This is a warning.',
-					status: 'warning',
-					duration: 9000,
-					isClosable: true,
-				})
-			}
-		>
-			Show Warning Toast
-		</Button>
-	);
+  const toast = useToast();
+  return (
+    <Button
+      onClick={() =>
+        toast({
+          title: "Warning.",
+          description: "This is a warning.",
+          status: "warning",
+          duration: 9000,
+          isClosable: true,
+        })
+      }
+    >
+      Show Warning Toast
+    </Button>
+  );
 }
 ```
 
@@ -90,22 +90,22 @@ function Example() {
 
 ```jsx
 function ErrorToast() {
-	const toast = useToast();
-	return (
-		<Button
-			onClick={() =>
-				toast({
-					title: 'An error occurred.',
-					description: 'Unable to create user account.',
-					status: 'error',
-					duration: 9000,
-					isClosable: true,
-				})
-			}
-		>
-			Show Error Toast
-		</Button>
-	);
+  const toast = useToast();
+  return (
+    <Button
+      onClick={() =>
+        toast({
+          title: "An error occurred.",
+          description: "Unable to create user account.",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        })
+      }
+    >
+      Show Error Toast
+    </Button>
+  );
 }
 ```
 
@@ -115,23 +115,23 @@ Using the `position` prop you can adjust where your toast will be popup from.
 
 ```jsx
 function PositionExample() {
-	const toast = useToast();
-	return (
-		<Button
-			onClick={() =>
-				toast({
-					position: 'bottom-left',
-					title: 'Account created.',
-					description: "We've created your account for you.",
-					status: 'success',
-					duration: 9000,
-					isClosable: true,
-				})
-			}
-		>
-			Show Toast
-		</Button>
-	);
+  const toast = useToast();
+  return (
+    <Button
+      onClick={() =>
+        toast({
+          position: "bottom-left",
+          title: "Account created.",
+          description: "We've created your account for you.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        })
+      }
+    >
+      Show Toast
+    </Button>
+  );
 }
 ```
 
