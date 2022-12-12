@@ -23,7 +23,7 @@ const Code = (props) => {
     mountStylesheet = false,
   } = props.children.props;
 
-  const isLive = live === "true" || !!live;
+  const isLive = live === "true" || live === true;
   const language = className?.replace(/language-/, "");
   const rawCode = children.trim();
 
@@ -31,9 +31,10 @@ const Code = (props) => {
     rawCode,
     language,
     noInline: manual,
+    mountStylesheet,
   };
 
-  if (isMounted && language === "jsx" && !!live) {
+  if (isMounted && language === "jsx" && !!isLive) {
     return <ReactLiveBlock editable {...reactLiveBlockProps} />;
   }
 
