@@ -1,11 +1,12 @@
 ---
+id: Popover
+category: overlay
 title: Popover
 package: "@nature-ui/popover"
 description: Popover is a non-modal dialog that floats around a trigger
 ---
 
-Popover is a non-modal dialog that floats around a trigger. It is used to
-display contextual information to the user, and should be paired with a
+It is used to display contextual information to the user, and should be paired with a
 clickable trigger element.
 
 `Popover` is built on top of the [Popper.js](https://popper.js.org/) library,
@@ -97,7 +98,7 @@ function WalkthroughPopover() {
       closeOnBlur={false}
     >
       <PopoverTrigger>
-        <Button className="ml-12  ">Trigger</Button>
+        <Button>Trigger</Button>
       </PopoverTrigger>
       <PopoverContent className="w-full px-3 bg-blue-800 text-white border-blue-800">
         <PopoverHeader className="pt-4 font-bold border-none">
