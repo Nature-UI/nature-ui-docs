@@ -52,7 +52,9 @@ function AlertDialogExample() {
 
   return (
     <>
-      <Button onClick={onOpen}>Delete something</Button>
+      <Button className="bg-primary-500" onClick={onOpen}>
+        Delete something
+      </Button>
       <AlertDialog
         variant="blur"
         isOpen={isOpen}
@@ -96,7 +98,9 @@ function TransitionExample() {
 
   return (
     <>
-      <Button onClick={onOpen}>Discard</Button>
+      <Button className="bg-primary-500" onClick={onOpen}>
+        Discard
+      </Button>
 
       <AlertDialog
         variant="blur"

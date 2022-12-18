@@ -48,7 +48,9 @@ function BasicUsage() {
 
   return (
     <>
-      <Button onClick={onOpen}>Open</Button>
+      <Button className="bg-purple-500" onClick={onOpen}>
+        Open
+      </Button>
 
       <Modal
         variant="blur"
@@ -84,7 +86,9 @@ function Composition() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button className="bg-purple-500" onClick={onOpen}>
+        Open Modal
+      </Button>
       <NatureModal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
@@ -95,10 +99,10 @@ function Composition() {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button className="bg-purple-500" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
+            <Button className="text-purple-500">Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </NatureModal>
@@ -117,7 +121,9 @@ function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button className="bg-purple-500" onClick={onOpen}>
+        Open Modal
+      </Button>
 
       <Modal
         variant="normal"
@@ -127,12 +133,10 @@ function BasicUsage() {
         isCentered
         footer={
           <>
-            <Button onClick={onClose} className="mr-3">
+            <Button onClick={onClose} className="mr-3 bg-purple-500">
               Cancel
             </Button>
-            <Button className="text-purple-500 hover:bg-purple-100">
-              Save
-            </Button>
+            <Button className="text-purple-500">Save</Button>
           </>
         }
       >
@@ -157,7 +161,7 @@ function DrawerExample() {
 
   return (
     <>
-      <Button ref={btnRef} color="purple-500" onClick={onOpen}>
+      <Button ref={btnRef} className="bg-purple-500" onClick={onOpen}>
         Open
       </Button>
 
@@ -178,7 +182,7 @@ function DrawerExample() {
         onClose={onClose}
         footer={
           <>
-            <Button onClick={onClose} className="mr-3">
+            <Button onClick={onClose} className="mr-3 text-purple-500">
               Cancel
             </Button>
             <Button className="bg-red-500">Save</Button>
@@ -224,7 +228,7 @@ function ReturnFocus() {
         Some other content that'll receive focus on close.
       </Box>
 
-      <Button mt={4} onClick={onOpen}>
+      <Button mt={4} className="bg-purple-500" onClick={onOpen}>
         Open Modal
       </Button>
       <Modal
@@ -235,10 +239,10 @@ function ReturnFocus() {
         onClose={onClose}
         footer={
           <>
-            <Button color="red-600" onClick={onClose} className="mr-3">
+            <Button onClick={onClose} className="mr-3 bg-red-500">
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
+            <Button className="text-purple-500">Secondary Action</Button>
           </>
         }
       >
@@ -260,7 +264,9 @@ function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button className="bg-purple-500" onClick={onOpen}>
+        Open Modal
+      </Button>
 
       <NatureModal onClose={onClose} isOpen={isOpen} blockScrollOnMount={false}>
         <ModalOverlay />
@@ -307,8 +313,10 @@ function InitialFocus() {
 
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
-      <Button className={"ml-4"} ref={finalRef}>
+      <Button onClick={onOpen} className="bg-purple-500">
+        Open Modal
+      </Button>
+      <Button className={"ml-4 text-purple-500"} ref={finalRef}>
         I'll receive focus on close
       </Button>
 
@@ -335,10 +343,12 @@ function InitialFocus() {
           </ModalBody>
 
           <ModalFooter>
-            <Button color="purple-500" mr={3}>
+            <Button className="bg-purple-500" mr={3}>
               Save
             </Button>
-            <Button onClick={onClose}>Cancel</Button>
+            <Button onClick={onClose} className="text-purple-500">
+              Cancel
+            </Button>
           </ModalFooter>
         </ModalContent>
       </NatureModal>
@@ -357,32 +367,33 @@ function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button onClick={onOpen} className="bg-purple-500">
+        Open Modal
+      </Button>
 
       <NatureModal
         closeOnOverlayClick={false}
         isOpen={isOpen}
         onClose={onClose}
       >
-        <ModalOverlay>
-          <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <h3 className="font-bold mb-4">
-                Close on overlay click is disabled.
-              </h3>
-              <Lorem count={2} />
-            </ModalBody>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <h3 className="font-bold mb-4">
+              Close on overlay click is disabled.
+            </h3>
+            <Lorem count={2} />
+          </ModalBody>
 
-            <ModalFooter>
-              <Button color="purple-600" className="mr-3" onClick={onClose}>
-                Close
-              </Button>
-              <Button variant="ghost">Secondary Action</Button>
-            </ModalFooter>
-          </ModalContent>
-        </ModalOverlay>
+          <ModalFooter>
+            <Button className="bg-purple-500 mr-3" onClick={onClose}>
+              Close
+            </Button>
+            <Button className="bg-purple-500">Secondary Action</Button>
+          </ModalFooter>
+        </ModalContent>
       </NatureModal>
     </>
   );
@@ -403,7 +414,9 @@ function VerticallyCentered() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button onClick={onOpen} className="bg-purple-500">
+        Open Modal
+      </Button>
 
       <Modal
         isCentered
@@ -412,10 +425,10 @@ function VerticallyCentered() {
         title="Modal Title"
         footer={
           <>
-            <Button color="purple-600" className="mr-3" onClick={onClose}>
+            <Button className="mr-3 text-purple-500" onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
+            <Button className="bg-purple-500">Secondary Action</Button>
           </>
         }
       >
@@ -437,11 +450,14 @@ function TransitionExample() {
 
   return (
     <>
-      <Button onClick={onOpen}>Trigger modal</Button>
+      <Button onClick={onOpen} className="bg-purple-500">
+        Trigger modal
+      </Button>
       <NatureModal
         isOpen={isOpen}
         onClose={onClose}
-        motionPreset="slideInRight"
+        motionPreset="slideInBottom"
+        isCentered
       >
         <ModalOverlay />
         <ModalContent>
@@ -452,10 +468,12 @@ function TransitionExample() {
           </ModalBody>
 
           <ModalFooter>
-            <Button color="purple-500" mr={3}>
+            <Button className="bg-purple-500" mr={3}>
               Save
             </Button>
-            <Button onClick={onClose}>Cancel</Button>
+            <Button className="text-purple-500" onClick={onClose}>
+              Cancel
+            </Button>
           </ModalFooter>
         </ModalContent>
       </NatureModal>
@@ -488,7 +506,7 @@ function ScrollingExample() {
         </Stack>
       </RadioGroup>
 
-      <Button className={"mt-3"} ref={btnRef} onClick={onOpen}>
+      <Button className={"mt-3 bg-purple-500"} ref={btnRef} onClick={onOpen}>
         Trigger modal
       </Button>
 
@@ -498,19 +516,20 @@ function ScrollingExample() {
         isOpen={isOpen}
         scrollBehavior={scrollBehavior}
       >
-        <ModalOverlay>
-          <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <Lorem size={5} />
-              <Lorem size={5} />
-            </ModalBody>
-            <ModalFooter>
-              <Button onClick={onClose}>Close</Button>
-            </ModalFooter>
-          </ModalContent>
-        </ModalOverlay>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Lorem size={5} />
+            <Lorem size={5} />
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={onClose} className="bg-purple-500">
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
       </NatureModal>
     </>
   );

@@ -34,7 +34,9 @@ function FadeEx() {
 
   return (
     <>
-      <Button onClick={onToggle}>Click Me</Button>
+      <Button onClick={onToggle} className="bg-purple-500">
+        Click Me
+      </Button>
       <Fade in={isOpen}>
         <Box className="p-4 text-white bg-teal-500 rounded-md shadow-md mt-4">
           Fade
@@ -54,7 +56,9 @@ function ScaleFadeEx() {
 
   return (
     <>
-      <Button onClick={onToggle}>Click Me</Button>
+      <Button onClick={onToggle} className="bg-purple-500">
+        Click Me
+      </Button>
       <ScaleFade initialScale={0.9} in={isOpen}>
         <Box className="p-4 text-white bg-teal-500 rounded-md shadow-md mt-4">
           Scale Fade
@@ -74,7 +78,9 @@ function SlideEx() {
 
   return (
     <>
-      <Button onClick={onToggle}>Click Me</Button>
+      <Button onClick={onToggle} className="bg-purple-500">
+        Click Me
+      </Button>
       <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
         <Box className="p-10 text-white bg-teal-600 rounded-md shadow-md mt-4">
           Slide <br />
@@ -95,7 +101,9 @@ function SlideFadeEx() {
 
   return (
     <>
-      <Button onClick={onToggle}>Click Me</Button>
+      <Button onClick={onToggle} className="bg-purple-500">
+        Click Me
+      </Button>
       <SlideFade in={isOpen}>
         <Box className="p-10 text-white bg-teal-500 rounded-md shadow-md mt-4">
           Slide Fade <br />
@@ -120,7 +128,9 @@ function CollapseEx() {
 
   return (
     <>
-      <Button onClick={onToggle}>Click Me</Button>
+      <Button onClick={onToggle} className="bg-purple-500">
+        Click Me
+      </Button>
       <Collapse in={isOpen}>
         <Box className="p-10 text-white bg-teal-500 rounded-md shadow-md mt-4">
           Collapses <br />
@@ -148,7 +158,7 @@ function Example() {
         terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
         labore wes anderson cred nesciunt sapiente ea proident.
       </Collapse>
-      <Button size="sm" onClick={handleToggle} className="mt-4">
+      <Button size="sm" onClick={handleToggle} className="mt-4 bg-purple-500">
         Show {show ? "Less" : "More"}
       </Button>
     </>
