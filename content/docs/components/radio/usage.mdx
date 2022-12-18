@@ -24,7 +24,7 @@ import { Radio, RadioGroup } from "@nature-ui/core";
 function RadioExample() {
   const [value, setValue] = React.useState("1");
   return (
-    <RadioGroup onchange={setValue} value={value}>
+    <RadioGroup onChange={setValue} value={value}>
       <Stack row>
         <Radio value="1">first</Radio>
         <Radio value="2">second</Radio>
@@ -149,28 +149,28 @@ function RadioCard({ className, ...props }) {
 
   const checked = typeof checkbox["data-checked"] === "string";
   return (
-    <box as="label" className={className}>
-      <input {...input} />
-      <box
+    <Box as="label" className={className}>
+      <Input {...input} />
+      <Box
         {...checkbox}
         className={`${className} cursor-pointer border rounded-md shadow-md focus:shadow-outline px-5 py-3 ${
           checked && "bg-teal-600 text-white border-teal-600"
         }`}
       >
         {props.children}
-      </box>
-    </box>
+      </Box>
+    </Box>
   );
 }
 
 // step 2: use the `useRadioGroup` hook to control a group of custom Radios.
-function example() {
+function Example() {
   const options = ["react", "vue", "svelte"];
 
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "framework",
     defaultValue: "react",
-    onchange: console.log,
+    onChange: console.log,
   });
 
   const group = getRootProps();
@@ -189,7 +189,7 @@ function example() {
   );
 }
 
-render(<example />);
+render(<Example />);
 ```
 
 ## props
@@ -205,13 +205,13 @@ render(<example />);
 | bgBorder         | `string`             |         | the border color of the Radio when it's checked.(e.g."border-blue-500")                                                                         |
 | darkBorderBg     | `string`             |         | the border color of the Radio when it's checked and on a hover state.(e.g."border-blue-700")                                                    |
 | defaultIsChecked | `boolean`            |         | if `true`, the Radio will be initially checked                                                                                                  |
-| isChecked        | `boolean`            |         | if `true`, the Radio will be checked. you'll need to pass `onchange` to update it's value (since it's now controlled)                           |
+| isChecked        | `boolean`            |         | if `true`, the Radio will be checked. you'll need to pass `onChange` to update it's value (since it's now controlled)                           |
 | isFullWidth      | `boolean`            |         | if `true`, the Radio should take up the full width of the parent                                                                                |
 | size             | `sm`, `md`, `lg`     | `md`    | the size (width and height) of the Radio                                                                                                        |
 | isDisabled       | `boolean`            |         | if `true`, the Radio will be disabled                                                                                                           |
 | isInvalid        | `boolean`            |         | if `true`, the Radio is marked as invalid. changes style of unchecked state                                                                     |
 | children         | `react.reactnode`    |         | the children of the Radio                                                                                                                       |
-| onchange         | `function`           |         | function called when the state of the Radio changes                                                                                             |
+| onChange         | `function`           |         | function called when the state of the Radio changes                                                                                             |
 | onblur           | `function`           |         | function called when you blur out of the Radio                                                                                                  |
 | onfocus          | `function`           |         | function called when the Radio receive focus                                                                                                    |
 | aria-label       | `string`             |         | an accessible label for the Radio in event there's no visible label or `children` was passed                                                    |
