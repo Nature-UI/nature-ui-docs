@@ -61,10 +61,6 @@
             {
               "title": "Radio",
               "path": "/docs/components/radio"
-            },
-            {
-              "title": "Textarea",
-              "path": "/docs/components/textarea"
             }
           ]
         },

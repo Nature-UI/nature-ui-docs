@@ -50,7 +50,7 @@ You can add `colorScheme` prop to any progress bar to apply any color that
 exists in the theme config file.
 
 ```jsx
-<CircularProgress value={30} colorScheme="orange-400" thickness="12px" />
+<CircularProgress value={30} colorScheme="text-orange-400" thickness="12px" />
 ```
 
 ### Adding label
@@ -58,7 +58,12 @@ exists in the theme config file.
 You can add `label` prop to any progress bar to include a label text.
 
 ```jsx
-<CircularProgress label="40%" value={40} colorScheme="green-400" size="50px" />
+<CircularProgress
+  showPercent
+  value={40}
+  colorScheme="text-green-600"
+  size="50px"
+/>
 ```
 
 ### Indeterminate Progress
@@ -67,7 +72,7 @@ Setting the progress to indeterminate means you're not able to determine the
 `value` upfront. Pass the `isIndeterminate` prop to activate this state.
 
 ```jsx
-<CircularProgress isIndeterminate colorScheme="green-300" />
+<CircularProgress isIndeterminate colorScheme="text-primary-500" />
 ```
 
 ### Accessibility
