@@ -32,6 +32,7 @@ function ToastExample() {
           isClosable: true,
         })
       }
+      className="bg-primary-500"
     >
       Show Toast
     </Button>
@@ -48,6 +49,7 @@ function Example() {
   const toast = useToast();
   return (
     <Button
+      className="bg-primary-500"
       onClick={() =>
         toast({
           position: "bottom-left",
@@ -70,6 +72,7 @@ function Example() {
   const toast = useToast();
   return (
     <Button
+      className="bg-primary-500"
       onClick={() =>
         toast({
           title: "Warning.",
@@ -93,6 +96,7 @@ function ErrorToast() {
   const toast = useToast();
   return (
     <Button
+      className="bg-primary-500"
       onClick={() =>
         toast({
           title: "An error occurred.",
@@ -118,6 +122,7 @@ function PositionExample() {
   const toast = useToast();
   return (
     <Button
+      className="bg-primary-500"
       onClick={() =>
         toast({
           position: "bottom-left",

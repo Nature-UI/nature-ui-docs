@@ -71,16 +71,16 @@ If there is an error loading the `src` of the avatar, there are 2 fallbacks:
 You can customize the background color and icon of the fallback avatar icon to
 match your design requirements.
 
-- To update the background, pass the usual `bg` prop.
+- To update the background, pass the usual `color` prop.
 - To update the icon svg, pass the `icon` prop.
 
 ```jsx
 <Stack row spacing={14}>
   <Avatar
-    className="bg-primary-500"
+    color="bg-primary-500"
     icon={<AiOutlineUser color="white" size="2rem" />}
   />
-  <Avatar className="bg-teal-500" />
+  <Avatar color="bg-teal-500" />
 </Stack>
 ```
 
@@ -138,5 +138,6 @@ prop.
 | showBorder | `boolean`                           | `false` | If `true`, the `Avatar` will show a border around it. Best for a group of avatars |
 | name       | `string`                            |         | The name of the user in the avatar                                                |
 | src        | `string`                            |         | The image url of the `Avatar`                                                     |
+| color      | `string`                            |         | tailwindcss color property `Avatar`                                               |
 | icon       | `React.ReactElement`                |         | The icon to use for the fallback avatar                                           |
 | children   | `React.ReactNode`                   |         | The badge at the bottom right corner of the Avatar.                               |

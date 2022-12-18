@@ -34,32 +34,30 @@ function DrawerExample() {
 
   return (
     <>
-      <Button ref={btnRef} color="purple-500" onClick={onOpen}>
+      <Button ref={btnRef} className="bg-primary-500" onClick={onOpen}>
         Open
       </Button>
       <Drawer isOpen={isOpen} onClose={onClose} finalFocusRef={btnRef}>
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerCloseButton />
 
-            <DrawerBody>
-              <Input placeholder="Type here..." />
-            </DrawerBody>
+          <DrawerBody>
+            <Input placeholder="Type here..." />
+          </DrawerBody>
 
-            <DrawerFooter>
-              <Button
-                variant="outline"
-                className="mr-3"
-                color="gray-600"
-                onClick={onClose}
-              >
-                Cancel
-              </Button>
-              <Button color="blue-500">Save</Button>
-            </DrawerFooter>
-          </DrawerContent>
-        </DrawerOverlay>
+          <DrawerFooter>
+            <Button
+              variant="outline"
+              className="mr-3 t text-primary-500"
+              onClick={onClose}
+            >
+              Cancel
+            </Button>
+            <Button className="bg-primary-500">Save</Button>
+          </DrawerFooter>
+        </DrawerContent>
       </Drawer>
     </>
   );
@@ -86,20 +84,19 @@ function PlacementExample() {
           <Radio value="left">Left</Radio>
         </Stack>
       </RadioGroup>
-      <Button color="blue-600" onClick={onOpen}>
+      <Button className="bg-blue-600" onClick={onOpen}>
         Open
       </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerHeader className="border-b">Basic Drawer</DrawerHeader>
-            <DrawerBody>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader className="border-b">Basic Drawer</DrawerHeader>
+          <DrawerBody>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+          </DrawerBody>
+        </DrawerContent>
       </Drawer>
     </>
   );
@@ -119,7 +116,7 @@ function DrawerExample() {
 
   return (
     <>
-      <Button ref={btnRef} color="purple-500" onClick={onOpen}>
+      <Button ref={btnRef} className="bg-purple-500" onClick={onOpen}>
         Open
       </Button>
 
@@ -138,28 +135,26 @@ function DrawerExample() {
         onClose={onClose}
         finalFocusRef={btnRef}
       >
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader>Create your account</DrawerHeader>
 
-            <DrawerBody>
-              <Input placeholder="Type here..." />
-            </DrawerBody>
+          <DrawerBody>
+            <Input placeholder="Type here..." />
+          </DrawerBody>
 
-            <DrawerFooter>
-              <Button
-                variant="outline"
-                className="mr-3"
-                color="gray-600"
-                onClick={onClose}
-              >
-                Cancel
-              </Button>
-              <Button color="blue-500">Save</Button>
-            </DrawerFooter>
-          </DrawerContent>
-        </DrawerOverlay>
+          <DrawerFooter>
+            <Button
+              variant="outline"
+              className="mr-3"
+              className="text-gray-600"
+              onClick={onClose}
+            >
+              Cancel
+            </Button>
+            <Button className="bg-blue-500">Save</Button>
+          </DrawerFooter>
+        </DrawerContent>
       </Drawer>
     </>
   );
@@ -181,7 +176,7 @@ function DrawerExample() {
 
   return (
     <>
-      <Button leftIcon={<AddIcon />} color="purple-500" onClick={onOpen}>
+      <Button leftIcon={<AddIcon />} className="bg-purple-500" onClick={onOpen}>
         Create user
       </Button>
       <Drawer
@@ -198,46 +193,40 @@ function DrawerExample() {
             </DrawerHeader>
 
             <DrawerBody>
-              <Stack spacing="24px">
-                <Box>
-                  <FormLabel htmlFor="username">Name</FormLabel>
+              <Stack col>
+                <FormControl id="username" className="mb-4" isRequired>
+                  <FormLabel>Name</FormLabel>
                   <Input
                     ref={firstField}
-                    id="username"
                     placeholder="Please enter user name"
                   />
-                </Box>
+                </FormControl>
 
-                <Box>
-                  <FormLabel htmlFor="url">Url</FormLabel>
+                <FormControl id="url">
+                  <FormLabel>Url</FormLabel>
                   <Input
                     placeholder="your-website"
                     defaultValue="divinehycenth"
                     addonLeft="https://"
                     addonRight=".com"
                   />
-                </Box>
+                </FormControl>
 
-                <Box>
-                  <FormLabel htmlFor="desc">Description</FormLabel>
+                <FormControl id="description">
+                  <FormLabel>Description</FormLabel>
                   <textarea
                     id="desc"
                     className="w-full p-2 border border-solid border-gray-300"
                   ></textarea>
-                </Box>
+                </FormControl>
               </Stack>
             </DrawerBody>
 
             <DrawerFooter className="border-t">
-              <Button
-                variant="outline"
-                color="gray-600"
-                className="mr-3"
-                onClick={onClose}
-              >
+              <Button className="mr-3 text-gray-600" onClick={onClose}>
                 Cancel
               </Button>
-              <Button color="blue-500">Submit</Button>
+              <Button className="bg-primary-500">Submit</Button>
             </DrawerFooter>
           </DrawerContent>
         </DrawerOverlay>
