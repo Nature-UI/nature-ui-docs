@@ -1,0 +1,265 @@
+---
+id: number-input
+category: form
+title: Number Input
+package: "@nature-ui/number-input"
+description: The NumberInput component is similar to the Input component, but it has controls for incrementing or decrementing numeric values.
+---
+
+## Import
+
+Nature UI exports 5 components for the NumberInput.
+
+- NumberInputWrapper: The wrapper that provides context and logic to the components.
+- NumberInputField: The input field itself.
+- NumberInputStepper: The wrapper for the input's stepper buttons.
+- NumberIncrementStepper: The button to increment the value of the input.
+- NumberDecrementStepper: The button to decrement the value of the input.
+
+```js
+import {
+  NumberDecrementStepper,
+  NumberIncrementStepper,
+  NumberInputField,
+  NumberInputStepper,
+  NumberInputWrapper,
+  useNumberInput,
+  Button,
+  Stack,
+} from "@nature-ui/core";
+import React from "react";
+```
+
+## Usage
+
+Here's a basic usage example of the `NumberInput` component:
+
+```jsx
+<Stack>
+  <NumberInputWrapper defaultValue={0}>
+    <NumberInputField />
+    <NumberInputStepper>
+      <NumberIncrementStepper />
+      <NumberDecrementStepper />
+    </NumberInputStepper>
+  </NumberInputWrapper>
+</Stack>
+```
+
+### Changing the size of the Input
+
+The `NumberInput` component comes in three sizes. The default is `md`.
+
+- `sm` (`32px`)
+- `md` (`40px`)
+- `lg` (`48px`)
+
+```jsx
+<Stack col>
+  <NumberInputWrapper defaultValue={0}>
+    <NumberInputField size="md" />
+    <NumberInputStepper>
+      <NumberIncrementStepper />
+      <NumberDecrementStepper />
+    </NumberInputStepper>
+  </NumberInputWrapper>
+
+  <NumberInputWrapper defaultValue={0}>
+    <NumberInputField size="lg" />
+    <NumberInputStepper>
+      <NumberIncrementStepper />
+      <NumberDecrementStepper />
+    </NumberInputStepper>
+  </NumberInputWrapper>
+</Stack>
+```
+
+### Setting a minimum and maximum value
+
+Pass an integer value to the "min" prop or "max" prop to set an upper and lower limit for the input. By default, the input will restrict the value to stay within the specified range.
+
+```jsx
+<NumberInputWrapper min={10} max={15}>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInputWrapper>
+```
+
+### Setting the step size
+
+Pass the step prop to change the step size when you increment or decrement the value. By default, the value is rounded to match the number of decimals in the step.
+
+```jsx
+<NumberInputWrapper min={0} step={5} max={35}>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInputWrapper>
+```
+
+### With precision
+
+In some cases, you might need the value to be rounded to specific decimal points. Simply pass the precision prop and set it to the number of decimal points.
+
+```jsx
+<NumberInputWrapper defaultValue={10} precision={2} step={0.2}>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInputWrapper>
+```
+
+### Clamp value when user blurs the input
+
+In most cases, users can type custom values in the input field. If the typed value is greater than the max, the value is reset to max when the user blur out of the input.
+
+To disable this behavior, pass clampValueOnBlur and set to false.
+
+> In this example, try to type a value greater than the max. It won't reset the value on blur.
+
+```jsx
+<NumberInputWrapper defaultValue={15} max={25} clampValueOnBlur={false}>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInputWrapper>
+```
+
+### Formatting and Passing the value
+
+```jsx
+function Example() {
+  const [value, setValue] = React.useState("4.53");
+  const format = (val) => `$` + val;
+  const parse = (val) => val.replace(/^\$/, "");
+
+  return (
+    <NumberInputWrapper
+      onChange={(valueString) => setValue(parse(valueString))}
+      value={format(value)}
+    >
+      <NumberInputField />
+      <NumberInputStepper>
+        <NumberIncrementStepper />
+        <NumberDecrementStepper />
+      </NumberInputStepper>
+    </NumberInputWrapper>
+  );
+}
+```
+
+### Create a mobile Number Input
+
+Sometimes, you might need to create a mobile version of the number input. Here's how you can leverage the useNumberInput hook to build one.
+
+```jsx
+function HookUsage() {
+  const {
+    getInputProps,
+    getIncrementButtonProps,
+    getDecrementButtonProps,
+    valueAsNumber,
+  } = useNumberInput({
+    step: 0.01,
+    defaultValue: 1.53,
+    min: 1,
+    max: 6,
+    precision: 2,
+    allowMouseWheel: true,
+  });
+
+  return (
+    <Stack row className="w-[320px]">
+      <Button
+        className="hover:bg-gray-200 rounded-lg text-gray-700 bg-gray-100"
+        {...getDecrementButtonProps()}
+      >
+        -
+      </Button>
+      <Input {...getInputProps()} />
+      <Button
+        className="hover:bg-gray-200 rounded-lg text-gray-700 bg-gray-100"
+        {...getIncrementButtonProps()}
+      >
+        +
+      </Button>
+    </Stack>
+  );
+}
+```
+
+### Hook With Format And Parse
+
+```jsx
+function HookWithFormatAndParse() {
+  const format = (val) => `$` + val;
+  const parse = (val) => val.replace(/^\$/, "");
+  const [value, setValue] = React.useState("4.53");
+
+  const {
+    getInputProps,
+    getIncrementButtonProps,
+    getDecrementButtonProps,
+    valueAsNumber,
+  } = useNumberInput({
+    step: 0.01,
+    value: format(value),
+    min: 1,
+    max: 6,
+    precision: 2,
+    onChange: (valueString) => setValue(parse(valueString)),
+  });
+
+  return (
+    <Stack row>
+      <Button
+        className="hover:bg-gray-200 rounded-lg text-gray-700 bg-gray-100"
+        {...getDecrementButtonProps()}
+      >
+        -
+      </Button>
+      <Input {...getInputProps()} />
+      <Button
+        className="hover:bg-gray-200 rounded-lg text-gray-700 bg-gray-100"
+        {...getIncrementButtonProps()}
+      >
+        +
+      </Button>
+    </Stack>
+  );
+}
+```
+
+### Changing the style
+
+You can change the style of any part of the components using any valid tailwindcss styles in the className prop. You can also change the icons used in the steppers with the children prop.
+
+```jsx
+<NumberInputWrapper>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper children="+" className="bg-emerald-400" />
+    <NumberDecrementStepper children="-" className="bg-rose-400" />
+  </NumberInputStepper>
+</NumberInputWrapper>
+```
+
+## Props
+
+| Name             | Type      | Default | Description                                                                   |
+| ---------------- | --------- | ------- | ----------------------------------------------------------------------------- |
+| defaultValue     | `number`  | `null`  | Specifies default value of the number input.                                  |
+| min              | `number`  | `null`  | The `min` prop Specifies the minimum value of the number input component.     |
+| max              | `number`  | `null`  | The `max` prop Specifies the maximum value of the number input component.     |
+| step             | `number`  | `null`  | The `step` prop provides the increment or decrement step of the number value. |
+| precision        | `number`  | `null`  | Round up values to specific decimal points.                                   |
+| clampValueOnBlur | `boolean` | `false` | `clampValueOnBlur` to reset value to max when the max is exceeded.            |
