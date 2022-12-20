@@ -1,0 +1,58 @@
+---
+title: Installation
+description: How to install and set up Nature UI in your project
+tags: ["principles"]
+---
+
+> Version 2 of Nature UI is only compatible with React 18. If you are still
+> needing to use React 17 or earlier, please use
+> [version 1 of Nature UI](https://v1.nature-ui.com/guides/first-steps) but it's not advisable because of the many changes on version 2.
+
+To use Nature UI in your project, you need to first setup [tailwindcss](https://tailwindcss.com):
+
+### Install tailwindcss
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+
+### Install Nature UI
+
+```bash
+npm i @nature-ui/core
+```
+
+### Using Yarn
+
+```bash
+yarn add -D tailwindcss postcss autoprefixer.
+yarn add @nature-ui/core
+```
+
+After installing Nature UI, you need to set up `Tailwindcss` and `Postcss`. Run the following command to generate both configurations:
+
+```bash
+npx tailwindcss init -p
+```
+
+Finally, you need to update your `Tailwindcss` config file to include contents of `Nature UI` in the node modules.
+
+```diff
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
++   "./src/**/*.{js,jsx,ts,tsx}",
++   "./node_modules/@nature-ui/**/*.{js,ts}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+## Contribute
+
+Whether you're a beginner or advanced Nature UI user, joining our community is
+the best way to connect with like-minded people who build great products with
+the library.

@@ -28,8 +28,8 @@ export const MDXComponents = {
   td: TData,
   a: Anchor,
   p: (props) => <nature.p className="leading-7" {...props} />,
-  ul: (props) => <nature.ul className="mt-7 ml-7" {...props} />,
-  ol: (props) => <nature.ol {...props} />,
+  ul: (props) => <nature.ul className="mt-2 ml-6" {...props} />,
+  ol: (props) => <nature.ol className="mt-2 ml-6" {...props} />,
   li: (props) => <nature.li className="pb-1 list-disc" {...props} />,
   blockquote: (props) => (
     <Alert

@@ -11,7 +11,7 @@ export const CopyButton: React.FC<CopyButtonProps> = ({ code, ...props }) => {
       {...props}
       size="xs"
       color="primary-600"
-      className={`uppercase text-xs h-6 top-0 right-5 z-10`}
+      className={`uppercase text-xs h-6 top-0 right-5 z-10 bg-primary-600 text-gray-100 ${props.className}`}
       css={{ position: "absolute" }}
       onClick={onCopy}
     >
