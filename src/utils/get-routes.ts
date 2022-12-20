@@ -11,7 +11,7 @@ export const getRoutes = (slug?: string) => {
   };
 
   const [, sidebar] =
-    Object.entries(configMap).find(([path]) => slug?.startsWith(path)) ?? [];
+    Object.entries(configMap).find(([path]) => slug.startsWith(path)) ?? [];
 
   const routes = sidebar?.routes ?? [];
   return routes as RouteItem[];

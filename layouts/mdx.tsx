@@ -16,7 +16,7 @@ const MDXLayout: React.FC<MDXLayoutProps> = (props) => {
   const { frontmatter, children, hideToc } = props;
   const routes = getRoutes(frontmatter.slug);
 
-  const route = findRouteByPath(routes, removeFromLast("#", frontmatter.slug));
+  const route = findRouteByPath(removeFromLast(frontmatter.slug, "#"), routes);
   const routeContext = getRouteContext(routes, route);
 
   return (
