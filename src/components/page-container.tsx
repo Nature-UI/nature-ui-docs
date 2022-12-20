@@ -8,6 +8,7 @@ import { FrontmatterHeading } from "src/types/frontmatter";
 import Footer from "./footer";
 import Header from "./header";
 import PageTransition from "./page-transition";
+import TableOfContent from "./table-of-content";
 
 function useHeadingFocusOnRouteChange() {
   const router = useRouter();
@@ -51,37 +52,39 @@ function PageContainer(props: PageContainerProps) {
   } = props;
   useHeadingFocusOnRouteChange();
 
-  const { title, description, editUrl, version } = frontmatter;
+  const { title, description, editUrl, version, headings = [] } = frontmatter;
 
   return (
     <>
       <SEO title={title} description={description} />
       <Header />
-      <Box className="bg-white h-full">
-        <Box centered className="flex max-w-screen-lg mx-auto">
-          {leftSidebar || null}
-          <Box className="flex-1 w-screen">
-            <Box
-              id="content"
-              className="pt-3 px-5 mt:10 md:mt-16 mx-auto max-w-3xl bg-white"
-              css={{
-                minHeight: "76vh",
-              }}
-            >
-              <PageTransition>
-                <h1 className="outline-none text-4xl font-black mt-8 mb-1">
-                  {title}
-                </h1>
-                {version && <Badge color="teal-500">v{version}</Badge>}
-                {children}
-              </PageTransition>
-              <Box className="mt-14">
-                {editUrl && <EditPageLink href={editUrl} />}
-              </Box>
-              {pagination || null}
+      <Box className="bg-white max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+        {leftSidebar || null}
+        <Box className="lg:pl-[19.5rem]">
+          <Box
+            id="content"
+            className="max-w-3xl mx-auto pt-10 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16 min-h-[75vh]"
+          >
+            <PageTransition>
+              <h1 className="outline-none text-4xl font-black mt-8 mb-1">
+                {title}
+              </h1>
+              {version && <Badge color="teal-500">v{version}</Badge>}
+              {children}
+            </PageTransition>
+            <Box className="mt-14">
+              {editUrl && <EditPageLink href={editUrl} />}
             </Box>
-            <Footer />
+            {pagination || null}
+            {!hideToc && (
+              <TableOfContent
+                visibility={headings.length === 0 ? "hidden" : "initial"}
+                headings={headings}
+              />
+            )}
+            {rightSidebar}
           </Box>
+          <Footer />
         </Box>
       </Box>
     </>

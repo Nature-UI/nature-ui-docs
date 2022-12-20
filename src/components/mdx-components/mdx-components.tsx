@@ -2,7 +2,7 @@ import { Alert, Box, Divider, nature } from "@nature-ui/core";
 import { Anchor } from "./anchor";
 import { CodeBlock } from "./codeblock";
 import { LinkedHeading } from "./linked-heading";
-import { Table, TData, THead } from "./table";
+import { TData, THead, Table } from "./table";
 
 export const MDXComponents = {
   h1: (props) => (
@@ -27,13 +27,13 @@ export const MDXComponents = {
   th: THead,
   td: TData,
   a: Anchor,
-  p: (props) => <nature.p className="mt-5 leading-7" {...props} />,
+  p: (props) => <nature.p className="leading-7" {...props} />,
   ul: (props) => <nature.ul className="mt-7 ml-7" {...props} />,
   ol: (props) => <nature.ol {...props} />,
   li: (props) => <nature.li className="pb-1 list-disc" {...props} />,
   blockquote: (props) => (
     <Alert
-      className="mt-4 rounded-md my-6"
+      className="rounded my-6 p-4"
       role="none"
       status="warning"
       variant="left-accent"
