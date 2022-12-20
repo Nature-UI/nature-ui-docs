@@ -56,7 +56,7 @@ const Code = (props) => {
           showLines={viewlines}
         />
       </CodeContainer>
-      <CopyButton className="top-4" code={rawCode} />
+      <CopyButton className="top-2" code={rawCode} />
     </Box>
   );
 };

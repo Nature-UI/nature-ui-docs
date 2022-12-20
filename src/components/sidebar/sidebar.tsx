@@ -122,7 +122,7 @@ const mainNavLinks = [
   },
   {
     icon: DocumentationIcon,
-    href: "/docs/components",
+    href: "/docs/components/box",
     label: "Components",
   },
   {
@@ -132,22 +132,6 @@ const mainNavLinks = [
     match: (asPath: string, href: string) =>
       href.startsWith("/docs/hooks") && asPath.startsWith("/docs/hooks"),
   },
-  // TODO: Coming soon
-  // {
-  //   icon: <Showcase />,
-  //   href: '/showcase',
-  //   label: 'Showcase',
-  // },
-  // {
-  //   icon: <TeamIcon />,
-  //   href: '/team',
-  //   label: 'Team',
-  // },
-  // {
-  //   icon: <BlogIcon />,
-  //   href: '/blog',
-  //   label: 'Blog',
-  // },
 ];
 
 const MainNavLinkGroup = (props: BoxProps) => {

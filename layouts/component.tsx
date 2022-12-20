@@ -27,12 +27,6 @@ export default function ComponentDocsLayout({
       {id && (
         <Stack spacing="5">
           <MDXComponents.p>{frontmatter.description}</MDXComponents.p>
-          {/* <MDXComponents.ComponentLinks
-            theme={hasTheme && { componentName: id }}
-            github={{ package: id }}
-            npm={{ package: frontmatter.package }}
-          /> */}
-          {/* TODO: Add links to npm and github package */}
         </Stack>
       )}
 
