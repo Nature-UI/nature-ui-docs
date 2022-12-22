@@ -191,26 +191,6 @@
               "path": "/docs/components/transitions"
             }
           ]
-        },
-        {
-          "title": "Hooks",
-          "path": "/docs/hooks",
-          "open": true,
-          "sort": true,
-          "routes": [
-            {
-              "title": "useClipboard",
-              "path": "/docs/hooks/use-clipboard"
-            },
-            {
-              "title": "useControllable",
-              "path": "/docs/hooks/use-controllable"
-            },
-            {
-              "title": "useDisclosure",
-              "path": "/docs/hooks/use-disclosure"
-            }
-          ]
         }
       ]
     }

@@ -172,7 +172,7 @@ const Sidebar = ({ routes }) => {
         ref={ref}
         as="nav"
         aria-label="Main Navigation"
-        className="fixed top-[4.2rem] left-[max(0px,calc(50%-45rem))] w-[19.5rem] px-8 pb-12 right-auto hidden md:block overflow-y-auto h-full"
+        className="fixed top-[4.2rem] left-[max(0px,calc(50%-45rem))] w-[19.5rem] px-8 pb-12 right-auto hidden md:block overflow-y-auto max-h-[93vh] h-full"
       >
         <MainNavLinkGroup className="mb-10" />
         <SidebarContent routes={routes} pathname={pathname} contentRef={ref} />
