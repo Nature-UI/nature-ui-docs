@@ -19,11 +19,11 @@ The `useClipboard` hook takes the following arguments:
 
 The `useClipboard` hook returns an object with the following fields:
 
-| Name        | Type       | Default | Description                                                                                                                                                                       |
-| ----------- | ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `value`     | `string`   |         | The copied value.                                                                                                                                                                 |
-| `onCopy`    | `function` |         | Callback function to copy content.                                                                                                                                                |
-| `hasCopied` | `boolean`  | `false` | If `true`, the content has been copied within the last `timeout` milliseconds. That is, it is set to true right after `onCopy` is called, and `false` after `timeout` has passed. |
+| Name     | Type       | Default | Description                                                                                                                                                                       |
+| -------- | ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `value`  | `string`   |         | The copied value.                                                                                                                                                                 |
+| `onCopy` | `function` |         | Callback function to copy content.                                                                                                                                                |
+| `copied` | `boolean`  | `false` | If `true`, the content has been copied within the last `timeout` milliseconds. That is, it is set to true right after `onCopy` is called, and `false` after `timeout` has passed. |
 
 ## Import
 
@@ -36,7 +36,7 @@ import { useClipboard } from "@nature-ui/core";
 ```jsx
 function Example() {
   const [value, setValue] = React.useState("");
-  const { hasCopied, onCopy } = useClipboard(value);
+  const { copied, onCopy } = useClipboard(value);
 
   return (
     <>
@@ -47,7 +47,7 @@ function Example() {
           onChange={(e) => setValue(e.target.value)}
         />
         <Button onClick={onCopy} className="bg-primary-500 mb-2">
-          {hasCopied ? "Copied" : "Copy"}
+          {copied ? "Copied" : "Copy"}
         </Button>
       </Stack>
       <FormControl id="first-name">
