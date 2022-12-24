@@ -1,8 +1,8 @@
-import React from "react";
 import { Icon, Stack, nature } from "@nature-ui/core";
+import { FC } from "react";
 import { MdEdit } from "react-icons/md";
 
-export const EditPageLink: React.FC<{ href?: string }> = ({ href }) => {
+export const EditPageLink: FC<{ href?: string }> = ({ href }) => {
   return (
     <nature.a href={href} className="hover:underline" target="_blank">
       <Stack className="inline-flex items-center opacity-70" row spacing="1rem">

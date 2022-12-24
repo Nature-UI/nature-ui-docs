@@ -1,4 +1,3 @@
-import * as React from "react";
 import { HTMLMotionProps, motion } from "framer-motion";
 
 const PageTransition = (props: HTMLMotionProps<"main">) => (

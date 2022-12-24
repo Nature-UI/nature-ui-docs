@@ -1,7 +1,7 @@
 import { Box, Container, IconButton, Stack } from "@nature-ui/core";
 import siteConfig from "configs/site-config";
 import Link from "next/link";
-import React from "react";
+import { ElementType, FC } from "react";
 import {
   IoGlobeOutline,
   IoLogoDiscord,
@@ -42,12 +42,12 @@ export const links = [
 ];
 
 type FooterLinkProps = {
-  icon?: React.ElementType;
+  icon?: ElementType;
   href: string;
   label?: string;
 };
 
-const FooterLink: React.FC<FooterLinkProps> = ({
+const FooterLink: FC<FooterLinkProps> = ({
   icon: Icon,
   href,
   label,

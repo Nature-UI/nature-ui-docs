@@ -16,5 +16,5 @@ module.exports = withContentlayer({
   },
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
-  // swcMinify: true
+  swcMinify: true,
 });

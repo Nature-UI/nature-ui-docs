@@ -1,7 +1,7 @@
 import { nature } from "@nature-ui/core";
 import BaseHighlight, { defaultProps, Language } from "prism-react-renderer";
 import nightOwlTheme from "prism-react-renderer/themes/nightOwl";
-import * as React from "react";
+import { FC } from "react";
 import { liveEditorStyle } from "./styles";
 
 const RE = /{([\d,-]+)}/;
@@ -35,7 +35,7 @@ interface HighlightProps {
   showLines?: boolean;
 }
 
-export const Highlight: React.FC<HighlightProps> = ({
+export const Highlight: FC<HighlightProps> = ({
   codeString,
   language,
   metaString,

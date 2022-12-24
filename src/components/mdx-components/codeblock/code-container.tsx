@@ -1,7 +1,7 @@
 import { Box, HTMLNatureProps } from "@nature-ui/core";
-import React from "react";
+import { FC } from "react";
 
-export const CodeContainer: React.FC<HTMLNatureProps<"div">> = ({
+export const CodeContainer: FC<HTMLNatureProps<"div">> = ({
   className,
   ...props
 }) => (

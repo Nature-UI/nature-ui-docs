@@ -1,4 +1,3 @@
-import React from "react";
 import { nature } from "@nature-ui/core";
 
 const Svg = nature("svg");
