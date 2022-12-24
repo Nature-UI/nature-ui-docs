@@ -1,0 +1,63 @@
+---
+title: useRadio
+package: "@nature-ui/radio"
+description: "React hook to manage radio."
+---
+
+`useRadio` is a custom hook used to provide radio functionality, as well as
+state and focus management to custom radio components when using it.
+
+## Import
+
+```js
+import { useRadio } from "@nature-ui/core";
+```
+
+## Return value
+
+The `useRadio` hook returns following props
+
+| Name               | Type         | Description                                                              |
+| ------------------ | ------------ | ------------------------------------------------------------------------ |
+| `state`            | `RadioState` | An object that contains all props defining the current state of a radio. |
+| `getCheckboxProps` | `PropGetter` | A function to get the props of the radio.                                |
+| `getInputProps`    | `PropGetter` | A function to get the props of the input field.                          |
+| `getLabelProps`    | `PropGetter` | A function to get the props of the radio label.                          |
+| `getRootProps`     | `PropGetter` | A function to get the props of the radio root.                           |
+| `htmlProps`        | `{}`         | An object with all htmlProps.                                            |
+
+> The `getCheckboxProps` function does return the props of the radio. The naming
+> error is known. Changing it would mean a breaking change to a lot of users,
+> which is why it will stay like this until the next major release.
+
+## Usage
+
+```jsx
+function Example() {
+  const CustomRadio = (props) => {
+    const { image, ...radioProps } = props;
+    const { state, getInputProps, getCheckboxProps, htmlProps, getLabelProps } =
+      useRadio(radioProps);
+
+    return (
+      <nature.label {...htmlProps} className="cursor-pointer">
+        <input {...getInputProps({})} hidden />
+        <Box
+          {...getCheckboxProps()}
+          className={`rounded-full w-12 p-1 ${
+            state.isChecked ? "bg-green-200" : "bg-transparent"
+          }`}
+        >
+          <Image src={image} className="rounded-full" {...getLabelProps()} />
+        </Box>
+      </nature.label>
+    );
+  };
+
+  return (
+    <div>
+      <CustomRadio image={"https://randomuser.me/api/portraits/men/86.jpg"} />
+    </div>
+  );
+}
+```
