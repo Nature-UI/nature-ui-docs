@@ -20,32 +20,8 @@
               "path": "/docs/hooks/use-controllable"
             },
             {
-              "title": "useDimensions",
-              "path": "/docs/hooks/use-dimensions"
-            },
-            {
               "title": "useDisclosure",
               "path": "/docs/hooks/use-disclosure"
-            },
-            {
-              "title": "useMergeRefs",
-              "path": "/docs/hooks/use-merge-refs"
-            },
-            {
-              "title": "useOutsideClick",
-              "path": "/docs/hooks/use-outside-click"
-            },
-            {
-              "title": "usePrefersReducedMotion",
-              "path": "/docs/hooks/use-prefers-reduced-motion"
-            },
-            {
-              "title": "useTheme",
-              "path": "/docs/hooks/use-theme"
-            },
-            {
-              "title": "useToken",
-              "path": "/docs/hooks/use-token"
             }
           ]
         },
@@ -64,10 +40,6 @@
             {
               "title": "useRadio",
               "path": "/docs/hooks/use-radio"
-            },
-            {
-              "title": "useRadioGroup",
-              "path": "/docs/hooks/use-radio-group"
             }
           ]
         }
