@@ -1,0 +1,71 @@
+---
+title: useCheckboxGroup
+package: "@nature-ui/checkbox"
+description: "React hooks to manage checkbox groups."
+---
+
+`useCheckboxGroup` is a custom hook that provides all the state management logic
+for a group of checkboxes.
+
+## Import
+
+```js
+import { useCheckboxGroup } from "@nature-ui/core";
+```
+
+## Return value
+
+The `useCheckboxGroup` hook returns following props
+
+| Name               | Type                                | Description                                                                                                             |
+| ------------------ | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `value`            | `StringOrNumber[]`                  | The value of checkbox group.                                                                                            |
+| `isDisabled`       | `boolean`                           | A function to set the boolean value to `false`.                                                                         |
+| `onChange`         | `(input: EventOrValue) => void`     | The onChange handler for the checkbox group.                                                                            |
+| `setValue`         | `(state: StringOrNumber[]) => void` | A function to set the value of the checkbox group.                                                                      |
+| `getCheckboxProps` | `(props?: Dict) => Dict`            | A function that takes checkbox props returns them with a onChange handler for the checkbox group and the checked state. |
+
+## Usage
+
+```jsx
+function Example() {
+  const CustomCheckbox = (props) => {
+    const { state, getCheckboxProps, getInputProps, getLabelProps, htmlProps } =
+      useCheckbox(props);
+
+    return (
+      <nature.label
+        className="flex flex-row items-center gap-x-2 max-w-[9rem] bg-green-100 border border-solid border-green-500 rounded-lg px-3 py-1 cursor-pointer"
+        {...htmlProps}
+      >
+        <input {...getInputProps()} hidden />
+        <Stack
+          col
+          className="items-center justify-center border-2 border-solid border-green-500 w-4 h-4"
+          {...getCheckboxProps()}
+        >
+          {state.isChecked && <Box className="bg-green-500 h-2 w-2" />}
+        </Stack>
+        <p className="text-gray-700" {...getLabelProps()}>
+          Click me
+        </p>
+      </nature.label>
+    );
+  };
+
+  const { value, getCheckboxProps } = useCheckboxGroup({
+    defaultValue: ["2"],
+  });
+
+  return (
+    <>
+      <nature.p>
+        The selected checkboxes are: {value.sort().join(" and ")}
+      </nature.p>
+      <CustomCheckbox {...getCheckboxProps({ value: "1" })} />
+      <CustomCheckbox {...getCheckboxProps({ value: "2" })} />
+      <CustomCheckbox {...getCheckboxProps({ value: "3" })} />
+    </>
+  );
+}
+```
