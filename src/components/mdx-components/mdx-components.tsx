@@ -20,7 +20,7 @@ export const MDXComponents = {
   h4: (props) => <LinkedHeading as="h4" {...props} />,
   hr: (props) => <Divider {...props} />,
   strong: (props) => <Box as="strong" className="font-medium " {...props} />,
-  code: (props) => <nature.code className="text-accent-600 " {...props} />,
+  code: (props) => <nature.code className="text-orange-600 " {...props} />,
   pre: CodeBlock,
   br: (props) => <Box height="24px" {...props} />,
   table: Table,

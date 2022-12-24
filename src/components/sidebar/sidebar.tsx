@@ -101,12 +101,15 @@ const MainNavLink = ({ href, icon: NavIcon, children, isActive }) => {
           }
         )}
       >
-        <nature.div className="flex items-center justify-center w-6 h-6 border-primary-300 border rounded-md mr-3 text-primary-400 overflow-hidden">
-          <NavIcon
-            className={clsx({
-              "bg-primary-500": active,
-            })}
-          />
+        <nature.div
+          className={clsx(
+            `flex items-center justify-center w-6 h-6 border-gray-300 border-[1.5px] rounded-md mr-3 text-primary-400 overflow-hidden`,
+            {
+              "border-primary-500 ": active,
+            }
+          )}
+        >
+          <NavIcon />
         </nature.div>
         {children}
       </nature.a>
@@ -172,7 +175,7 @@ const Sidebar = ({ routes }) => {
         ref={ref}
         as="nav"
         aria-label="Main Navigation"
-        className="fixed top-[4.2rem] left-[max(0px,calc(50%-45rem))] w-[19.5rem] px-8 pb-12 right-auto hidden md:block overflow-y-auto max-h-[93vh] h-full"
+        className="hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto"
       >
         <MainNavLinkGroup className="mb-10" />
         <SidebarContent routes={routes} pathname={pathname} contentRef={ref} />

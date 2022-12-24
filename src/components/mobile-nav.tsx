@@ -148,7 +148,7 @@ export const MobileNaveContent: React.FC<MobileNavContentProps> = (props) => {
 export const MobileNavButton = React.forwardRef(
   (props: IconButtonProps, ref: React.Ref<any>) => {
     return (
-      <div className="md:hidden justify-end flex items-center">
+      <div className="lg:hidden justify-end flex items-center">
         <Link
           aria-label="Go to Nature UI GitHub page"
           href={siteConfig.repo.url}
@@ -156,12 +156,12 @@ export const MobileNavButton = React.forwardRef(
         >
           <IconButton
             className="md:hidden text-gray-500 hover:text-gray-75 transition-colors duration-150"
-            size="lg"
+            size="sm"
             icon={<GithubIcon />}
           />
         </Link>
         <IconButton
-          className="md:hidden text-xl  ml-3"
+          className="text-xl ml-3"
           ref={ref}
           css={{
             paddingLeft: "5px !important",
