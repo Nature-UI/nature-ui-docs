@@ -1,0 +1,62 @@
+---
+title: useCheckbox
+package: "@nature-ui/checkbox"
+description: "React hook to manage checkboxes."
+---
+
+`useCheckbox` is a custom hook used to provide checkbox functionality, as well
+as state and focus management to custom checkbox components when using it.
+
+## Import
+
+```js
+import { useCheckbox } from "@nature-ui/core";
+```
+
+## Return value
+
+The `useCheckbox` hook returns following props
+
+| Name               | Type            | Description                                                                 |
+| ------------------ | --------------- | --------------------------------------------------------------------------- |
+| `state`            | `CheckboxState` | An object that contains all props defining the current state of a checkbox. |
+| `getCheckboxProps` | `PropGetter`    | A function to get the props of the checkbox.                                |
+| `getInputProps`    | `PropGetter`    | A function to get the props of the input field.                             |
+| `getLabelProps`    | `PropGetter`    | A function to get the props of the checkbox label.                          |
+| `htmlProps`        | `{}`            | An object with all htmlProps.                                               |
+
+## Usage
+
+```jsx
+function Example() {
+  const CustomCheckbox = (props) => {
+    const { state, getCheckboxProps, getInputProps, getLabelProps, htmlProps } =
+      useCheckbox(props);
+
+    return (
+      <nature.label
+        className="flex flex-row items-center gap-x-2 max-w-[9rem] bg-green-100 border border-solid border-green-500 rounded-lg px-3 py-1 cursor-pointer"
+        {...htmlProps}
+      >
+        <input {...getInputProps()} hidden />
+        <Stack
+          col
+          className="items-center justify-center border-2 border-solid border-green-500 w-4 h-4"
+          {...getCheckboxProps()}
+        >
+          {state.isChecked && <Box className="bg-green-500 h-2 w-2" />}
+        </Stack>
+        <p className="text-gray-700" {...getLabelProps()}>
+          Click me
+        </p>
+      </nature.label>
+    );
+  };
+
+  return (
+    <div>
+      <CustomCheckbox />
+    </div>
+  );
+}
+```
