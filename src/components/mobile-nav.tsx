@@ -12,7 +12,15 @@ import {
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import {
+  FC,
+  forwardRef,
+  ReactNode,
+  Ref,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { RemoveScroll } from "react-remove-scroll";
 
 import siteConfig from "configs/site-config";
@@ -25,10 +33,10 @@ import { SidebarContent } from "./sidebar";
 
 interface NavLinkProps {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
+const NavLink: FC<NavLinkProps> = ({ href, children }) => {
   const { pathname } = useRouter();
 
   const [, group] = href.split("/");
@@ -54,10 +62,10 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
 
 const ScrollView = (props: BoxProps & { onScroll?: any }) => {
   const { onScroll, ...rest } = props;
-  const [y, setY] = React.useState(0);
-  const elRef = React.useRef<any>();
+  const [y, setY] = useState(0);
+  const elRef = useRef<any>();
   const { scrollY } = useScroll({ container: elRef });
-  React.useEffect(() => {
+  useEffect(() => {
     return scrollY.onChange(() => setY(scrollY.get()));
   }, [scrollY]);
 
@@ -80,9 +88,9 @@ interface MobileNavContentProps {
   onClose: () => void;
 }
 
-export const MobileNaveContent: React.FC<MobileNavContentProps> = (props) => {
+export const MobileNaveContent: FC<MobileNavContentProps> = (props) => {
   const { isOpen, onClose } = props;
-  const closeBtnRef = React.useRef<HTMLButtonElement | null>(null);
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const { pathname } = useRouter();
 
   useRouteChanged(onClose);
@@ -95,7 +103,7 @@ export const MobileNaveContent: React.FC<MobileNavContentProps> = (props) => {
     }
   }, [isOpen]);
 
-  const [shadow, setShadow] = React.useState<string>();
+  const [shadow, setShadow] = useState<string>();
 
   return (
     <AnimatePresence>
@@ -145,8 +153,8 @@ export const MobileNaveContent: React.FC<MobileNavContentProps> = (props) => {
   );
 };
 
-export const MobileNavButton = React.forwardRef(
-  (props: IconButtonProps, ref: React.Ref<any>) => {
+export const MobileNavButton = forwardRef(
+  (props: IconButtonProps, ref: Ref<any>) => {
     return (
       <div className="lg:hidden justify-end flex items-center">
         <Link

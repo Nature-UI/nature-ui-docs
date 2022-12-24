@@ -1,11 +1,11 @@
-import { clsx, nature, PropsOf } from "@nature-ui/core";
+import { clsx, forwardRef, nature, PropsOf } from "@nature-ui/core";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import { Ref } from "react";
 
-const StyledLink = React.forwardRef(function StyledLink(
+const StyledLink = forwardRef(function StyledLink(
   props: PropsOf<typeof nature.a> & { isActive?: boolean },
-  ref: React.Ref<any>
+  ref: Ref<any>
 ) {
   const { isActive, ...rest } = props;
 

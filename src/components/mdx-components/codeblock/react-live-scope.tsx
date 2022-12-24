@@ -2,7 +2,7 @@ import Button from "@custom/button";
 import * as Nature from "@nature-ui/core";
 import * as Icons from "@nature-ui/icons";
 import * as Formik from "formik";
-import * as React from "react";
+import React from "react";
 import { AiOutlineUser } from "react-icons/ai";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import {

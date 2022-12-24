@@ -3,10 +3,10 @@ import { Box, BoxProps, clsx, nature, Stack } from "@nature-ui/core";
 import { Search } from "components/algolia-search";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import * as React from "react";
 import { FaTools } from "react-icons/fa";
 import { RouteItem, Routes } from "utils/get-route-context";
 
+import { Fragment, useRef } from "react";
 import SidebarCategory from "./sidebar-category";
 import { DocsIcon, DocumentationIcon } from "./sidebar-icons";
 import SidebarLink from "./sidebar-link";
@@ -30,7 +30,7 @@ export function SidebarContent(props: SidebarContentProps) {
     <>
       {routes.map((lvl1, idx) => {
         return (
-          <React.Fragment key={String(idx)}>
+          <Fragment key={String(idx)}>
             {lvl1.heading && (
               <nature.h4 className="text-sm font-bold my-5 uppercase text-gray-600">
                 {lvl1.title}
@@ -80,7 +80,7 @@ export function SidebarContent(props: SidebarContentProps) {
                 </SidebarCategory>
               );
             })}
-          </React.Fragment>
+          </Fragment>
         );
       })}
     </>
@@ -170,7 +170,7 @@ const MainNavLinkGroup = (props: BoxProps) => {
 
 const Sidebar = ({ routes }) => {
   const { pathname } = useRouter();
-  const ref = React.useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   return (
     <>

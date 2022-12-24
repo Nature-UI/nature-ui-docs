@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 
 import { EditPageLink } from "components/edit-page-button";
-import { SEO } from "components/seo";
+import SEO from "components/seo";
 import { FrontmatterHeading } from "src/types/frontmatter";
 import Footer from "./footer";
 import Header from "./header";
