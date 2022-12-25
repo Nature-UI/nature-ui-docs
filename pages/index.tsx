@@ -1,68 +1,67 @@
-import { Box, Button, Container, Input } from "@nature-ui/core";
+import { Box, Button, Container } from "@nature-ui/core";
+import Link from "next/link";
+import { AiFillThunderbolt } from "react-icons/ai";
+import { IoLogoGithub } from "react-icons/io";
+import { MdAccessibility, MdGrain, MdPalette } from "react-icons/md";
+
 import { Feature } from "components/feature";
 import Footer from "components/footer";
 import Header from "components/header";
-import { SEO } from "components/seo";
-import Link from "next/link";
-import { AiFillThunderbolt } from "react-icons/ai";
-import { FiSearch } from "react-icons/fi";
-import { MdAccessibility, MdGrain, MdPalette } from "react-icons/md";
+import SEO from "components/seo";
+import siteConfig from "configs/site-config";
+
 const Index = () => {
   return (
-    <>
+    <div className="bg-slate-100">
       <SEO
         title="Nature UI - A simple, modular, extensible and accessible component library based on tailwindcss that gives you the building blocks you need to build your React applications."
         description="Simple, Modular and Accessible UI Components based on Tailwindcss for your React Applications."
       />
       <Header />
       <main className="grid place-items-center w-full bg-white md:pb-24 pb-12 px-4 md:px-0">
-        <Container
-          size="md"
-          className="text-center items-center py-7 justify-center mt-16 md:mt-28 mb-12"
-        >
-          <h1
-            style={{
-              lineHeight: 1.3,
-            }}
-            className="text-4xl md:text-7xl font-bold md:font-black text-[#1b1b1b]"
-          >
+        <Container size="md" className="text-center mt-16 md:mt-28 mb-12">
+          <h1 className="text-4xl md:text-7xl font-bold md:font-black text-gray-1000 leading-10">
             Set of Lightview and fully customizable React Components optimized
             for <span className="text-primary-500">TailwindCss</span>
           </h1>
 
-          <Box className="mt-12 sm:flex items-center justify-center">
-            <Box>
-              <Link href="/docs/getting-started">
-                <a>
-                  <Button
-                    size="lg"
-                    className="w-full bg-[#4a07e1] text-white mb-4 sm:mb-0 sm:w-auto sm:mr-8 hover:opacity-80"
-                  >
-                    Get started
-                  </Button>
-                </a>
-              </Link>
-            </Box>
-            <Box className="flex border rounded-xl px-2 items-center border-[#cdcccc]">
-              <FiSearch color="#cdcccc" className="text-3xl" />
-              <Input
-                text="gray-1000"
-                placeholder="Search"
+          <Box className="mt-12">
+            <Link href="/getting-started">
+              <Button
                 size="lg"
-                className="w-full h-full outline-none border-none sm:w-auto"
-              />
-            </Box>
+                className="bg-primary-600 text-white w-full mb-4 sm:mb-0 sm:w-auto sm:mr-8 hover:opacity-80"
+              >
+                Get started
+              </Button>
+            </Link>
+            <Link href={siteConfig.repo.url}>
+              <a target="_blank">
+                <Button
+                  size="lg"
+                  color="gray-200"
+                  text="gray-1000"
+                  className="w-full sm:w-auto"
+                >
+                  <IoLogoGithub size="1.5rem" className="mr-2" /> Github
+                </Button>
+              </a>
+            </Link>
           </Box>
         </Container>
       </main>
-      {/* <Box
+      <Box
         className="bg-no-repeat mb-6 bg-cover bg-top"
         css={{
           backgroundImage: "url('curves.svg')",
           height: "174.69px",
         }}
-      /> */}
-      <Container className="py-24 px-8 xl:px-0" centered size="lg" as="section">
+      />
+      <Container
+        className="py-24 px-8 xl:px-0 "
+        centered
+        size="lg"
+        as="section"
+      >
         <Box className="grid md:grid-cols-2 gap-8">
           <Feature icon={MdAccessibility} title="Accessible">
             Nature UI strictly follows WAI-ARIA standards for all components.
@@ -116,7 +115,7 @@ const Index = () => {
       </Box>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

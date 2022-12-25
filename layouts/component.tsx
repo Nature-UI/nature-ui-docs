@@ -1,5 +1,5 @@
 import { Box, Stack } from "@nature-ui/core";
-import { isEmpty } from "@nature-ui/utils";
+import { isEmptyObject } from "@nature-ui/utils";
 import { MDXComponents } from "components/mdx-components";
 import { Doc } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
@@ -32,7 +32,11 @@ export default function ComponentDocsLayout({
 
       {
         <Box id={tabsData.id} hidden={!tabsData.match}>
-          {isEmpty(tabsData) ? children : <MDXContent doc={tabsData.doc} />}
+          {isEmptyObject(tabsData) ? (
+            children
+          ) : (
+            <MDXContent doc={tabsData.doc} />
+          )}
         </Box>
       }
     </MDXLayout>

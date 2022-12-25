@@ -1,10 +1,11 @@
 import { Button, ButtonProps, useClipboard } from "@nature-ui/core";
-import React from "react";
+import { FC } from "react";
 
 interface CopyButtonProps extends ButtonProps {
   code: string;
 }
-export const CopyButton: React.FC<CopyButtonProps> = ({ code, ...props }) => {
+
+export const CopyButton: FC<CopyButtonProps> = ({ code, ...props }) => {
   const { copied, onCopy } = useClipboard(code);
   return (
     <Button

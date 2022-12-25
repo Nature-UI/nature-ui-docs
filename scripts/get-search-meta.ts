@@ -40,9 +40,11 @@ function getMDXMeta(file: string) {
   const filePath = posixPath(file);
   const fileContent = fs.readFileSync(filePath, "utf-8");
 
-  const { content, frontmatter } = parseFrontMatter(fileContent) as {
+  const { content, frontMatter: frontmatter } = parseFrontMatter(
+    fileContent
+  ) as {
     content: string;
-    frontmatter: Record<string, any>;
+    frontMatter: Record<string, any>;
   };
   const tableOfContent = toc(content);
   const json = tableOfContent.json as TOCResultItem[];

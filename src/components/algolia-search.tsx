@@ -9,7 +9,14 @@ import {
 import { SearchIcon } from "@nature-ui/icons";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import * as React from "react";
+import {
+  Ref,
+  forwardRef,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 const ACTION_KEY_DEFAULT = ["Ctrl", "Control"];
 const ACTION_KEY_APPLE = ["⌘", "Command"];
@@ -19,15 +26,11 @@ function Hit(props) {
   return <Link href={hit.url}>{children}</Link>;
 }
 
-export const SearchButton = React.forwardRef(
-  (
-    props: HTMLNatureProps<"button">,
-    ref: React.Ref<HTMLButtonElement> | null
-  ) => {
-    const [actionKey, setActionKey] =
-      React.useState<string[]>(ACTION_KEY_APPLE);
+export const SearchButton = forwardRef(
+  (props: HTMLNatureProps<"button">, ref: Ref<HTMLButtonElement> | null) => {
+    const [actionKey, setActionKey] = useState<string[]>(ACTION_KEY_APPLE);
 
-    React.useEffect(() => {
+    useEffect(() => {
       if (typeof navigator === "undefined") return;
 
       const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
@@ -65,19 +68,19 @@ SearchButton.displayName = "SearchButton";
 
 export function Search() {
   const router = useRouter();
-  const [isOpen, setIsOpen] = React.useState(false);
-  const searchButtonRef = React.useRef<HTMLButtonElement | null>(null);
-  const [initialQuery, setInitialQuery] = React.useState<string | undefined>();
+  const [isOpen, setIsOpen] = useState(false);
+  const searchButtonRef = useRef<HTMLButtonElement | null>(null);
+  const [initialQuery, setInitialQuery] = useState<string | undefined>();
 
-  const onOpen = React.useCallback(() => {
+  const onOpen = useCallback(() => {
     setIsOpen(true);
   }, [setIsOpen]);
 
-  const onClose = React.useCallback(() => {
+  const onClose = useCallback(() => {
     setIsOpen(false);
   }, [setIsOpen]);
 
-  const onInput = React.useCallback(
+  const onInput = useCallback(
     (e) => {
       setIsOpen(true);
       setInitialQuery(e.key);

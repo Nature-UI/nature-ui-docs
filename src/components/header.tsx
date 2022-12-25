@@ -1,6 +1,6 @@
 import { IconButton, useDisclosure, useUpdateEffect } from "@nature-ui/core";
 import Link from "next/link";
-import React from "react";
+import { useRef } from "react";
 
 import siteConfig from "configs/site-config";
 
@@ -9,7 +9,7 @@ import { MobileNavButton, MobileNaveContent } from "./mobile-nav";
 import VersionSwitcher from "./version-switcher";
 
 const HeaderContent = () => {
-  const mobileNavBtnRef = React.useRef<HTMLButtonElement>();
+  const mobileNavBtnRef = useRef<HTMLButtonElement>();
 
   const mobileNav = useDisclosure();
 
