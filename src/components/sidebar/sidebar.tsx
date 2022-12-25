@@ -127,6 +127,9 @@ const mainNavLinks = [
     icon: DocumentationIcon,
     href: "/docs/components/box",
     label: "Components",
+    match: (asPath: string, href: string) =>
+      href.startsWith("/docs/components") &&
+      asPath.startsWith("/docs/components"),
   },
   {
     icon: FaTools,
