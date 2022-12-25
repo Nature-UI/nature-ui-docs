@@ -55,13 +55,7 @@ const Index = () => {
           </Box>
         </Container>
       </main>
-      {/* <Box
-        className="bg-no-repeat mb-6 bg-cover bg-top"
-        css={{
-          backgroundImage: "url('curves.svg')",
-          height: "174.69px",
-        }}
-      /> */}
+
       <Container className="py-24 px-8 xl:px-0" centered size="lg" as="section">
         <Box className="grid md:grid-cols-2 gap-8">
           <Feature icon={MdAccessibility} title="Accessible">
