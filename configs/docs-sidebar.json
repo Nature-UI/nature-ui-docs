@@ -125,10 +125,6 @@
             {
               "title": "Modal",
               "path": "/docs/components/modal"
-            },
-            {
-              "title": "Popover",
-              "path": "/docs/components/popover"
             }
           ]
         },

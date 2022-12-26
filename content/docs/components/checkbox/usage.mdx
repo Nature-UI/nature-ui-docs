@@ -1,13 +1,11 @@
 ---
 id: Checkbox
 title: Checkbox
-package: '@nature-ui/checkbox'
-image: 'components/checkbox.svg'
+package: "@nature-ui/checkbox"
 description:
   The `Checkbox` component is used in forms when a user needs to select multiple
   values from several options.
 ---
-
 
 Native HTML checkboxes are 100% accessible by default, so we used a
 [very common CSS technique](https://dev.to/lkopacz/create-custom-keyboard-accessible-checkboxes-2036)
@@ -16,7 +14,7 @@ to style the checkboxes.
 ## Import
 
 ```js
-import { Checkbox, CheckboxGroup } from '@nature-ui/core';
+import { Checkbox, CheckboxGroup } from "@nature-ui/core";
 ```
 
 ## Usage
@@ -45,10 +43,10 @@ You can override the color of the `Checkbox` to any color key specified in
 
 ```jsx
 <Stack spacing={10} row>
-  <Checkbox color='bg-purple-500 hover:bg-purple-700' defaultIsChecked>
+  <Checkbox color="bg-purple-500 hover:bg-purple-700" defaultIsChecked>
     Checkbox
   </Checkbox>
-  <Checkbox color='bg-green-500 hover:bg-green-700' defaultIsChecked>
+  <Checkbox color="bg-green-500 hover:bg-green-700" defaultIsChecked>
     Checkbox
   </Checkbox>
 </Stack>
@@ -61,13 +59,17 @@ Pass the `size` prop to change the size of the `Checkbox`. Values can be either
 
 ```jsx
 <Stack spacing={10} row>
-  <Checkbox size='sm' color='bg-purple-500 hover:bg-purple-700'>
+  <Checkbox size="sm" color="bg-purple-500 hover:bg-purple-700">
     Checkbox
   </Checkbox>
-  <Checkbox size='md' color='bg-green-500 hover:bg-green-700' defaultIsChecked>
+  <Checkbox size="md" color="bg-green-500 hover:bg-green-700" defaultIsChecked>
     Checkbox
   </Checkbox>
-  <Checkbox size='lg' color='bg-orange-500 hover:bg-orange-700' defaultIsChecked>
+  <Checkbox
+    size="lg"
+    color="bg-orange-500 hover:bg-orange-700"
+    defaultIsChecked
+  >
     Checkbox
   </Checkbox>
 </Stack>
@@ -85,7 +87,7 @@ We added the `spacing` prop to customize the spacing between the `Checkbox` and
 label text.
 
 ```jsx live=false
-<Checkbox spacing='1rem'>Option</Checkbox>
+<Checkbox spacing="1rem">Option</Checkbox>
 ```
 
 ### Changing the icon color and size
@@ -94,7 +96,7 @@ You can customize the color and size of the check icon by passing the
 `iconColor` and `iconSize` prop.
 
 ```jsx live=false
-<Checkbox iconColor='gray-900' iconSize='1rem'>
+<Checkbox iconColor="gray-900" iconSize="1rem">
   Option
 </Checkbox>
 ```
@@ -117,7 +119,7 @@ function IndeterminateExample() {
       >
         Parent Checkbox
       </Checkbox>
-      <Stack className={'pl-6 mt-1'} spacing={1}>
+      <Stack className={"pl-6 mt-1"} spacing={1}>
         <Checkbox
           isChecked={checkedItems[0]}
           onChange={(e) => setCheckedItems([e.target.checked, checkedItems[1]])}
@@ -144,11 +146,14 @@ props to each. See the props table at the bottom of this page for a list of the
 shared styling props.
 
 ```jsx
-<CheckboxGroup color='bg-green-600 hover:bg-green-700' defaultValue={['naruto', 'kakashi']}>
+<CheckboxGroup
+  color="bg-green-600 hover:bg-green-700"
+  defaultValue={["naruto", "kakashi"]}
+>
   <Stack row>
-    <Checkbox value='naruto'>Naruto</Checkbox>
-    <Checkbox value='sasuke'>Sasuke</Checkbox>
-    <Checkbox value='kakashi'>kakashi</Checkbox>
+    <Checkbox value="naruto">Naruto</Checkbox>
+    <Checkbox value="sasuke">Sasuke</Checkbox>
+    <Checkbox value="kakashi">kakashi</Checkbox>
   </Stack>
 </CheckboxGroup>
 ```
