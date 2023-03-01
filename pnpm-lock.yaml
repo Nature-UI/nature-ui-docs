@@ -7,7 +7,6 @@ specifiers:
   '@nature-ui/core': 2.2.0
   '@nature-ui/icons': 2.2.0
   '@nature-ui/utils': 2.2.0
-  '@reach/router': ^1.3.4
   '@types/github-slugger': ^2.0.0
   '@types/node': 18.11.7
   '@types/prettier': ^2.7.1
@@ -48,44 +47,12 @@ specifiers:
   unist-util-visit: ^4.1.1
 
 dependencies:
-<<<<<<< HEAD
-  '@docsearch/react': registry.npmjs.org/@docsearch/react/3.3.0_knhnagtyfncgg2hpin7s37uixq
-  '@docusaurus/utils': registry.npmjs.org/@docusaurus/utils/2.2.0
-  '@mdx-js/react': registry.npmjs.org/@mdx-js/react/2.1.5_react@18.2.0
-  '@nature-ui/core': registry.npmjs.org/@nature-ui/core/0.0.0-dev-20221225100930_n7bjw643kpk64gpz3him6vilce
-  '@nature-ui/icons': registry.npmjs.org/@nature-ui/icons/2.0.3-alpha.0_bbvjflvjoibwhtpmedigb26h6y
-  '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/2.0.3-alpha.0_react@18.2.0
-  '@reach/router': registry.npmjs.org/@reach/router/1.3.4_biqbaboplfbrettd7655fr4n2y
-  contentlayer: registry.npmjs.org/contentlayer/0.2.9
-  formik: registry.npmjs.org/formik/2.2.9_react@18.2.0
-  framer-motion: registry.npmjs.org/framer-motion/7.6.5_biqbaboplfbrettd7655fr4n2y
-  github-slugger: registry.npmjs.org/github-slugger/2.0.0
-  markdown-toc: registry.npmjs.org/markdown-toc/1.2.0
-  mdx-bundler: registry.npmjs.org/mdx-bundler/9.0.1
-  nanoid: registry.npmjs.org/nanoid/4.0.0
-  next: registry.npmjs.org/next/12.3.3_biqbaboplfbrettd7655fr4n2y
-  next-contentlayer: registry.npmjs.org/next-contentlayer/0.2.9_axequwibc5yadwk55bo7ehxsoe
-  next-seo: registry.npmjs.org/next-seo/5.14.0_axequwibc5yadwk55bo7ehxsoe
-  prism-react-renderer: registry.npmjs.org/prism-react-renderer/1.3.5_react@18.2.0
-  react: registry.npmjs.org/react/18.2.0
-  react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
-  react-icons: registry.npmjs.org/react-icons/4.6.0_react@18.2.0
-  react-live: registry.npmjs.org/react-live/3.1.1_biqbaboplfbrettd7655fr4n2y
-  react-lorem-component: registry.npmjs.org/react-lorem-component/0.13.0_react@18.2.0
-  react-remove-scroll: registry.npmjs.org/react-remove-scroll/2.5.5_bbvjflvjoibwhtpmedigb26h6y
-  remark: registry.npmjs.org/remark/14.0.2
-  remark-emoji: registry.npmjs.org/remark-emoji/3.0.2
-  remark-gfm: registry.npmjs.org/remark-gfm/3.0.1
-  remark-slug: registry.npmjs.org/remark-slug/7.0.1
-  shelljs: registry.npmjs.org/shelljs/0.8.5
-=======
   '@docsearch/react': 3.3.0_zula6vjvt3wdocc4mwcxqa6nzi
   '@docusaurus/utils': 2.2.0
   '@mdx-js/react': 2.1.5_react@18.2.0
   '@nature-ui/core': 2.2.0_64lymlyqhin2t676fswfxsko3y
   '@nature-ui/icons': 2.2.0_react@18.2.0
   '@nature-ui/utils': 2.2.0_react@18.2.0
-  '@reach/router': 1.3.4_biqbaboplfbrettd7655fr4n2y
   contentlayer: 0.2.9
   formik: 2.2.9_react@18.2.0
   framer-motion: 7.6.5_biqbaboplfbrettd7655fr4n2y
@@ -108,7 +75,6 @@ dependencies:
   remark-gfm: 3.0.1
   remark-slug: 7.0.1
   shelljs: 0.8.5
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
 
 devDependencies:
   '@types/github-slugger': 2.0.0
@@ -2149,32 +2115,6 @@ packages:
       tslib: 2.4.1
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/alert/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-kFB3HeNQp5GKL//aLMwXSiLGNXHuud0S+LUXf4VL6hXES0p+dtHhHjExE3LNtpRv8gdzX6nfyKXfwB/Xwq3eMg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/alert/-/alert-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/alert/0.0.0-dev-20221225100930
-    name: '@nature-ui/alert'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/icon': registry.npmjs.org/@nature-ui/icon/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/avatar/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-OsTSTTv5xX2Zw7QNiRyZDSjaRWiT0V41P4hIbovELLpSOqpDJsfRD6ti1G7C0gMN48u0D7pSIBRYMnqXx0EqKw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/avatar/-/avatar-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/avatar/0.0.0-dev-20221225100930
-    name: '@nature-ui/avatar'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/color': registry.npmjs.org/@nature-ui/color/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/image': registry.npmjs.org/@nature-ui/image/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      react: registry.npmjs.org/react/18.2.0
-      tinycolor2: registry.npmjs.org/tinycolor2/1.4.2
-=======
   /@nature-ui/alert/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-rhygtkBifuTTg/dwK53RtYN5a374yaNbDW7hZmqjEwOMsT9Z6VPkJR/T5dV8Gzb3XYwQY+IF6/CqSWXicDWIAA==}
     peerDependencies:
@@ -2193,59 +2133,18 @@ packages:
       '@nature-ui/image': 2.2.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       tinycolor2: 1.4.2
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/breadcrumb/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-QZI3wPFtvGuj8BfsfHFMaFcLikdhZdMXtwgArU3P0crw5ryfJUOvqq0IAZydf+JH9n0gcktAjwLIh67Gial12w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/breadcrumb/-/breadcrumb-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/breadcrumb/0.0.0-dev-20221225100930
-    name: '@nature-ui/breadcrumb'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/breadcrumb/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-nvqnJnQ8Vl5vuwETA9kTHYi0LWAcX4yz8+b228efSCwAjtS4VzY3DkVy2nvfms+oKVY0lrj8yD+zWVa+gMTfpA==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       react: '>=18'
     dependencies:
       react: 18.2.0
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/button/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-4g48XrxqGmeFo9Qsa5z0GP5SfpbsZCKURI983TRj1RyGO7tluZ+/QKUCT54FL1zMnhnM6Z162nvCSDWVraQrOQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/button/-/button-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/button/0.0.0-dev-20221225100930
-    name: '@nature-ui/button'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/spinner': registry.npmjs.org/@nature-ui/spinner/0.0.0-dev-20221225100930_react@18.2.0
-      postcss: registry.npmjs.org/postcss/8.4.18
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/checkbox/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4:
-    resolution: {integrity: sha512-I2/wX5774Efvqe+PDElFH2gZ3YAADU/mJf/eyfbEftcgkeJ5DFtLE4L+grwuPfGj6ohDdYvC+LxKcQ4PT6nf7w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/checkbox/-/checkbox-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/checkbox/0.0.0-dev-20221225100930
-    name: '@nature-ui/checkbox'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      '@nature-ui/system': 0.0.0-dev-20221225100930
-      react: '>=18'
-    dependencies:
-      '@nature-ui/form-control': registry.npmjs.org/@nature-ui/form-control/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/icon': registry.npmjs.org/@nature-ui/icon/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/react-utils': registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/system': registry.npmjs.org/@nature-ui/system/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y
-      '@nature-ui/visually-hidden': registry.npmjs.org/@nature-ui/visually-hidden/0.0.0-dev-20221225100930_react@18.2.0
-      '@zag-js/focus-visible': registry.npmjs.org/@zag-js/focus-visible/0.1.6
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/button/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-/VA8L1sI6hNGrGoxhxL7CB8Mjl2bgvz3Eyg+Va3CKRhzh4vuLY4s16n2pTXdecm7gyNO0fN5dDTPWC1T/WwN1g==}
     peerDependencies:
@@ -2270,42 +2169,10 @@ packages:
       '@nature-ui/visually-hidden': 2.2.0_react@18.2.0
       '@zag-js/focus-visible': 0.1.6
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/clickable/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-Qp9i4f1U9vN0OrngWTVtBwAKgYbT4FLgT9YGc5v3OYCUYMph2h2Q6yq3y87Ciky4zYjx9tiCkSgvTwQ6+mkedw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/clickable/-/clickable-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/clickable/0.0.0-dev-20221225100930
-    name: '@nature-ui/clickable'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/close-button/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-gtt107QIzIdVpxVcNGMff79FqlXy5+ZBZkgOx/9FzlgZ7JOvDE9iimZUNjJMj+mkHduXMvMTEzboSlznnC2EiQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/close-button/-/close-button-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/close-button/0.0.0-dev-20221225100930
-    name: '@nature-ui/close-button'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/icon': registry.npmjs.org/@nature-ui/icon/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/color/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-G3ZmrRDYY2cxABYKdkByXb71HJgXFQ5bOcta1A+wURbmXu1sn/d1WSQAFGPGHJBNv3+AQiWc8/4lUvZproDkrA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/color/-/color-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/color/0.0.0-dev-20221225100930
-    name: '@nature-ui/color'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/clickable/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-+ai2yI96F3VhVs3VM5w2g6pZ06qz7vs0ZJheu0WWcUsbf7uJf159zoUGdfxi7HscLNeqLqFnZVp8bDOh7VWDGw==}
     peerDependencies:
@@ -2326,7 +2193,6 @@ packages:
 
   /@nature-ui/color/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-D58lwEshhW3DU5I4GpXT8bbhyBo5YqIfeWLg3bAobS4MeZpkONl61RmrxGFuDLkHdBJfXHq8jrbimT/46rjQpw==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       react: '>=18'
     dependencies:
@@ -2334,60 +2200,6 @@ packages:
       tinycolor2: 1.4.2
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/container/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-tOQlC7vMEbTgyupywRvn7EWkoagK3ksCzXnss/nZ3PDDxlEJL08QBxAYUkrkFEINppk44eY+solqRVaGNUJd+Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/container/-/container-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/container/0.0.0-dev-20221225100930
-    name: '@nature-ui/container'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/core/0.0.0-dev-20221225100930_n7bjw643kpk64gpz3him6vilce:
-    resolution: {integrity: sha512-VnwNMEPCU47niyyJFlLn9S40tVz9Xf3OUnGugnQYolv08Y9znf15Z7iTac9Q6uPpXnJ7w/mVKptoaXyS7cOVBA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/core/-/core-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/core/0.0.0-dev-20221225100930
-    name: '@nature-ui/core'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/alert': registry.npmjs.org/@nature-ui/alert/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/avatar': registry.npmjs.org/@nature-ui/avatar/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/breadcrumb': registry.npmjs.org/@nature-ui/breadcrumb/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/button': registry.npmjs.org/@nature-ui/button/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/checkbox': registry.npmjs.org/@nature-ui/checkbox/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4
-      '@nature-ui/clickable': registry.npmjs.org/@nature-ui/clickable/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/close-button': registry.npmjs.org/@nature-ui/close-button/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/color': registry.npmjs.org/@nature-ui/color/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/container': registry.npmjs.org/@nature-ui/container/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/counter': registry.npmjs.org/@nature-ui/counter/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/descendant': registry.npmjs.org/@nature-ui/descendant/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/drawer': registry.npmjs.org/@nature-ui/drawer/0.0.0-dev-20221225100930_ja4vojjmh7bldicsk7k4lr22aa
-      '@nature-ui/focus-lock': registry.npmjs.org/@nature-ui/focus-lock/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y
-      '@nature-ui/form-control': registry.npmjs.org/@nature-ui/form-control/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/icon': registry.npmjs.org/@nature-ui/icon/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/image': registry.npmjs.org/@nature-ui/image/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/input': registry.npmjs.org/@nature-ui/input/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/layout': registry.npmjs.org/@nature-ui/layout/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/modal': registry.npmjs.org/@nature-ui/modal/0.0.0-dev-20221225100930_ja4vojjmh7bldicsk7k4lr22aa
-      '@nature-ui/number-input': registry.npmjs.org/@nature-ui/number-input/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4
-      '@nature-ui/popover': registry.npmjs.org/@nature-ui/popover/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4
-      '@nature-ui/popper': registry.npmjs.org/@nature-ui/popper/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/portal': registry.npmjs.org/@nature-ui/portal/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4
-      '@nature-ui/progress': registry.npmjs.org/@nature-ui/progress/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/radio': registry.npmjs.org/@nature-ui/radio/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/spinner': registry.npmjs.org/@nature-ui/spinner/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/system': registry.npmjs.org/@nature-ui/system/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y
-      '@nature-ui/toast': registry.npmjs.org/@nature-ui/toast/0.0.0-dev-20221225100930_e24yueuieof4k6otjjeyxe3lyy
-      '@nature-ui/transition': registry.npmjs.org/@nature-ui/transition/0.0.0-dev-20221225100930_5xmkhvnjllbyj3a5q6oq7aeuji
-      '@nature-ui/visually-hidden': registry.npmjs.org/@nature-ui/visually-hidden/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/container/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-AeF92o7T1oB+ZEmrkyxqClv3ne9ojH+zVyl4YEHad3kjS0fncQC5x9EQK7c+GtUm1WqD4mGI+neYA9E9gcAgNA==}
     peerDependencies:
@@ -2434,7 +2246,6 @@ packages:
       '@nature-ui/transition': 2.2.0_5xmkhvnjllbyj3a5q6oq7aeuji
       '@nature-ui/visually-hidden': 2.2.0_react@18.2.0
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/react'
@@ -2442,42 +2253,17 @@ packages:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/counter/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-LPq9sAAxCWoKX21vWW7KvhU6uZll8EMIEaZS81epPklx/P/XwXei/8Dba49u88F54QgaRNk5xxxBJT46GUatuA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/counter/-/counter-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/counter/0.0.0-dev-20221225100930
-    name: '@nature-ui/counter'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/counter/2.2.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-9cvQW2LVhO1Nfr4Yko3P0hzgm3g9F80KmNFWXAsvjOtwRcV4XhH9ocPlsOaZYhiK2ltPaDpZXkNnIOyiOHTbtw==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       react: '>=18'
     dependencies:
-<<<<<<< HEAD
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      react: registry.npmjs.org/react/18.2.0
-=======
       '@nature-ui/hooks': 2.2.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/descendant/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-nwZ8WTuRqDSEEXmOuvOWIvU/Ne2ocYltUESD68k5UWN0UudsH3GvnKe4oUpWEZnp1JtwVv1nIl8nzfeNYwOhQw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/descendant/-/descendant-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/descendant/0.0.0-dev-20221225100930
-    name: '@nature-ui/descendant'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/descendant/2.2.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-lZpPEXdxTDFKc0WoZ833iK/a/svAhW9gYE4WJtSc3wbTnTyT8s7DV70cZXD64rm09CKt5K+aj2H7/9SbBDl54w==}
     peerDependencies:
@@ -2485,25 +2271,10 @@ packages:
     dependencies:
       '@nature-ui/hooks': 2.2.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/drawer/0.0.0-dev-20221225100930_ja4vojjmh7bldicsk7k4lr22aa:
-    resolution: {integrity: sha512-JFe0do2IiWV4pCOETh70u6OuWuSO7S3gEqthwXI1jVsbiYtRB39kNuJzLtP5ve5PIH8k8DAlTzB7ULCPxeS7uw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/drawer/-/drawer-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/drawer/0.0.0-dev-20221225100930
-    name: '@nature-ui/drawer'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/modal': registry.npmjs.org/@nature-ui/modal/0.0.0-dev-20221225100930_ja4vojjmh7bldicsk7k4lr22aa
-      '@nature-ui/react-utils': registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/transition': registry.npmjs.org/@nature-ui/transition/0.0.0-dev-20221225100930_5xmkhvnjllbyj3a5q6oq7aeuji
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/drawer/2.2.0_ybddowxvun4blizi7cuzoomppq:
     resolution: {integrity: sha512-Wc/3am/r0p4FG5TeD6jJUapaWONhLN4eG6lyvcPobiDXJuqDhSlE/QDPTe2BD8snJLRdUndVW4SNACqkxaHY7A==}
     peerDependencies:
@@ -2513,7 +2284,6 @@ packages:
       '@nature-ui/react-utils': 2.2.0_react@18.2.0
       '@nature-ui/transition': 2.2.0_5xmkhvnjllbyj3a5q6oq7aeuji
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - '@nature-ui/system'
       - '@types/react'
@@ -2521,19 +2291,6 @@ packages:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/focus-lock/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y:
-    resolution: {integrity: sha512-/rA1aFrJFPl3+g/Wbo/w5rdXfToyslPHiAG+h5U1LLl6ydRYjGRH5xUxPUwiefIB1sbhvCyjtgrzJNLoJxSqIQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/focus-lock/-/focus-lock-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/focus-lock/0.0.0-dev-20221225100930
-    name: '@nature-ui/focus-lock'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-      react-focus-lock: registry.npmjs.org/react-focus-lock/2.9.2_bbvjflvjoibwhtpmedigb26h6y
-=======
   /@nature-ui/focus-lock/2.2.0_pmekkgnqduwlme35zpnqhenc34:
     resolution: {integrity: sha512-9rT68eqSJ3Mie6d+X3vUMFJsWgC9G5wLIFGJoboqGZgYLWCqtoFpOiO4Rr6GLqeAyjYzua/1UX1oggX3/LAzEg==}
     peerDependencies:
@@ -2542,25 +2299,10 @@ packages:
       '@nature-ui/utils': 2.2.0_react@18.2.0
       react: 18.2.0
       react-focus-lock: 2.9.2_pmekkgnqduwlme35zpnqhenc34
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - '@types/react'
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/form-control/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-YrnKuKKUrB8Ecqz5Iu0dGvx4T8JuuHEFYX7YGWdTq2c20BgHf73kUkAXF6ZTQzF6/k4r7aty5ah8EYkv7PgrOA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/form-control/-/form-control-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/form-control/0.0.0-dev-20221225100930
-    name: '@nature-ui/form-control'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/icon': registry.npmjs.org/@nature-ui/icon/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/react-utils': registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/form-control/2.2.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-pRRwZG1Ras+/ZeP7mAQOKd2VJ+DeE4OjsZsiuc4t5x1UVNXC73/PdRCAkpjTKW6d/8npltKaj72qTamY4qm1Hw==}
     peerDependencies:
@@ -2570,25 +2312,10 @@ packages:
       '@nature-ui/icon': 2.2.0_react@18.2.0
       '@nature-ui/react-utils': 2.2.0_react@18.2.0
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-t4M6mNLf+zauVfdZP5wR9It9LGEIEVtIxlqFIekay+GaLkkrnyWji4PIcP18Mvvgb8t2ZANAZHMDqUxtinGl5w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/hooks/-/hooks-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930
-    name: '@nature-ui/hooks'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@reach/auto-id': registry.npmjs.org/@reach/auto-id/0.11.2_biqbaboplfbrettd7655fr4n2y
-      copy-to-clipboard: registry.npmjs.org/copy-to-clipboard/3.3.3
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/hooks/2.2.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-XgFaW1TNPcJ1PFoDjnL2wqNtRFyrav7PIv+hraG74pOBpx8d2DtWtwW+D4gy3vq2sk9yGdC6aIXLUCJqDLgbdg==}
     peerDependencies:
@@ -2598,21 +2325,12 @@ packages:
       '@reach/auto-id': 0.11.2_biqbaboplfbrettd7655fr4n2y
       copy-to-clipboard: 3.3.3
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/icon/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-Rk4plFkWrQ3kizBnfKWqc5ul3P+ABWTcZCKT5WTQzYzwIbOimafHaayrBJ6ziGoBPV0lpypfEIZjXiU/UCDbvA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/icon/-/icon-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/icon/0.0.0-dev-20221225100930
-    name: '@nature-ui/icon'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/icon/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-ogAbAqcwAh2Hpwt2MTOywwsigk4gdJiJ/5rGe6l8/o0yqLIWfuM965Mo0DWRyflQI2YSvWY3tg1XZCSx1DEPhQ==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       react: '>=18'
     dependencies:
@@ -2633,46 +2351,13 @@ packages:
     peerDependencies:
       react: '>=18'
     dependencies:
-<<<<<<< HEAD
-      '@nature-ui/icon': registry.npmjs.org/@nature-ui/icon/2.0.3-alpha.0_bbvjflvjoibwhtpmedigb26h6y
-      react: registry.npmjs.org/react/18.2.0
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@types/react'
-    dev: false
-
-  registry.npmjs.org/@nature-ui/image/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-scP+7a/QX+lHTBl8eFf127KGY7qfcY0yV6Xw1UYKoxix8OoqNG3PHEWK7F+Oro2EnfW14d598dQ7xNgXPwmBsw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/image/-/image-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/image/0.0.0-dev-20221225100930
-    name: '@nature-ui/image'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      react: registry.npmjs.org/react/18.2.0
-      react-intersection-observer: registry.npmjs.org/react-intersection-observer/8.34.0_react@18.2.0
-=======
       '@nature-ui/hooks': 2.2.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-intersection-observer: 8.34.0_react@18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/input/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-7nvMGSgg45Pxm8LhuuZ0wwztOqWa7cVKAQM/q9biu7DVHHE+vYljYyCqBvC8fsHdW0FKtZGCMLF1RUgKoGnJYw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/input/-/input-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/input/0.0.0-dev-20221225100930
-    name: '@nature-ui/input'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/form-control': registry.npmjs.org/@nature-ui/form-control/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/input/2.2.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-wWTwSSoQlW/+eo53VWDKmQyP0MVLT4mgodMcN4hIT26itwG9aFOjyE7qals54IYpdCfBi+DZFV2HLVRWRJEb7w==}
     peerDependencies:
@@ -2680,51 +2365,18 @@ packages:
     dependencies:
       '@nature-ui/form-control': 2.2.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/layout/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-/qoLkOrA3bN3A+EhAzRAwG4z+PWuQiLf1yNqjfC/yrWZtMzU91ULBb0F+92rRW5OKbnBvmCZmi+W//zMws4cXQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/layout/-/layout-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/layout/0.0.0-dev-20221225100930
-    name: '@nature-ui/layout'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/layout/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-ixbCeWyoBhCmvdlPE+sn2VnraUlT3q6HbJpELVt5CjmMl4+QhNRZJ5VSO2qgfZyUv1O3lpohfldbepqMqlAIKw==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       react: '>=18'
     dependencies:
       react: 18.2.0
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/modal/0.0.0-dev-20221225100930_ja4vojjmh7bldicsk7k4lr22aa:
-    resolution: {integrity: sha512-81WFGbm8DF8S1LXwwAAo5arkr8hzMpipG9yvk7xt0MMQ3wXEXWa6NUWNJwdEyCSsW1EhCZ31IyMgv22gspUnGA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/modal/-/modal-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/modal/0.0.0-dev-20221225100930
-    name: '@nature-ui/modal'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      '@nature-ui/system': 0.0.0-dev-20221225100930
-      framer-motion: '>=6.0.0'
-      react: '>=18'
-    dependencies:
-      '@nature-ui/close-button': registry.npmjs.org/@nature-ui/close-button/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/focus-lock': registry.npmjs.org/@nature-ui/focus-lock/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/portal': registry.npmjs.org/@nature-ui/portal/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4
-      '@nature-ui/react-utils': registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/system': registry.npmjs.org/@nature-ui/system/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y
-      '@nature-ui/transition': registry.npmjs.org/@nature-ui/transition/0.0.0-dev-20221225100930_5xmkhvnjllbyj3a5q6oq7aeuji
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      aria-hidden: registry.npmjs.org/aria-hidden/1.2.2_bbvjflvjoibwhtpmedigb26h6y
-      framer-motion: registry.npmjs.org/framer-motion/7.6.5_biqbaboplfbrettd7655fr4n2y
-      react: registry.npmjs.org/react/18.2.0
-      react-remove-scroll: registry.npmjs.org/react-remove-scroll/2.5.5_bbvjflvjoibwhtpmedigb26h6y
-=======
   /@nature-ui/modal/4.0.0_ybddowxvun4blizi7cuzoomppq:
     resolution: {integrity: sha512-gDTa9sjRMfhi5t+z66vY8kLDUZ4n7HIcgR3eQppJYxuqnjE6TrGiq19ekzPB90xuURuu+pt+6kfv00XENPjc9g==}
     peerDependencies:
@@ -2744,32 +2396,11 @@ packages:
       framer-motion: 7.6.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-remove-scroll: 2.5.5_pmekkgnqduwlme35zpnqhenc34
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/number-input/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4:
-    resolution: {integrity: sha512-wJQ2TNrPX1Tfo8DOgRYSENYx9WZRkE9HQOcGHllL5JylvOp+MKtsLYW0USemiouT3qIIw3Nj1//MlA/3IIAVLA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/number-input/-/number-input-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/number-input/0.0.0-dev-20221225100930
-    name: '@nature-ui/number-input'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      '@nature-ui/system': 0.0.0-dev-20221225100930
-      react: '>=18'
-    dependencies:
-      '@nature-ui/counter': registry.npmjs.org/@nature-ui/counter/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/form-control': registry.npmjs.org/@nature-ui/form-control/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/icon': registry.npmjs.org/@nature-ui/icon/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/input': registry.npmjs.org/@nature-ui/input/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/react-utils': registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/system': registry.npmjs.org/@nature-ui/system/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/number-input/4.0.0_xdiosrn2khk2aismliq7btb2lm:
     resolution: {integrity: sha512-JGGiUTHW5iyscymf3Vip10kZ0iQHi82b7jGxffw+Xqsn1C6j521Acl/+4WzCu7T43hZw89zc38jRos8VJGdogA==}
     peerDependencies:
@@ -2785,26 +2416,10 @@ packages:
       '@nature-ui/system': 2.2.0_pmekkgnqduwlme35zpnqhenc34
       '@nature-ui/utils': 2.2.0_react@18.2.0
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/popover/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4:
-    resolution: {integrity: sha512-k5hvsmHeBkGtNNYO5aA/HkYjCL+Ej6FVrPUAE0Q/Ji3THJU/oYZ7Mz1Y8G7KMbq3pc+ln5Dr6mKIgh9+KptwUA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/popover/-/popover-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/popover/0.0.0-dev-20221225100930
-    name: '@nature-ui/popover'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/close-button': registry.npmjs.org/@nature-ui/close-button/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/popper': registry.npmjs.org/@nature-ui/popper/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/portal': registry.npmjs.org/@nature-ui/portal/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/popover/2.2.0_xdiosrn2khk2aismliq7btb2lm:
     resolution: {integrity: sha512-hfSgAHHaEJpB9Xaig2bOtg54aiK4KLcO4Mia1YKV/GSdtYGaP4bK/hT15o/5kgxu2cLVPjtnNSGlgZCIU2KkKw==}
     peerDependencies:
@@ -2815,22 +2430,13 @@ packages:
       '@nature-ui/popper': 2.2.0_react@18.2.0
       '@nature-ui/portal': 4.0.0_xdiosrn2khk2aismliq7btb2lm
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - '@nature-ui/system'
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/popper/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-GDZj+kcFZXo5NgADBSkbjJO+0/oumGeRmzOYtCf/Kkv5yM7cFqN2ibkNLy0pKEijI6ixr+YZ+oDo/HdJPKQ1bQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/popper/-/popper-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/popper/0.0.0-dev-20221225100930
-    name: '@nature-ui/popper'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/popper/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-jmW4q+NpmbbSRogQWlc93T9dXlPp7qhJOMCUMDQQwvUQvhVaNaXXoUr3FmAmedXcYlU2UqWH5EUTBW9VwpmJ9A==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       react: '>=18'
     dependencies:
@@ -2838,52 +2444,6 @@ packages:
       react: 18.2.0
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/portal/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4:
-    resolution: {integrity: sha512-+Mak2OtZeIvbenNFn9Hg4J+EmOZ2/vY7bmPnyLc1B1tvK3S5myYVJueNq9WPiiWS3Lf2F7eGwJvroFynD3DRAA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/portal/-/portal-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/portal/0.0.0-dev-20221225100930
-    name: '@nature-ui/portal'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      '@nature-ui/system': 0.0.0-dev-20221225100930
-      react: '>=18'
-      react-dom: '>=18'
-    dependencies:
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/react-utils': registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/system': registry.npmjs.org/@nature-ui/system/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y
-      react: registry.npmjs.org/react/18.2.0
-      react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/progress/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-1Dd2WPJyTyhpEDpCr55z/XEqdwMU2riUHrUSMNgpx6zzL9yF3vEEGqz+Vah04HUN+4Tx+/gNTkG+8Q49H+EjCQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/progress/-/progress-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/progress/0.0.0-dev-20221225100930
-    name: '@nature-ui/progress'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/color': registry.npmjs.org/@nature-ui/color/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/radio/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-obmYQ5fhdzuvqRBKFxePcCsHK/dR+gSvx0wU+9Cl6o5vBKDttVxAYYKm35xd3pIu0N35tYGEf6b6k/E2U/Kmdw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/radio/-/radio-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/radio/0.0.0-dev-20221225100930
-    name: '@nature-ui/radio'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/form-control': registry.npmjs.org/@nature-ui/form-control/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/react-utils': registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/visually-hidden': registry.npmjs.org/@nature-ui/visually-hidden/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-=======
   /@nature-ui/portal/4.0.0_xdiosrn2khk2aismliq7btb2lm:
     resolution: {integrity: sha512-flYNdNNWYcd+nXdT0TEBfnLx+DeLpkXGFs7X58KL8WTn1GV3j+bTpdles27v1BrBD2AyGz3cBqT/jd8PvkRAaw==}
     peerDependencies:
@@ -2919,43 +2479,10 @@ packages:
       '@nature-ui/utils': 2.2.0_react@18.2.0
       '@nature-ui/visually-hidden': 2.2.0_react@18.2.0
       react: 18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - react-dom
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-nGxL9qYWvx6bq7TFg7YK1MNWSRDYhbntDhzUe0iibiuzPvcNlmidGs+EffaflbthdxDZX+QUVf4gdKg+zBDVwQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/react-utils/-/react-utils-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930
-    name: '@nature-ui/react-utils'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=16.8.6'
-    dependencies:
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/spinner/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-j8sivycOYFRUIrdVmMiiPSFpQ35GxWc7sFu+S/KTD3TQ5LvMDNI79AMHZ+qAwIM4sA3RkPWkiDtOlz6jcLqx6Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/spinner/-/spinner-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/spinner/0.0.0-dev-20221225100930
-    name: '@nature-ui/spinner'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/visually-hidden': registry.npmjs.org/@nature-ui/visually-hidden/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@nature-ui/system/0.0.0-dev-20221225100930_bbvjflvjoibwhtpmedigb26h6y:
-    resolution: {integrity: sha512-4gt0WKCQk8CSqkdyxhBfCurHOqUb1Rz4xr8Xr0CIAok/1VLUj49DoDHielHSD+NO/WAyic5dp3I1mRAsC/Hd8A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/system/-/system-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/system/0.0.0-dev-20221225100930
-    name: '@nature-ui/system'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/react-utils/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-ze/YjNfCxrR0/8B5kh/jT0L0caEYwvaFpwDeCn/YdNO80k6G1B0+7LVJZv4w3u7CXJdL8NZRoZL/u3qzf1wZhw==}
     peerDependencies:
@@ -2977,7 +2504,6 @@ packages:
 
   /@nature-ui/system/2.2.0_pmekkgnqduwlme35zpnqhenc34:
     resolution: {integrity: sha512-qujryRJlkNb/ke5yDu/0knU291/eFYEuIAHYsecTOIL1DWeEKLVWxl4SDy9biWi2NfL5Zps/9RmctTEm1s0etg==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       react: '>=18'
     dependencies:
@@ -2991,51 +2517,13 @@ packages:
       - '@types/react'
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/system/3.0.3-alpha.0_bbvjflvjoibwhtpmedigb26h6y:
-    resolution: {integrity: sha512-K7BxqdHa/9HKrrYYCxYM2muTJ8IHM0D7Vv8S3uAKZca1n9G2grIa3v3R2Iku9OjLqQXhB/XanM0KcYfSr0mWBA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/system/-/system-3.0.3-alpha.0.tgz}
-    id: registry.npmjs.org/@nature-ui/system/3.0.3-alpha.0
-    name: '@nature-ui/system'
-    version: 3.0.3-alpha.0
-    peerDependencies:
-      react: '>=16.8.6'
-    dependencies:
-      '@emotion/css': registry.npmjs.org/@emotion/css/11.10.5
-      '@emotion/react': registry.npmjs.org/@emotion/react/11.10.5_bbvjflvjoibwhtpmedigb26h6y
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/2.0.3-alpha.0_react@18.2.0
-      clsx: registry.npmjs.org/clsx/1.2.1
-      hoist-non-react-statics: registry.npmjs.org/hoist-non-react-statics/3.3.2
-      react: registry.npmjs.org/react/18.2.0
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@types/react'
-    dev: false
-
-  registry.npmjs.org/@nature-ui/toast/0.0.0-dev-20221225100930_e24yueuieof4k6otjjeyxe3lyy:
-    resolution: {integrity: sha512-kgtaT5XNV5Rb/twCYEEvqHemZ+IT7riqmZ/shSTjUQ7pJJNVGoIpreZbICtUkYtXr8C6ifxWVeeORlIoePzgJg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/toast/-/toast-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/toast/0.0.0-dev-20221225100930
-    name: '@nature-ui/toast'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/toast/2.2.0_pilgnxnc4ckygwmpfn7asooqku:
     resolution: {integrity: sha512-x3XF0c3ylKtLg24BydB4tGBk3oZULqlbO58pqCEBUlqvAEQAUqvB5ADd6LPpef3wFHat6pD1htCWtWKFyOdxaw==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       framer-motion: '>=6.0.0'
       react: '>=18'
       react-dom: ^>=18
     dependencies:
-<<<<<<< HEAD
-      '@nature-ui/alert': registry.npmjs.org/@nature-ui/alert/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/close-button': registry.npmjs.org/@nature-ui/close-button/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/hooks': registry.npmjs.org/@nature-ui/hooks/0.0.0-dev-20221225100930_biqbaboplfbrettd7655fr4n2y
-      '@nature-ui/portal': registry.npmjs.org/@nature-ui/portal/0.0.0-dev-20221225100930_qwxtcqnsk5mc2tmo3fntcmu3t4
-      '@nature-ui/react-utils': registry.npmjs.org/@nature-ui/react-utils/0.0.0-dev-20221225100930_react@18.2.0
-      '@nature-ui/transition': registry.npmjs.org/@nature-ui/transition/0.0.0-dev-20221225100930_5xmkhvnjllbyj3a5q6oq7aeuji
-      framer-motion: registry.npmjs.org/framer-motion/7.6.5_biqbaboplfbrettd7655fr4n2y
-      react: registry.npmjs.org/react/18.2.0
-      react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
-=======
       '@nature-ui/alert': 2.2.0_react@18.2.0
       '@nature-ui/close-button': 2.2.0_react@18.2.0
       '@nature-ui/hooks': 2.2.0_biqbaboplfbrettd7655fr4n2y
@@ -3045,21 +2533,12 @@ packages:
       framer-motion: 7.6.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     transitivePeerDependencies:
       - '@nature-ui/system'
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/transition/0.0.0-dev-20221225100930_5xmkhvnjllbyj3a5q6oq7aeuji:
-    resolution: {integrity: sha512-d7NkPXgWcWu9OWJV9qjDUlik9J0HMcZUiVz9Zgg63er2niE9r+vnc6dWXgQbKOoQB9wmNTetxz0lpuUZxoKpzw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/transition/-/transition-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/transition/0.0.0-dev-20221225100930
-    name: '@nature-ui/transition'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/transition/2.2.0_5xmkhvnjllbyj3a5q6oq7aeuji:
     resolution: {integrity: sha512-lvbevHw4lwb8y7lORpUIIPIY+3TQVb/Y98acwVqJF7iPJZ4b2EBS8TVCwJJZtnw9JWVxJPBR5+lDuKQUcVm6Cg==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       framer-motion: '>=6.0.0'
       react: '>=18'
@@ -3072,16 +2551,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-U0Oa4/QfttunYGHGHQnB9weP7w+1Y1PfVJ/yZe2G8s7acPU1Zl09pWljgOn8YpkLUWKxkKObH47OsTbgExeCEQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/utils/-/utils-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930
-    name: '@nature-ui/utils'
-    version: 0.0.0-dev-20221225100930
-=======
   /@nature-ui/utils/2.2.0_react@18.2.0:
     resolution: {integrity: sha512-0DVG7n95nAR4QP1uB/Mv3gjckPMJwgqWdQ2PY9XvsYRO8xH8ywKcS+gZ1+ELqTlUXRz1c0Oyg3i5cPmBZMqhaw==}
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     peerDependencies:
       react: '>=18'
     dependencies:
@@ -3097,32 +2568,6 @@ packages:
       react: 18.2.0
     dev: false
 
-<<<<<<< HEAD
-  registry.npmjs.org/@nature-ui/visually-hidden/0.0.0-dev-20221225100930_react@18.2.0:
-    resolution: {integrity: sha512-gpw5X1HPDZXN4HrctaBbejM79cDTS072DwF7dwI8ycZQzkltm3QxLPw2y45VKzwkXAmjwJHAzU05rjlF99Wo6A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@nature-ui/visually-hidden/-/visually-hidden-0.0.0-dev-20221225100930.tgz}
-    id: registry.npmjs.org/@nature-ui/visually-hidden/0.0.0-dev-20221225100930
-    name: '@nature-ui/visually-hidden'
-    version: 0.0.0-dev-20221225100930
-    peerDependencies:
-      react: '>=18'
-    dependencies:
-      '@nature-ui/utils': registry.npmjs.org/@nature-ui/utils/0.0.0-dev-20221225100930_react@18.2.0
-      react: registry.npmjs.org/react/18.2.0
-    dev: false
-
-  registry.npmjs.org/@next/env/12.3.3:
-    resolution: {integrity: sha512-H2pKuOasV9RgvVaWosB2rGSNeQShQpiDaF4EEjLyagIc3HwqdOw2/VAG/8Lq+adOwPv2P73O1hulTNad3k5MDw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/env/-/env-12.3.3.tgz}
-    name: '@next/env'
-    version: 12.3.3
-    dev: false
-
-  registry.npmjs.org/@next/eslint-plugin-next/13.0.0:
-    resolution: {integrity: sha512-z+gnX4Zizatqatc6f4CQrcC9oN8Us3Vrq/OLyc98h7K/eWctrnV91zFZodmJHUjx0cITY8uYM7LXD7IdYkg3kg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-13.0.0.tgz}
-    name: '@next/eslint-plugin-next'
-    version: 13.0.0
-    dependencies:
-      glob: registry.npmjs.org/glob/7.1.7
-=======
   /@next/env/12.3.3:
     resolution: {integrity: sha512-H2pKuOasV9RgvVaWosB2rGSNeQShQpiDaF4EEjLyagIc3HwqdOw2/VAG/8Lq+adOwPv2P73O1hulTNad3k5MDw==}
     dev: false
@@ -3131,7 +2576,6 @@ packages:
     resolution: {integrity: sha512-z+gnX4Zizatqatc6f4CQrcC9oN8Us3Vrq/OLyc98h7K/eWctrnV91zFZodmJHUjx0cITY8uYM7LXD7IdYkg3kg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.com/@next/eslint-plugin-next/-/eslint-plugin-next-13.0.0.tgz}
     dependencies:
       glob: 7.1.7
->>>>>>> e5166d0 (feat: added SEO, banner and favicons)
     dev: true
 
   /@next/swc-android-arm-eabi/12.3.3:
@@ -3487,20 +2931,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       tslib: 2.4.1
-    dev: false
-
-  /@reach/router/1.3.4_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-+mtn9wjlB9NN2CNnnC/BRYtwdKBfSyyasPYraNAyvaV1occr/5NnB4CVzjEZipNHwYebQwcndGUmpFzxAUoqSA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.com/@reach/router/-/router-1.3.4.tgz}
-    peerDependencies:
-      react: 15.x || 16.x || 16.4.0-alpha.0911da3
-      react-dom: 15.x || 16.x || 16.4.0-alpha.0911da3
-    dependencies:
-      create-react-context: 0.3.0_sh5qlbywuemxd2y3xkrw2y2kr4
-      invariant: 2.2.4
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      react-lifecycles-compat: 3.0.4
     dev: false
 
   /@reach/utils/0.11.2_biqbaboplfbrettd7655fr4n2y:
@@ -4567,18 +3997,6 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-    dev: false
-
-  /create-react-context/0.3.0_sh5qlbywuemxd2y3xkrw2y2kr4:
-    resolution: {integrity: sha512-dNldIoSuNSvlTJ7slIKC/ZFGKexBMBrrcc+TTe1NdmROnaASuLPvqpwj9v4XS4uXZ8+YPu0sNmShX2rXI5LNsw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.com/create-react-context/-/create-react-context-0.3.0.tgz}
-    peerDependencies:
-      prop-types: ^15.0.0
-      react: ^0.14.0 || ^15.0.0 || ^16.0.0
-    dependencies:
-      gud: 1.0.0
-      prop-types: 15.8.1
-      react: 18.2.0
-      warning: 4.0.3
     dev: false
 
   /cross-spawn/7.0.3:
@@ -5807,10 +5225,6 @@ packages:
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
-    dev: false
-
-  /gud/1.0.0:
-    resolution: {integrity: sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.com/gud/-/gud-1.0.0.tgz}
     dev: false
 
   /gulp-header/1.8.12:
@@ -7670,10 +7084,6 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.com/react-is/-/react-is-16.13.1.tgz}
-
-  /react-lifecycles-compat/3.0.4:
-    resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz}
-    dev: false
 
   /react-live/3.1.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-U9LhpvOBd1o9ajylgk6yyM7sfkMv0CM6Ya40DBlp4QcPlvwKH6tbDnGXyA5qv/wx1dwIj+cYhAzn3YoxPeMaAw==}
