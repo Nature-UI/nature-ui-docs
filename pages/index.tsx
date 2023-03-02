@@ -34,17 +34,15 @@ const Index = () => {
                 Get started
               </Button>
             </Link>
-            <Link href={siteConfig.repo.url}>
-              <a target="_blank">
-                <Button
-                  size="lg"
-                  color="gray-200"
-                  text="gray-1000"
-                  className="w-full sm:w-auto"
-                >
-                  <IoLogoGithub size="1.5rem" className="mr-2" /> Github
-                </Button>
-              </a>
+            <Link href={siteConfig.repo.url} target="_blank">
+              <Button
+                size="lg"
+                color="gray-200"
+                text="gray-1000"
+                className="w-full sm:w-auto"
+              >
+                <IoLogoGithub size="1.5rem" className="mr-2" /> Github
+              </Button>
             </Link>
           </Box>
         </Container>

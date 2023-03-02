@@ -1,5 +1,4 @@
-import { HTMLNatureProps, nature } from "@nature-ui/core";
-import { cx } from "@nature-ui/utils";
+import { HTMLNatureProps, clsx, nature } from "@nature-ui/core";
 import { useState } from "react";
 
 export const LinkedHeading = (props: HTMLNatureProps<"h2">) => {
@@ -23,7 +22,7 @@ export const LinkedHeading = (props: HTMLNatureProps<"h2">) => {
         <nature.a
           aria-label="anchor"
           href={`#${id}`}
-          className={cx(
+          className={clsx(
             "text-primary-500 focus:opacity-100 focus:shadow-outline opacity-0 ml-2 outline-none hover:opacity-100 rounded-md",
             {
               "opacity-100": hover,

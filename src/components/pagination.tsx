@@ -6,16 +6,16 @@ export const PaginationLink = (props) => {
   const { label, href, children, className, ...rest } = props;
 
   return (
-    <NextLink href={href} passHref>
-      <a
-        className={`hover:no-underline flex-1 rounded-md ${className}`}
-        {...rest}
-      >
-        <span className="text-sm px-2">{label}</span>
-        <span className="mt-1 text-lg font-bold text-purple-600 block">
-          {children}
-        </span>
-      </a>
+    <NextLink
+      href={href}
+      passHref
+      className={`hover:no-underline flex-1 rounded-md ${className}`}
+      {...rest}
+    >
+      <span className="text-sm px-2">{label}</span>
+      <span className="mt-1 text-lg font-bold text-purple-600 block">
+        {children}
+      </span>
     </NextLink>
   );
 };
