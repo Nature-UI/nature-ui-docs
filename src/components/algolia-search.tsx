@@ -7,6 +7,7 @@ import {
   VisuallyHidden,
 } from "@nature-ui/core";
 import { SearchIcon } from "@nature-ui/icons";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -17,6 +18,7 @@ import {
   useRef,
   useState,
 } from "react";
+import SearchStyle from "./search.styles";
 
 const ACTION_KEY_DEFAULT = ["Ctrl", "Control"];
 const ACTION_KEY_APPLE = ["⌘", "Command"];
@@ -98,6 +100,14 @@ export function Search() {
 
   return (
     <>
+      <Head>
+        <link
+          rel="preconnect"
+          href="https://BH4D9OD16A-dsn.algolia.net"
+          crossOrigin="use-credentials"
+        />
+      </Head>
+      <SearchStyle />
       <SearchButton onClick={onOpen} ref={searchButtonRef} />
       {isOpen && (
         <Portal>

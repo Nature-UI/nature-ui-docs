@@ -119,3 +119,5 @@ function getSearchMeta() {
   fs.writeFileSync(outPath, json);
   console.log("Search meta is ready ✅");
 }
+
+getSearchMeta();
