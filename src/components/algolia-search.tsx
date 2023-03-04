@@ -18,7 +18,6 @@ import {
   useRef,
   useState,
 } from "react";
-import SearchStyle from "./search.styles";
 
 const ACTION_KEY_DEFAULT = ["Ctrl", "Control"];
 const ACTION_KEY_APPLE = ["⌘", "Command"];
@@ -103,11 +102,10 @@ export function Search() {
       <Head>
         <link
           rel="preconnect"
-          href="https://BH4D9OD16A-dsn.algolia.net"
+          href="https://JMCYBZW4ZA-dsn.algolia.net"
           crossOrigin="use-credentials"
         />
       </Head>
-      <SearchStyle />
       <SearchButton onClick={onOpen} ref={searchButtonRef} />
       {isOpen && (
         <Portal>
@@ -117,8 +115,8 @@ export function Search() {
             initialScrollY={window.scrollY}
             onClose={onClose}
             indexName="nature-ui"
-            apiKey="0d8256bb9d09856b576409dfb05103af"
-            appId="BH4D9OD16A"
+            apiKey="035c3c60b8976f31f2cb0c88b0a477a8"
+            appId="JMCYBZW4ZA"
             navigator={{
               navigate({ itemUrl }) {
                 setIsOpen(false);

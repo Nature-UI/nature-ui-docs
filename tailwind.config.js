@@ -35,6 +35,11 @@ module.exports = {
         source: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
         "ubuntu-mono": ["Ubuntu Mono", ...defaultTheme.fontFamily.mono],
       },
+      boxShadow: {
+        small: "0 5px 10px rgba(0, 0, 0, 0.12)",
+        medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
+        outline: "0 0 0 3px rgba(66, 153, 225, 0.5)",
+      },
     },
   },
   plugins: [],

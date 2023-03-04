@@ -8,7 +8,6 @@
     "start": "next start",
     "cache:clean": "rm -rf .next .contentlayer",
     "format": "prettier --write .",
-    "search-meta:gen": "tsx scripts/get-search-meta.ts",
     "lint": "next lint"
   },
   "dependencies": {
