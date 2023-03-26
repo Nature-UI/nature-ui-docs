@@ -130,7 +130,7 @@ export const MobileNaveContent: FC<MobileNavContentProps> = (props) => {
                 </Box>
                 <Box className={`px-6 mt-6 pb-4 shadow-${shadow}`}>
                   <Stack row spacing="8px">
-                    <NavLink href="/docs/getting-started">Docs</NavLink>
+                    <NavLink href="/getting-started">Docs</NavLink>
                   </Stack>
                 </Box>
               </Box>
