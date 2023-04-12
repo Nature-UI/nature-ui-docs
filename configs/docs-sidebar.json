@@ -182,7 +182,7 @@
         },
         {
           "title": "Others",
-          "path": "/docs/components",
+          "path": "/docs/components/other",
           "open": true,
           "sort": true,
           "routes": [

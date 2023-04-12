@@ -27,7 +27,7 @@ export type SidebarContentProps = Routes & {
 export function SidebarContent(props: SidebarContentProps) {
   const { routes, pathname, contentRef } = props;
   return (
-    <>
+    <div>
       {routes.map((lvl1, idx) => {
         return (
           <Fragment key={String(idx)}>
@@ -83,7 +83,7 @@ export function SidebarContent(props: SidebarContentProps) {
           </Fragment>
         );
       })}
-    </>
+    </div>
   );
 }
 
@@ -151,7 +151,7 @@ const MainNavLinkGroup = (props: BoxProps) => {
         </div>
         <div className="h-8 bg-gradient-to-b from-white"></div>
       </div>
-      <Stack col className="items-stretch" spacing="1rem" {...props}>
+      <Stack {...props} col className="items-stretch" spacing="1rem" as="ul">
         {mainNavLinks.map((item) => (
           <nature.li className="list-none" key={item.label}>
             <MainNavLink
@@ -178,7 +178,7 @@ const Sidebar = ({ routes }) => {
         ref={ref}
         as="nav"
         aria-label="Main Navigation"
-        className="hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto"
+        className="hidden lg:block fixed z-5 inset-0 top-[4.5rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto"
       >
         <MainNavLinkGroup className="mb-10" />
         <SidebarContent routes={routes} pathname={pathname} contentRef={ref} />

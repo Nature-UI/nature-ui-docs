@@ -22,7 +22,7 @@ export const links = [
   {
     icon: IoLogoTwitter,
     label: "Twitter",
-    href: "https://twitter.com/DivineHycenth",
+    href: "https://twitter.com/built_divine",
   },
   {
     icon: IoGlobeOutline,
@@ -55,7 +55,7 @@ const FooterLink: FC<FooterLinkProps> = ({
 }) => (
   <Box as="span" {...rest}>
     <Link href={href} aria-label={label} target="_blank">
-      <IconButton icon={<Icon />} size="lg" className="text-gray-100" />
+      <IconButton icon={<Icon />} size="lg" className="text-gray-500" />
     </Link>
   </Box>
 );
