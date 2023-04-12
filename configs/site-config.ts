@@ -8,7 +8,7 @@ const siteConfig = {
     twitter: "https://twitter.com/DivineHycenth",
     linkedin: "https://linkedin.com/in/dnature",
     email: "contact@divinehycenth.com",
-    website: "https://divinehycenth.com",
+    website: "https://portfolio.builtdivine.com",
   },
   repo: {
     url: baseUrl,

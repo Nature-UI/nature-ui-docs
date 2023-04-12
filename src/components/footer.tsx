@@ -27,7 +27,7 @@ export const links = [
   {
     icon: IoGlobeOutline,
     label: "Website",
-    href: "https://divinehycenth.com",
+    href: "https://portfolio.builtdivine.com",
   },
   {
     icon: MdEmail,
