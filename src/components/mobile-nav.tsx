@@ -29,7 +29,7 @@ import { getRoutes } from "utils/get-routes";
 
 import { AiOutlineMenu } from "react-icons/ai";
 import { GithubIcon, Logo } from "./icons";
-import { SidebarContent } from "./sidebar";
+import { NavLinks, SidebarContent } from "./sidebar";
 
 interface NavLinkProps {
   href: string;
@@ -129,9 +129,7 @@ export const MobileNaveContent: FC<MobileNavContentProps> = (props) => {
                   </Stack>
                 </Box>
                 <Box className={`px-6 mt-6 pb-4 shadow-${shadow}`}>
-                  <Stack row spacing="8px">
-                    <NavLink href="/getting-started">Docs</NavLink>
-                  </Stack>
+                  <NavLinks />
                 </Box>
               </Box>
 

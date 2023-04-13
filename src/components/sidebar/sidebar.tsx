@@ -1,14 +1,11 @@
-/** ** */
-import { Box, BoxProps, clsx, nature, Stack } from "@nature-ui/core";
+import { Box, nature } from "@nature-ui/core";
 import { Search } from "components/algolia-search";
-import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { FaTools } from "react-icons/fa";
 import { RouteItem, Routes } from "utils/get-route-context";
 
 import { Fragment, useRef } from "react";
+import { NavLinks } from "./nav-links";
 import SidebarCategory from "./sidebar-category";
-import { DocsIcon, DocumentationIcon } from "./sidebar-icons";
 import SidebarLink from "./sidebar-link";
 
 const sortRoutes = (routes: RouteItem[]) => {
@@ -87,61 +84,7 @@ export function SidebarContent(props: SidebarContentProps) {
   );
 }
 
-const MainNavLink = ({ href, icon: NavIcon, children, isActive }) => {
-  const router = useRouter();
-  const active = router.asPath.startsWith(href) || !!isActive;
-
-  return (
-    <NextLink href={href} passHref>
-      <nature.a
-        className={clsx(
-          "flex items-center transition-colors duration-200 text-gray-500 hover:text-gray-75",
-          {
-            "text-primary-700 font-semibold": active,
-          }
-        )}
-      >
-        <nature.div
-          className={clsx(
-            `flex items-center justify-center w-6 h-6 border-gray-300 border-[1.5px] rounded-md mr-3 text-primary-400 overflow-hidden`,
-            {
-              "border-primary-500 ": active,
-            }
-          )}
-        >
-          <NavIcon />
-        </nature.div>
-        {children}
-      </nature.a>
-    </NextLink>
-  );
-};
-
-const mainNavLinks = [
-  {
-    icon: DocsIcon,
-    href: "/getting-started",
-    label: "Getting started",
-  },
-  {
-    icon: DocumentationIcon,
-    href: "/docs/components/box",
-    label: "Components",
-    match: (asPath: string, href: string) =>
-      href.startsWith("/docs/components") &&
-      asPath.startsWith("/docs/components"),
-  },
-  {
-    icon: FaTools,
-    href: "/docs/hooks/use-boolean",
-    label: "Hooks",
-    match: (asPath: string, href: string) =>
-      href.startsWith("/docs/hooks") && asPath.startsWith("/docs/hooks"),
-  },
-];
-
-const MainNavLinkGroup = (props: BoxProps) => {
-  const router = useRouter();
+const MainNavLinkGroup = () => {
   return (
     <>
       <div className="sticky top-0 -ml-0.5 pointer-events-none">
@@ -151,19 +94,7 @@ const MainNavLinkGroup = (props: BoxProps) => {
         </div>
         <div className="h-8 bg-gradient-to-b from-white"></div>
       </div>
-      <Stack {...props} col className="items-stretch" spacing="1rem" as="ul">
-        {mainNavLinks.map((item) => (
-          <nature.li className="list-none" key={item.label}>
-            <MainNavLink
-              icon={item.icon}
-              href={item.href}
-              isActive={item.match?.(router.asPath, item.href)}
-            >
-              {item.label}
-            </MainNavLink>
-          </nature.li>
-        ))}
-      </Stack>
+      <NavLinks className="mb-10" />
     </>
   );
 };
@@ -180,7 +111,7 @@ const Sidebar = ({ routes }) => {
         aria-label="Main Navigation"
         className="hidden lg:block fixed z-5 inset-0 top-[4.5rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto"
       >
-        <MainNavLinkGroup className="mb-10" />
+        <MainNavLinkGroup />
         <SidebarContent routes={routes} pathname={pathname} contentRef={ref} />
       </Box>
     </>
