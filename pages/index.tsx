@@ -93,11 +93,11 @@ const Index = () => {
           <Box
             as="iframe"
             tabIndex={-1}
-            src="https://codesandbox.io/embed/nature-ui-0eolr?fontsize=11&hidenavigation=1&theme=dark"
+            src="https://codesandbox.io/p/sandbox/nature-ui-0eolr?file=src/App.jsx"
             css={{
               width: "100%",
               background: "white",
-              height: "600px",
+              height: "650px",
               border: "0",
               borderRadius: 8,
               overflow: "hidden",
